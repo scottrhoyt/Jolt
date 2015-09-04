@@ -224,6 +224,46 @@ public func sqrt(x: [Double]) -> [Double] {
     return results
 }
 
+// MARK: Power
+
+public func powf(x: [Float], _ power: Float) -> [Float] {
+// FIXME: Should use a vector function
+//    var results = [Float](count: x.count, repeatedValue: 0.0)
+//    vvpowf(&results, x, &power, [Int32(x.count)])
+//    
+//    return results
+    return x.map( { powf($0, power) } )
+}
+
+public func pow(x: [Double], _ power: Double) -> [Double] {
+// FIXME: Should use a vector function
+//    var results = [Double](count: x.count, repeatedValue: 0.0)
+//    vvpow(&results, x, &power, [Int32(x.count)])
+//    
+//    return results
+    return x.map( { pow($0, power) } )
+}
+
+// MARK: Square
+
+public func sqf(x: [Float]) -> [Float] {
+    return powf(x, 2)
+}
+
+public func sq(x: [Double]) -> [Double] {
+    return pow(x, 2)
+}
+
+// MARK: Magnitude
+
+public func magnitudef(x: [Float]) -> Float {
+    return sqrtf(sum(sqf(x)))
+}
+
+public func magnitude(x: [Double]) -> Double {
+   return sqrt(sum(sq(x)))
+}
+
 // MARK: Dot Product
 
 public func dot(x: [Float], _ y: [Float]) -> Float {
