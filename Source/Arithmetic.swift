@@ -264,6 +264,8 @@ public func magnitude(x: [Double]) -> Double {
    return sqrt(sum(sq(x)))
 }
 
+// MARK: Unit
+
 public func unit(x: [Float]) -> [Float] {
     return x / magnitude(x)
 }
