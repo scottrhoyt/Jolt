@@ -73,7 +73,7 @@ extension Matrix: CustomStringConvertible {
         var description = ""
 
         for i in 0..<rows {
-            let contents = "\t".join((0..<columns).map{"\(self[i, $0])"})
+            let contents = (0..<columns).map{"\(self[i, $0])"}.joinWithSeparator("\t")
 
             switch (i, rows) {
             case (0, 1):
