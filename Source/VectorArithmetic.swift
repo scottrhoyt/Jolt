@@ -44,6 +44,30 @@ func +<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
     return T.add(lhs, rhs)
 }
 
+func +<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
+    let rhsVect = Array<T>(count: lhs.count, repeatedValue: rhs)
+    return T.add(lhs, rhsVect)
+}
+
+func +<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
+    let lhsVect = Array<T>(count: rhs.count, repeatedValue: lhs)
+    return T.add(lhsVect, rhs)
+}
+
+func -<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
+    return T.subtract(lhs, rhs)
+}
+
+func -<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
+    let rhsVect = Array<T>(count: lhs.count, repeatedValue: rhs)
+    return T.subtract(lhs, rhsVect)
+}
+
+func -<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
+    let lhsVect = Array<T>(count: rhs.count, repeatedValue: lhs)
+    return T.subtract(lhsVect, rhs)
+}
+
 func *<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
     return T.multiply(lhs, rhs)
 }
@@ -51,4 +75,9 @@ func *<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
 func *<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
     let rhsVect = Array<T>(count: lhs.count, repeatedValue: rhs)
     return T.multiply(lhs, rhsVect)
+}
+
+func *<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
+    let lhsVect = Array<T>(count: rhs.count, repeatedValue: lhs)
+    return T.multiply(lhsVect, rhs)
 }
