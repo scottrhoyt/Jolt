@@ -8,9 +8,11 @@
 
 import Foundation
 
-public protocol VectorArithmetic : FloatLiteralConvertible {
+public protocol VectorArithmetic {
     
     // MARK: To Overload
+    static func one() -> Self
+    static func negativeOne() -> Self
     static func add(x: [Self], _ y: [Self]) -> [Self]
     static func multiply(x: [Self], _ y: [Self]) -> [Self]
     
@@ -21,10 +23,10 @@ public protocol VectorArithmetic : FloatLiteralConvertible {
 
 public extension VectorArithmetic {
     public static func subtract(x: [Self], _ y: [Self]) -> [Self] {
-        return x + (y * -1.0)
+        return x + (y * self.negativeOne())
     }
     public static func divide(x: [Self], _ y: [Self]) -> [Self] {
-        return x * (1.0 / y)
+        return x * (Self.one() / y)
     }
 }
 
