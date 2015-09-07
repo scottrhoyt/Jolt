@@ -8,16 +8,23 @@
 
 import Foundation
 
-public protocol VectorArithmetic {
+public protocol VectorArithmetic : FloatLiteralConvertible {
+    
+    // MARK: To Overload
     static func add(x: [Self], _ y: [Self]) -> [Self]
     static func multiply(x: [Self], _ y: [Self]) -> [Self]
-    init<T: FloatLiteralConvertible>(value: T)
+    
+    //MARK: Optional Overload
+    static func subtract(x: [Self], _ y: [Self]) -> [Self]
+}
+
+public extension VectorArithmetic {
+    public static func subtract(x: [Self], _ y: [Self]) -> [Self] {
+        return x + (y * -1.0)
+    }
 }
 
 extension Double : VectorArithmetic {
-    public init<T: FloatLiteralConvertible>(value: T) {
-        self = Double(value: value)
-    }
     
     public static func add(x: [Double], _ y: [Double]) -> [Double] {
         var results = [Double](y)
@@ -32,19 +39,6 @@ extension Double : VectorArithmetic {
         return results
     }
 }
-//extension Float : FloatingArithmetic {}
-
-//public protocol VectorArithmetic {
-//    func +(rhs: VectorArithmetic, lhs: VectorArithmetic) -> VectorArithmetic
-//}
-//
-//public extension Array where Element : FloatingArithmetic {
-//    //func +(rhs: Vector)
-//}
-//
-//public extension Double {
-//    
-//}
 
 func +<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
     return T.add(lhs, rhs)
@@ -57,10 +51,4 @@ func *<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
 func *<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
     let rhsVect = Array<T>(count: lhs.count, repeatedValue: rhs)
     return T.multiply(lhs, rhsVect)
-}
-
-public extension VectorArithmetic {
-    public static func subtract(x: [Self], _ y: [Self]) -> [Self] {
-        return x + (y * Self(value: -1))
-    }
 }
