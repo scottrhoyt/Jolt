@@ -10,6 +10,10 @@ import Foundation
 
 extension VectorArithmetic where Self : FloatLiteralConvertible {
     
+    public static func zero() -> Self {
+        return 0.0
+    }
+    
     public static func one() -> Self {
         return 1.0
     }

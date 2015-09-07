@@ -11,6 +11,7 @@ import Foundation
 public protocol VectorArithmetic {
     
     // MARK: To Overload
+    static func zero() -> Self
     static func one() -> Self
     static func negativeOne() -> Self
     static func add(x: [Self], _ y: [Self]) -> [Self]
