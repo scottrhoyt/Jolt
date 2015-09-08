@@ -46,7 +46,7 @@ public extension VectorArithmetic {
         return x + (y * Self.negativeOnes(y.count))
     }
     
-    // TODO Get rid of commented out default implementation
+    // TODO: Get rid of commented out default implementation
 //
 //    public static func divide(x: [Self], _ y: [Self]) -> [Self] {
 //        return x * (Self.ones(y.count) / y)
