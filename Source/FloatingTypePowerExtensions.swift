@@ -10,6 +10,7 @@ import Foundation
 
 public extension VectorPower where Self : FloatLiteralConvertible {
     static func sqrt(x: [Self]) -> [Self] {
+        // TODO: Can we leverage FloatLiteralConvertible and Double optimization?
         return Self.power(x, 0.5)
     }
 }
