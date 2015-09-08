@@ -27,3 +27,5 @@ public extension VectorPower {
     }
     
 }
+
+// TODO: Declare power operator
