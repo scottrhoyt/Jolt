@@ -18,12 +18,27 @@ public protocol VectorArithmetic {
     static func multiply(x: [Self], _ y: [Self]) -> [Self]
     
     //MARK: Optional Overload
+    static func zeros(count: Int) -> [Self]
+    static func ones(count: Int) -> [Self]
+    static func negativeOnes(count: Int) -> [Self]
     static func subtract(x: [Self], _ y: [Self]) -> [Self]
     static func divide(x: [Self], _ y: [Self]) -> [Self]
     
 }
 
 public extension VectorArithmetic {
+    
+    static func zeros(count: Int) -> [Self] {
+        return [Self](count: count, repeatedValue: Self.zero())
+    }
+    
+    static func ones(count: Int) -> [Self] {
+        return [Self](count: count, repeatedValue: Self.one())
+    }
+    
+    static func negativeOnes(count: Int) -> [Self] {
+        return [Self](count: count, repeatedValue: Self.negativeOne())
+    }
     
     public static func subtract(x: [Self], _ y: [Self]) -> [Self] {
         return x + (y * self.negativeOne())
