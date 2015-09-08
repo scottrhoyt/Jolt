@@ -20,15 +20,19 @@ public protocol VectorArithmetic {
     //MARK: Optional Overload
     static func subtract(x: [Self], _ y: [Self]) -> [Self]
     static func divide(x: [Self], _ y: [Self]) -> [Self]
+    
 }
 
 public extension VectorArithmetic {
+    
     public static func subtract(x: [Self], _ y: [Self]) -> [Self] {
         return x + (y * self.negativeOne())
     }
+    
     public static func divide(x: [Self], _ y: [Self]) -> [Self] {
         return x * (Self.one() / y)
     }
+    
 }
 
 func +<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
