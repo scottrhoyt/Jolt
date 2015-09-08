@@ -19,7 +19,7 @@ extension VectorArithmetic where Self : FloatLiteralConvertible {
     }
     
     public static func negativeOne() -> Self {
-        return 1.0
+        return -1.0
     }
     
 }
