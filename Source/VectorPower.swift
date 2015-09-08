@@ -13,6 +13,9 @@ public protocol VectorPower {
     // MARK: To Overload
     static func power(x: [Self], _ y: [Self]) -> [Self]
     
+    // MARK: Overload if not FloatLiteralConvertible
+    static func sqrt(x: [Self]) -> [Self]
+    
     // MARK: Optional Overload
     static func power(x: [Self], _ y: Self) -> [Self]
 }
