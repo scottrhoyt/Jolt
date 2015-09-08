@@ -41,11 +41,11 @@ public extension VectorArithmetic {
     }
     
     public static func subtract(x: [Self], _ y: [Self]) -> [Self] {
-        return x + (y * self.negativeOne())
+        return x + (y * Self.negativeOnes(y.count))
     }
     
     public static func divide(x: [Self], _ y: [Self]) -> [Self] {
-        return x * (Self.one() / y)
+        return x * (Self.ones(y.count) / y)
     }
     
 }
