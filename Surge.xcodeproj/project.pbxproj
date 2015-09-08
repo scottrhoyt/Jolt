@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B8C573B1B9D101200361AF9 /* VectorArithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C573A1B9D101200361AF9 /* VectorArithmetic.swift */; settings = {ASSET_TAGS = (); }; };
-		3B8C573D1B9E575200361AF9 /* FloatingTypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C573C1B9E575200361AF9 /* FloatingTypeExtensions.swift */; settings = {ASSET_TAGS = (); }; };
+		3B8C573D1B9E575200361AF9 /* FloatingTypeArithmeticExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C573C1B9E575200361AF9 /* FloatingTypeArithmeticExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 		E65C5BE419FF9CF600149FF1 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65C5BE319FF9CF600149FF1 /* Matrix.swift */; };
 		F8A1E1CB19917B0A009735E2 /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C419917B0A009735E2 /* Arithmetic.swift */; };
 		F8A1E1CC19917B0A009735E2 /* Auxiliary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C519917B0A009735E2 /* Auxiliary.swift */; };
@@ -40,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		3B8C573A1B9D101200361AF9 /* VectorArithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorArithmetic.swift; sourceTree = "<group>"; };
-		3B8C573C1B9E575200361AF9 /* FloatingTypeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTypeExtensions.swift; sourceTree = "<group>"; };
+		3B8C573C1B9E575200361AF9 /* FloatingTypeArithmeticExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTypeArithmeticExtensions.swift; sourceTree = "<group>"; };
 		E65C5BE319FF9CF600149FF1 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		F84A6AAE19A9A72F007B53E1 /* SurgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F84A6AB119A9A72F007B53E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 				F8A1E1C819917B0A009735E2 /* Power.swift */,
 				F8A1E1CA19917B0A009735E2 /* Trigonometric.swift */,
 				3B8C573A1B9D101200361AF9 /* VectorArithmetic.swift */,
-				3B8C573C1B9E575200361AF9 /* FloatingTypeExtensions.swift */,
+				3B8C573C1B9E575200361AF9 /* FloatingTypeArithmeticExtensions.swift */,
 			);
 			path = Source;
 			sourceTree = SOURCE_ROOT;
@@ -304,7 +304,7 @@
 				F8AE90FE19D1D9120078C7B2 /* FFT.swift in Sources */,
 				F8A1E1CD19917B0A009735E2 /* Exponential.swift in Sources */,
 				F8A1E1CB19917B0A009735E2 /* Arithmetic.swift in Sources */,
-				3B8C573D1B9E575200361AF9 /* FloatingTypeExtensions.swift in Sources */,
+				3B8C573D1B9E575200361AF9 /* FloatingTypeArithmeticExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
