@@ -11,11 +11,13 @@ import Foundation
 public protocol VectorArithmetic {
     
     // MARK: To Overload
+    static func add(x: [Self], _ y: [Self]) -> [Self]
+    static func multiply(x: [Self], _ y: [Self]) -> [Self]
+    
+    // MARK: Overload if not FloatLiteralConvertible, Optional Otherwise
     static func zero() -> Self
     static func one() -> Self
     static func negativeOne() -> Self
-    static func add(x: [Self], _ y: [Self]) -> [Self]
-    static func multiply(x: [Self], _ y: [Self]) -> [Self]
     
     //MARK: Optional Overload
     static func zeros(count: Int) -> [Self]
