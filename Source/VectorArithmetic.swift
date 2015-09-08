@@ -54,6 +54,8 @@ public extension VectorArithmetic {
     
 }
 
+// TODO: Separate Operator for member-wise?
+
 public func +<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
     return T.add(lhs, rhs)
 }
