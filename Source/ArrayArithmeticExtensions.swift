@@ -11,6 +11,10 @@ import Foundation
 // TODO: Add rest of Arithmetic functions
 
 extension Array where Element : VectorArithmetic {
+    public init(negativeOnes: Int) {
+        self = Element.negativeOnes(negativeOnes)
+    }
+    
     public func add(y: [Element]) -> [Element] {
         return Element.add(self, y)
     }
