@@ -30,15 +30,15 @@ public protocol VectorArithmetic {
 
 public extension VectorArithmetic {
     
-    static func zeros(count: Int) -> [Self] {
+    public static func zeros(count: Int) -> [Self] {
         return [Self](count: count, repeatedValue: Self.zero())
     }
     
-    static func ones(count: Int) -> [Self] {
+    public static func ones(count: Int) -> [Self] {
         return [Self](count: count, repeatedValue: Self.one())
     }
     
-    static func negativeOnes(count: Int) -> [Self] {
+    public static func negativeOnes(count: Int) -> [Self] {
         return [Self](count: count, repeatedValue: Self.negativeOne())
     }
     
@@ -54,58 +54,58 @@ public extension VectorArithmetic {
     
 }
 
-func +<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
+public func +<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
     return T.add(lhs, rhs)
 }
 
-func +<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
+public func +<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
     let rhsVect = Array<T>(count: lhs.count, repeatedValue: rhs)
     return T.add(lhs, rhsVect)
 }
 
-func +<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
+public func +<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
     let lhsVect = Array<T>(count: rhs.count, repeatedValue: lhs)
     return T.add(lhsVect, rhs)
 }
 
-func -<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
+public func -<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
     return T.subtract(lhs, rhs)
 }
 
-func -<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
+public func -<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
     let rhsVect = Array<T>(count: lhs.count, repeatedValue: rhs)
     return T.subtract(lhs, rhsVect)
 }
 
-func -<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
+public func -<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
     let lhsVect = Array<T>(count: rhs.count, repeatedValue: lhs)
     return T.subtract(lhsVect, rhs)
 }
 
-func *<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
+public func *<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
     return T.multiply(lhs, rhs)
 }
 
-func *<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
+public func *<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
     let rhsVect = Array<T>(count: lhs.count, repeatedValue: rhs)
     return T.multiply(lhs, rhsVect)
 }
 
-func *<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
+public func *<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
     let lhsVect = Array<T>(count: rhs.count, repeatedValue: lhs)
     return T.multiply(lhsVect, rhs)
 }
 
-func /<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
+public func /<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
     return T.divide(lhs, rhs)
 }
 
-func /<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
+public func /<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
     let rhsVect = Array<T>(count: lhs.count, repeatedValue: rhs)
     return T.divide(lhs, rhsVect)
 }
 
-func /<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
+public func /<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
     let lhsVect = Array<T>(count: rhs.count, repeatedValue: lhs)
     return T.divide(lhsVect, rhs)
 }
