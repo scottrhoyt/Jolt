@@ -38,7 +38,8 @@ public func fft(input: [Float]) -> [Float] {
     vDSP_zvmags(&splitComplex, 1, &magnitudes, 1, vDSP_Length(input.count))
 
     var normalizedMagnitudes = [Float](count: input.count, repeatedValue: 0.0)
-    vDSP_vsmul(sqrt(magnitudes), 1, [2.0 / Float(input.count)], &normalizedMagnitudes, 1, vDSP_Length(input.count))
+    // TODO: Should change?
+    vDSP_vsmul(Float.sqrt(magnitudes), 1, [2.0 / Float(input.count)], &normalizedMagnitudes, 1, vDSP_Length(input.count))
 
     vDSP_destroy_fftsetup(weights)
 
@@ -59,7 +60,8 @@ public func fft(input: [Double]) -> [Double] {
     vDSP_zvmagsD(&splitComplex, 1, &magnitudes, 1, vDSP_Length(input.count))
 
     var normalizedMagnitudes = [Double](count: input.count, repeatedValue: 0.0)
-    vDSP_vsmulD(sqrt(magnitudes), 1, [2.0 / Double(input.count)], &normalizedMagnitudes, 1, vDSP_Length(input.count))
+    // TODO: Should change?
+    vDSP_vsmulD(Double.sqrt(magnitudes), 1, [2.0 / Double(input.count)], &normalizedMagnitudes, 1, vDSP_Length(input.count))
 
     vDSP_destroy_fftsetupD(weights)
 

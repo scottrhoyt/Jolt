@@ -11,6 +11,8 @@
 		3B8C573D1B9E575200361AF9 /* FloatingTypeArithmeticExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C573C1B9E575200361AF9 /* FloatingTypeArithmeticExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 		3B8C573F1B9E5EED00361AF9 /* VectorPower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C573E1B9E5EED00361AF9 /* VectorPower.swift */; settings = {ASSET_TAGS = (); }; };
 		3B8C57411B9E5F6000361AF9 /* FloatingTypePowerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C57401B9E5F6000361AF9 /* FloatingTypePowerExtensions.swift */; settings = {ASSET_TAGS = (); }; };
+		3B8C57431B9E9C7300361AF9 /* VectorStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C57421B9E9C7300361AF9 /* VectorStatistics.swift */; settings = {ASSET_TAGS = (); }; };
+		3B8C57451B9E9F1D00361AF9 /* FloatingTypeStatisticsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C57441B9E9F1D00361AF9 /* FloatingTypeStatisticsExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 		E65C5BE419FF9CF600149FF1 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65C5BE319FF9CF600149FF1 /* Matrix.swift */; };
 		F8A1E1CB19917B0A009735E2 /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C419917B0A009735E2 /* Arithmetic.swift */; };
 		F8A1E1CC19917B0A009735E2 /* Auxiliary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C519917B0A009735E2 /* Auxiliary.swift */; };
@@ -45,6 +47,8 @@
 		3B8C573C1B9E575200361AF9 /* FloatingTypeArithmeticExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTypeArithmeticExtensions.swift; sourceTree = "<group>"; };
 		3B8C573E1B9E5EED00361AF9 /* VectorPower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorPower.swift; sourceTree = "<group>"; };
 		3B8C57401B9E5F6000361AF9 /* FloatingTypePowerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTypePowerExtensions.swift; sourceTree = "<group>"; };
+		3B8C57421B9E9C7300361AF9 /* VectorStatistics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorStatistics.swift; sourceTree = "<group>"; };
+		3B8C57441B9E9F1D00361AF9 /* FloatingTypeStatisticsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTypeStatisticsExtensions.swift; sourceTree = "<group>"; };
 		E65C5BE319FF9CF600149FF1 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		F84A6AAE19A9A72F007B53E1 /* SurgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F84A6AB119A9A72F007B53E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 				3B8C573C1B9E575200361AF9 /* FloatingTypeArithmeticExtensions.swift */,
 				3B8C573E1B9E5EED00361AF9 /* VectorPower.swift */,
 				3B8C57401B9E5F6000361AF9 /* FloatingTypePowerExtensions.swift */,
+				3B8C57421B9E9C7300361AF9 /* VectorStatistics.swift */,
+				3B8C57441B9E9F1D00361AF9 /* FloatingTypeStatisticsExtensions.swift */,
 			);
 			path = Source;
 			sourceTree = SOURCE_ROOT;
@@ -307,11 +313,13 @@
 				F8A1E1CE19917B0A009735E2 /* Hyperbolic.swift in Sources */,
 				3B8C573F1B9E5EED00361AF9 /* VectorPower.swift in Sources */,
 				F8A1E1CC19917B0A009735E2 /* Auxiliary.swift in Sources */,
+				3B8C57431B9E9C7300361AF9 /* VectorStatistics.swift in Sources */,
 				F8A1E1CF19917B0A009735E2 /* Power.swift in Sources */,
 				E65C5BE419FF9CF600149FF1 /* Matrix.swift in Sources */,
 				F8AE90FE19D1D9120078C7B2 /* FFT.swift in Sources */,
 				F8A1E1CD19917B0A009735E2 /* Exponential.swift in Sources */,
 				F8A1E1CB19917B0A009735E2 /* Arithmetic.swift in Sources */,
+				3B8C57451B9E9F1D00361AF9 /* FloatingTypeStatisticsExtensions.swift in Sources */,
 				3B8C573D1B9E575200361AF9 /* FloatingTypeArithmeticExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

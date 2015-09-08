@@ -24,19 +24,19 @@ import Accelerate
 
 // MARK: Sum
 
-public func sum(x: [Float]) -> Float {
-    var result: Float = 0.0
-    vDSP_sve(x, 1, &result, vDSP_Length(x.count))
+//public func sum(x: [Float]) -> Float {
+//    var result: Float = 0.0
+//    vDSP_sve(x, 1, &result, vDSP_Length(x.count))
+//
+//    return result
+//}
 
-    return result
-}
-
-public func sum(x: [Double]) -> Double {
-    var result: Double = 0.0
-    vDSP_sveD(x, 1, &result, vDSP_Length(x.count))
-
-    return result
-}
+//public func sum(x: [Double]) -> Double {
+//    var result: Double = 0.0
+//    vDSP_sveD(x, 1, &result, vDSP_Length(x.count))
+//
+//    return result
+//}
 
 // MARK: Sum of Absolute Values
 
@@ -50,51 +50,51 @@ public func asum(x: [Double]) -> Double {
 
 // MARK: Maximum
 
-public func max(x: [Float]) -> Float {
-    var result: Float = 0.0
-    vDSP_maxv(x, 1, &result, vDSP_Length(x.count))
+//public func max(x: [Float]) -> Float {
+//    var result: Float = 0.0
+//    vDSP_maxv(x, 1, &result, vDSP_Length(x.count))
+//
+//    return result
+//}
 
-    return result
-}
-
-public func max(x: [Double]) -> Double {
-    var result: Double = 0.0
-    vDSP_maxvD(x, 1, &result, vDSP_Length(x.count))
-
-    return result
-}
+//public func max(x: [Double]) -> Double {
+//    var result: Double = 0.0
+//    vDSP_maxvD(x, 1, &result, vDSP_Length(x.count))
+//
+//    return result
+//}
 
 // MARK: Minimum
 
-public func min(x: [Float]) -> Float {
-    var result: Float = 0.0
-    vDSP_minv(x, 1, &result, vDSP_Length(x.count))
+//public func min(x: [Float]) -> Float {
+//    var result: Float = 0.0
+//    vDSP_minv(x, 1, &result, vDSP_Length(x.count))
+//
+//    return result
+//}
 
-    return result
-}
-
-public func min(x: [Double]) -> Double {
-    var result: Double = 0.0
-    vDSP_minvD(x, 1, &result, vDSP_Length(x.count))
-
-    return result
-}
+//public func min(x: [Double]) -> Double {
+//    var result: Double = 0.0
+//    vDSP_minvD(x, 1, &result, vDSP_Length(x.count))
+//
+//    return result
+//}
 
 // MARK: Mean
 
-public func mean(x: [Float]) -> Float {
-    var result: Float = 0.0
-    vDSP_meanv(x, 1, &result, vDSP_Length(x.count))
+//public func mean(x: [Float]) -> Float {
+//    var result: Float = 0.0
+//    vDSP_meanv(x, 1, &result, vDSP_Length(x.count))
+//
+//    return result
+//}
 
-    return result
-}
-
-public func mean(x: [Double]) -> Double {
-    var result: Double = 0.0
-    vDSP_meanvD(x, 1, &result, vDSP_Length(x.count))
-
-    return result
-}
+//public func mean(x: [Double]) -> Double {
+//    var result: Double = 0.0
+//    vDSP_meanvD(x, 1, &result, vDSP_Length(x.count))
+//
+//    return result
+//}
 
 // MARK: Mean Magnitude
 
@@ -208,71 +208,71 @@ public func remainder(x: [Double], _ y: [Double]) -> [Double] {
     return results
 }
 
-// MARK: Square Root
-
-public func sqrt(x: [Float]) -> [Float] {
-    var results = [Float](count: x.count, repeatedValue: 0.0)
-    vvsqrtf(&results, x, [Int32(x.count)])
-
-    return results
-}
-
-public func sqrt(x: [Double]) -> [Double] {
-    var results = [Double](count: x.count, repeatedValue: 0.0)
-    vvsqrt(&results, x, [Int32(x.count)])
-
-    return results
-}
-
-// MARK: Power
-
-public func pow(x: [Float], _ power: Float) -> [Float] {
-// FIXME: Should use a vector function
+//// MARK: Square Root
+//
+//public func sqrt(x: [Float]) -> [Float] {
 //    var results = [Float](count: x.count, repeatedValue: 0.0)
-//    vvpowf(&results, x, &power, [Int32(x.count)])
-//    
+//    vvsqrtf(&results, x, [Int32(x.count)])
+//
 //    return results
-    return x.map( { powf($0, power) } )
-}
-
-public func pow(x: [Double], _ power: Double) -> [Double] {
-// FIXME: Should use a vector function
+//}
+//
+//public func sqrt(x: [Double]) -> [Double] {
 //    var results = [Double](count: x.count, repeatedValue: 0.0)
-//    vvpow(&results, x, &power, [Int32(x.count)])
-//    
+//    vvsqrt(&results, x, [Int32(x.count)])
+//
 //    return results
-    return x.map( { pow($0, power) } )
-}
-
-// MARK: Square
-
-public func sq(x: [Float]) -> [Float] {
-    return pow(x, 2)
-}
-
-public func sq(x: [Double]) -> [Double] {
-    return pow(x, 2)
-}
+//}
+//
+//// MARK: Power
+//
+//public func pow(x: [Float], _ power: Float) -> [Float] {
+//// FIXME: Should use a vector function
+////    var results = [Float](count: x.count, repeatedValue: 0.0)
+////    vvpowf(&results, x, &power, [Int32(x.count)])
+////    
+////    return results
+//    return x.map( { powf($0, power) } )
+//}
+//
+//public func pow(x: [Double], _ power: Double) -> [Double] {
+//// FIXME: Should use a vector function
+////    var results = [Double](count: x.count, repeatedValue: 0.0)
+////    vvpow(&results, x, &power, [Int32(x.count)])
+////    
+////    return results
+//    return x.map( { pow($0, power) } )
+//}
+//
+//// MARK: Square
+//
+//public func sq(x: [Float]) -> [Float] {
+//    return pow(x, 2)
+//}
+//
+//public func sq(x: [Double]) -> [Double] {
+//    return pow(x, 2)
+//}
 
 // MARK: Magnitude
 
-public func magnitude(x: [Float]) -> Float {
-    return sqrt(sum(sq(x)))
-}
-
-public func magnitude(x: [Double]) -> Double {
-   return sqrt(sum(sq(x)))
-}
-
-// MARK: Unit
-
-public func unit(x: [Float]) -> [Float] {
-    return x / magnitude(x)
-}
-
-public func unit(x: [Double]) -> [Double] {
-    return x / magnitude(x)
-}
+//public func magnitude(x: [Float]) -> Float {
+//    return sqrt(sum(sq(x)))
+//}
+//
+//public func magnitude(x: [Double]) -> Double {
+//   return sqrt(sum(sq(x)))
+//}
+//
+//// MARK: Unit
+//
+//public func unit(x: [Float]) -> [Float] {
+//    return x / magnitude(x)
+//}
+//
+//public func unit(x: [Double]) -> [Double] {
+//    return x / magnitude(x)
+//}
 
 // MARK: Dot Product
 
