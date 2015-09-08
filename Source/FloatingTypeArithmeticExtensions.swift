@@ -40,7 +40,7 @@ extension Double : VectorArithmetic {
         return results
     }
     
-    public func divide(x: [Double], _ y: [Double]) -> [Double] {
+    public static func divide(x: [Double], _ y: [Double]) -> [Double] {
         var results = [Double](count: x.count, repeatedValue: 0.0)
         vvdiv(&results, x, y, [Int32(x.count)])
         
