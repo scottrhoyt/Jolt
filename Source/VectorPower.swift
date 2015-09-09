@@ -29,3 +29,5 @@ public extension VectorPower {
 }
 
 // TODO: Declare power operator
+// TODO: Rename power to pow
+// TODO: Add square convenience method?

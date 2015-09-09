@@ -259,13 +259,13 @@ public func remainder(x: [Double], _ y: [Double]) -> [Double] {
 //public func magnitude(x: [Float]) -> Float {
 //    return sqrt(sum(sq(x)))
 //}
-//
+
 //public func magnitude(x: [Double]) -> Double {
 //   return sqrt(sum(sq(x)))
 //}
-//
-//// MARK: Unit
-//
+
+// MARK: Unit
+
 //public func unit(x: [Float]) -> [Float] {
 //    return x / magnitude(x)
 //}
@@ -276,24 +276,24 @@ public func remainder(x: [Double], _ y: [Double]) -> [Double] {
 
 // MARK: Dot Product
 
-public func dot(x: [Float], _ y: [Float]) -> Float {
-    precondition(x.count == y.count, "Vectors must have equal count")
+//public func dot(x: [Float], _ y: [Float]) -> Float {
+//    precondition(x.count == y.count, "Vectors must have equal count")
+//
+//    var result: Float = 0.0
+//    vDSP_dotpr(x, 1, y, 1, &result, vDSP_Length(x.count))
+//
+//    return result
+//}
 
-    var result: Float = 0.0
-    vDSP_dotpr(x, 1, y, 1, &result, vDSP_Length(x.count))
 
-    return result
-}
-
-
-public func dot(x: [Double], _ y: [Double]) -> Double {
-    precondition(x.count == y.count, "Vectors must have equal count")
-
-    var result: Double = 0.0
-    vDSP_dotprD(x, 1, y, 1, &result, vDSP_Length(x.count))
-
-    return result
-}
+//public func dot(x: [Double], _ y: [Double]) -> Double {
+//    precondition(x.count == y.count, "Vectors must have equal count")
+//
+//    var result: Double = 0.0
+//    vDSP_dotprD(x, 1, y, 1, &result, vDSP_Length(x.count))
+//
+//    return result
+//}
 
 // MARK: - Operators
 
@@ -361,11 +361,11 @@ public func % (lhs: [Double], rhs: Double) -> [Double] {
     return mod(lhs, [Double](count: lhs.count, repeatedValue: rhs))
 }
 
-infix operator • {}
-public func • (lhs: [Double], rhs: [Double]) -> Double {
-    return dot(lhs, rhs)
-}
-
-public func • (lhs: [Float], rhs: [Float]) -> Float {
-    return dot(lhs, rhs)
-}
+//infix operator • {}
+//public func • (lhs: [Double], rhs: [Double]) -> Double {
+//    return dot(lhs, rhs)
+//}
+//
+//public func • (lhs: [Float], rhs: [Float]) -> Float {
+//    return dot(lhs, rhs)
+//}
