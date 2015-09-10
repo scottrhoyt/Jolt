@@ -11,7 +11,12 @@ import Foundation
 // TODO: Add Rest of power functions
 
 extension Array where Element : VectorPower {
+    
     public func power(y: [Element]) -> [Element] {
+        return Element.power(self, y)
+    }
+    
+    public func power(y: Element) -> [Element] {
         return Element.power(self, y)
     }
 }

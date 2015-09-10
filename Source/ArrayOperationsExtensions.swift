@@ -9,9 +9,15 @@
 import Foundation
 
 extension Array where Element : VectorOperations {
+    
     public func unit() -> [Element] {
         return Element.unit(self)
     }
+    
+    public func magnitude() -> Element {
+        return Element.magnitude(self)
+    }
+
 }
 
 // TODO: Add rest of the Vector operations
