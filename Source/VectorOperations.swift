@@ -10,6 +10,7 @@ import Foundation
 
 public protocol VectorOperations {
     
+    // MARK: To Overload
     static func magnitude(x: [Self]) -> Self
     static func unit(x: [Self]) -> [Self]
     static func dot(x: [Self], _ y: [Self]) -> Self
