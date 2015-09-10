@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Accelerate
 
 // TODO: Uncomment
 //public extension VectorPower where Self : FloatLiteralConvertible {
