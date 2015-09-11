@@ -48,6 +48,20 @@ extension Double : VectorArithmetic {
         return results
     }
     
+    public static func mod(x: [Double], _ y: [Double]) -> [Double] {
+        var results = [Double](count: x.count, repeatedValue: 0.0)
+        vvfmod(&results, x, y, [Int32(x.count)])
+        
+        return results
+    }
+    
+    public static func remainder(x: [Double], _ y: [Double]) -> [Double] {
+        var results = [Double](count: x.count, repeatedValue: 0.0)
+        vvremainder(&results, x, y, [Int32(x.count)])
+        
+        return results
+    }
+    
 }
 
 extension Float : VectorArithmetic {
@@ -69,6 +83,20 @@ extension Float : VectorArithmetic {
     public static func divide(x: [Float], _ y: [Float]) -> [Float] {
         var results = [Float](count: x.count, repeatedValue: 0.0)
         vvdivf(&results, x, y, [Int32(x.count)])
+        
+        return results
+    }
+    
+    public static func mod(x: [Float], _ y: [Float]) -> [Float] {
+        var results = [Float](count: x.count, repeatedValue: 0.0)
+        vvfmodf(&results, x, y, [Int32(x.count)])
+        
+        return results
+    }
+    
+    public static func remainder(x: [Float], _ y: [Float]) -> [Float] {
+        var results = [Float](count: x.count, repeatedValue: 0.0)
+        vvremainderf(&results, x, y, [Int32(x.count)])
         
         return results
     }

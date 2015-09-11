@@ -13,6 +13,9 @@ public protocol VectorArithmetic {
     // MARK: To Overload
     static func add(x: [Self], _ y: [Self]) -> [Self]
     static func multiply(x: [Self], _ y: [Self]) -> [Self]
+    // TODO: Perhaps should be optional Overload?
+    static func mod(x: [Self], _ y: [Self]) -> [Self]
+    static func remainder(x: [Self], _ y: [Self]) -> [Self]
     
     // MARK: Overload if not FloatLiteralConvertible, Optional Otherwise
     static func zero() -> Self
@@ -110,4 +113,12 @@ public func /<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
 public func /<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
     let lhsVect = Array<T>(count: rhs.count, repeatedValue: lhs)
     return T.divide(lhsVect, rhs)
+}
+
+public func %<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
+    return T.mod(lhs, rhs)
+}
+
+public func %<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
+    return T.mod(lhs, [T](count: lhs.count, repeatedValue: rhs))
 }

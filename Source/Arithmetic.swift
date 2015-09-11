@@ -178,35 +178,35 @@ public func measq(x: [Double]) -> Double {
 
 // MARK: Modulo
 
-public func mod(x: [Float], _ y: [Float]) -> [Float] {
-    var results = [Float](count: x.count, repeatedValue: 0.0)
-    vvfmodf(&results, x, y, [Int32(x.count)])
+//public func mod(x: [Float], _ y: [Float]) -> [Float] {
+//    var results = [Float](count: x.count, repeatedValue: 0.0)
+//    vvfmodf(&results, x, y, [Int32(x.count)])
+//
+//    return results
+//}
 
-    return results
-}
-
-public func mod(x: [Double], _ y: [Double]) -> [Double] {
-    var results = [Double](count: x.count, repeatedValue: 0.0)
-    vvfmod(&results, x, y, [Int32(x.count)])
-
-    return results
-}
+//public func mod(x: [Double], _ y: [Double]) -> [Double] {
+//    var results = [Double](count: x.count, repeatedValue: 0.0)
+//    vvfmod(&results, x, y, [Int32(x.count)])
+//
+//    return results
+//}
 
 // MARK: Remainder
 
-public func remainder(x: [Float], _ y: [Float]) -> [Float] {
-    var results = [Float](count: x.count, repeatedValue: 0.0)
-    vvremainderf(&results, x, y, [Int32(x.count)])
+//public func remainder(x: [Float], _ y: [Float]) -> [Float] {
+//    var results = [Float](count: x.count, repeatedValue: 0.0)
+//    vvremainderf(&results, x, y, [Int32(x.count)])
+//
+//    return results
+//}
 
-    return results
-}
-
-public func remainder(x: [Double], _ y: [Double]) -> [Double] {
-    var results = [Double](count: x.count, repeatedValue: 0.0)
-    vvremainder(&results, x, y, [Int32(x.count)])
-
-    return results
-}
+//public func remainder(x: [Double], _ y: [Double]) -> [Double] {
+//    var results = [Double](count: x.count, repeatedValue: 0.0)
+//    vvremainder(&results, x, y, [Int32(x.count)])
+//
+//    return results
+//}
 
 //// MARK: Square Root
 //
@@ -345,21 +345,21 @@ public func remainder(x: [Double], _ y: [Double]) -> [Double] {
 //    return mul(lhs, [Double](count: lhs.count, repeatedValue: rhs))
 //}
 
-public func % (lhs: [Float], rhs: [Float]) -> [Float] {
-    return mod(lhs, rhs)
-}
-
-public func % (lhs: [Double], rhs: [Double]) -> [Double] {
-    return mod(lhs, rhs)
-}
-
-public func % (lhs: [Float], rhs: Float) -> [Float] {
-    return mod(lhs, [Float](count: lhs.count, repeatedValue: rhs))
-}
-
-public func % (lhs: [Double], rhs: Double) -> [Double] {
-    return mod(lhs, [Double](count: lhs.count, repeatedValue: rhs))
-}
+//public func % (lhs: [Float], rhs: [Float]) -> [Float] {
+//    return mod(lhs, rhs)
+//}
+//
+//public func % (lhs: [Double], rhs: [Double]) -> [Double] {
+//    return mod(lhs, rhs)
+//}
+//
+//public func % (lhs: [Float], rhs: Float) -> [Float] {
+//    return mod(lhs, [Float](count: lhs.count, repeatedValue: rhs))
+//}
+//
+//public func % (lhs: [Double], rhs: Double) -> [Double] {
+//    return mod(lhs, [Double](count: lhs.count, repeatedValue: rhs))
+//}
 
 //infix operator • {}
 //public func • (lhs: [Double], rhs: [Double]) -> Double {
