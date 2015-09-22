@@ -40,13 +40,13 @@ import Accelerate
 
 // MARK: Sum of Absolute Values
 
-public func asum(x: [Float]) -> Float {
-    return cblas_sasum(Int32(x.count), x, 1)
-}
+//public func asum(x: [Float]) -> Float {
+//    return cblas_sasum(Int32(x.count), x, 1)
+//}
 
-public func asum(x: [Double]) -> Double {
-    return cblas_dasum(Int32(x.count), x, 1)
-}
+//public func asum(x: [Double]) -> Double {
+//    return cblas_dasum(Int32(x.count), x, 1)
+//}
 
 // MARK: Maximum
 
@@ -98,35 +98,35 @@ public func asum(x: [Double]) -> Double {
 
 // MARK: Mean Magnitude
 
-public func meamg(x: [Float]) -> Float {
-    var result: Float = 0.0
-    vDSP_meamgv(x, 1, &result, vDSP_Length(x.count))
+//public func meamg(x: [Float]) -> Float {
+//    var result: Float = 0.0
+//    vDSP_meamgv(x, 1, &result, vDSP_Length(x.count))
+//
+//    return result
+//}
 
-    return result
-}
-
-public func meamg(x: [Double]) -> Double {
-    var result: Double = 0.0
-    vDSP_meamgvD(x, 1, &result, vDSP_Length(x.count))
-
-    return result
-}
+//public func meamg(x: [Double]) -> Double {
+//    var result: Double = 0.0
+//    vDSP_meamgvD(x, 1, &result, vDSP_Length(x.count))
+//
+//    return result
+//}
 
 // MARK: Mean Square Value
 
-public func measq(x: [Float]) -> Float {
-    var result: Float = 0.0
-    vDSP_measqv(x, 1, &result, vDSP_Length(x.count))
+//public func measq(x: [Float]) -> Float {
+//    var result: Float = 0.0
+//    vDSP_measqv(x, 1, &result, vDSP_Length(x.count))
+//
+//    return result
+//}
 
-    return result
-}
-
-public func measq(x: [Double]) -> Double {
-    var result: Double = 0.0
-    vDSP_measqvD(x, 1, &result, vDSP_Length(x.count))
-
-    return result
-}
+//public func measq(x: [Double]) -> Double {
+//    var result: Double = 0.0
+//    vDSP_measqvD(x, 1, &result, vDSP_Length(x.count))
+//
+//    return result
+//}
 
 //// MARK: Add
 //
