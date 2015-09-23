@@ -14,6 +14,7 @@ public protocol VectorArithmetic {
     static func add(x: [Self], _ y: [Self]) -> [Self]
     static func multiply(x: [Self], _ y: [Self]) -> [Self]
     // TODO: Perhaps should be optional Overload?
+    static func divide(x: [Self], _ y: [Self]) -> [Self]
     static func mod(x: [Self], _ y: [Self]) -> [Self]
     static func remainder(x: [Self], _ y: [Self]) -> [Self]
     
@@ -27,7 +28,6 @@ public protocol VectorArithmetic {
     static func ones(count: Int) -> [Self]
     static func negativeOnes(count: Int) -> [Self]
     static func subtract(x: [Self], _ y: [Self]) -> [Self]
-    static func divide(x: [Self], _ y: [Self]) -> [Self]
     
 }
 

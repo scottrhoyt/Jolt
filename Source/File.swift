@@ -8,34 +8,64 @@
 
 import Foundation
 
-public typealias VectorAll = protocol<VectorPower>
+public typealias VectorAll = protocol<VectorPower, VectorArithmetic>
 
 public protocol DoubleConvertible : VectorAll {
-    func toDouble() -> Double
-    static func fromDouble(value: Double) -> Self
+    func doubleValue() -> Double
+    init(value: Double)
 }
 
 extension Array where Element : DoubleConvertible {
     
     func toDoubleArray() -> [Double] {
-        return self.map( { return $0.toDouble() } )
+        return self.map( { return $0.doubleValue() } )
     }
     
     static func fromDoubleArray(x: [Double]) -> [Element] {
-        return x.map({ return Element.fromDouble($0) })
+        return x.map({ return Element(value: $0) })
     }
     
 }
 
 extension DoubleConvertible {
-    // MARK: To Overload
+    
+    // MARK: Power
     public static func power(x: [Self], _ y: [Self]) -> [Self] {
         return [Self].fromDoubleArray(Double.power(x.toDoubleArray(), y.toDoubleArray()))
     }
     
-    // MARK: Overload if not FloatLiteralConvertible, Optional Otherwise
     public static func sqrt(x: [Self]) -> [Self] {
         return [Self].fromDoubleArray(Double.sqrt(x.toDoubleArray()))
+    }
+    
+    // MARK: Arithmetic
+    public static func add(x: [Self], _ y: [Self]) -> [Self] {
+        return [Self].fromDoubleArray(Double.add(x.toDoubleArray(), y.toDoubleArray()))
+    }
+    public static func multiply(x: [Self], _ y: [Self]) -> [Self] {
+        return [Self].fromDoubleArray(Double.multiply(x.toDoubleArray(), y.toDoubleArray()))
+    }
+    // TODO: Perhaps should be optional Overload?
+    public static func divide(x: [Self], _ y: [Self]) -> [Self] {
+        return [Self].fromDoubleArray(Double.divide(x.toDoubleArray(), y.toDoubleArray()))
+    }
+    public static func mod(x: [Self], _ y: [Self]) -> [Self] {
+        return [Self].fromDoubleArray(Double.mod(x.toDoubleArray(), y.toDoubleArray()))
+    }
+    public static func remainder(x: [Self], _ y: [Self]) -> [Self] {
+        return [Self].fromDoubleArray(Double.remainder(x.toDoubleArray(), y.toDoubleArray()))
+    }
+    
+    // MARK: Overload if not FloatLiteralConvertible, Optional Otherwise
+    public static func zero() -> Self
+    {
+        return Self(value: 0)
+    }
+    public static func one() -> Self {
+        return Self(value: 1)
+    }
+    public static func negativeOne() -> Self {
+        return Self(value: -1)
     }
     
 }
