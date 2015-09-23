@@ -37,3 +37,18 @@ extension XCTestCase {
         }
     }
 }
+
+extension CollectionType where Generator.Element : protocol<FloatLiteralConvertible, FloatingPointType> {
+    
+    func mavmfwa(member: (Generator.Element) -> (Generator.Element), mapped: (Self) -> ([Generator.Element]), accuracy: Generator.Element) {
+        var expected = self.map(member)
+        var actual: [Generator.Element] = []
+        
+        actual = mapped(self)
+        
+        for (i, _) in self.enumerate() {
+            XCTAssertEqualWithAccuracy(actual[i], expected[i], accuracy: accuracy)
+        }
+    }
+    
+}

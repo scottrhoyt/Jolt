@@ -29,17 +29,20 @@ class TrigonometricTests: XCTestCase {
 
     func test_sin() {
         let values = (0...n).map{_ in drand48() * M_PI}
-        measureAndValidateMappedFunctionWithAccuracy(values, member: sin, mapped: sin, accuracy: 0.0001)
+        //measureAndValidateMappedFunctionWithAccuracy(values, member: sin, mapped: sin, accuracy: 0.0001)
+        values.mavmfwa(Foundation.sin, mapped: Double.sin, accuracy: 0.0001)
     }
 
     func test_cos() {
         let values = (0...n).map{_ in drand48() * M_PI}
-        measureAndValidateMappedFunctionWithAccuracy(values, member: cos, mapped: cos, accuracy: 0.0001)
+        //measureAndValidateMappedFunctionWithAccuracy(values, member: cos, mapped: cos, accuracy: 0.0001)
+        values.mavmfwa(Foundation.cos, mapped: Double.cos, accuracy: 0.0001)
     }
 
     func test_tan() {
         let values = (0...n).map{_ in drand48() * M_PI}
-        measureAndValidateMappedFunctionWithAccuracy(values, member: tan, mapped: tan, accuracy: 0.0001)
+        //measureAndValidateMappedFunctionWithAccuracy(values, member: tan, mapped: tan, accuracy: 0.0001)
+        values.mavmfwa(Foundation.tan, mapped: Double.tan, accuracy: 0.0001)
     }
 
 //    func test_asin() {

@@ -25,7 +25,7 @@ import Surge
 import XCTest
 
 class AuxiliaryTests: XCTestCase {
-    let n = 10000
+    let n = 1000000
 
     func test_copysign() {
         let signs = [Double]((0..<n).map {$0 % 2 == 0 ? 1.0 : -1.0})
@@ -42,7 +42,7 @@ class AuxiliaryTests: XCTestCase {
 
         var actual: [Double] = []
         self.measureBlock {
-            actual = copysign(signs, magnitudes)
+            actual = Double.copysign(signs, magnitudes)
         }
 
         XCTAssertEqual(actual, expected)
