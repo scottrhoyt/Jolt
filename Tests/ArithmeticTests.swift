@@ -25,11 +25,8 @@ import Surge
 import XCTest
 
 class ArithmeticTests: XCTestCase {
-    let n = 100000
-
     func test_sqrt() {
-        let values = (0...n).map{_ in Double(arc4random())}
-        //measureAndValidateMappedFunctionWithAccuracy(values, member: sqrt, mapped: sqrt, accuracy: 0.0001)
-        values.mavmfwa(Foundation.sqrt, mapped: Double.sqrt, accuracy: 0.0001)
+        let values = randDoubles(SurgeTestCountMedium)
+        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.sqrt, mapped: Double.sqrt, accuracy: SurgeTestDoubleAccuracy)
     }
 }

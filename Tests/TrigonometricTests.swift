@@ -25,38 +25,34 @@ import Surge
 import XCTest
 
 class TrigonometricTests: XCTestCase {
-    let n = 10000
-
+    
     func test_sin() {
-        let values = (0...n).map{_ in drand48() * M_PI}
-        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.sin, mapped: Double.sin, accuracy: 0.0001)
-        //values.mavmfwa(Foundation.sin, mapped: Double.sin, accuracy: 0.0001)
+        let values = randDoubles(SurgeTestCountMedium)
+        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.sin, mapped: Double.sin, accuracy: SurgeTestDoubleAccuracy)
     }
 
     func test_cos() {
-        let values = (0...n).map{_ in drand48() * M_PI}
-        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.cos, mapped: Double.cos, accuracy: 0.0001)
-        //values.mavmfwa(Foundation.cos, mapped: Double.cos, accuracy: 0.0001)
+        let values = randDoubles(SurgeTestCountMedium)
+        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.cos, mapped: Double.cos, accuracy: SurgeTestDoubleAccuracy)
     }
 
     func test_tan() {
-        let values = (0...n).map{_ in drand48() * M_PI}
-        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.tan, mapped: Double.tan, accuracy: 0.0001)
-        //values.mavmfwa(Foundation.tan, mapped: Double.tan, accuracy: 0.0001)
+        let values = randDoubles(SurgeTestCountMedium)
+        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.tan, mapped: Double.tan, accuracy: SurgeTestDoubleAccuracy)
     }
 
-//    func test_asin() {
-//        let values = map(0...n){_ in drand48()}
-//        measureAndValidateMappedFunctionWithAccuracy(values, member: asin, mapped: asin, accuracy: 0.0001)
-//    }
-//
-//    func test_acos() {
-//        let values = map(0...n){_ in drand48()}
-//        measureAndValidateMappedFunctionWithAccuracy(values, member: acos, mapped: acos, accuracy: 0.0001)
-//    }
-//
-//    func test_atan() {
-//        let values = map(0...n){_ in drand48()}
-//        measureAndValidateMappedFunctionWithAccuracy(values, member: atan, mapped: atan, accuracy: 0.0001)
-//    }
+    func test_asin() {
+        let values = randDoubles(SurgeTestCountMedium, lowerBound: -1, upperBound: 1)
+        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.asin, mapped: Double.asin, accuracy: SurgeTestDoubleAccuracy)
+    }
+
+    func test_acos() {
+        let values = randDoubles(SurgeTestCountMedium, lowerBound: -1, upperBound: 1)
+        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.acos, mapped: Double.acos, accuracy: SurgeTestDoubleAccuracy)
+    }
+
+    func test_atan() {
+        let values = randDoubles(SurgeTestCountMedium)
+        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.atan, mapped: Double.atan, accuracy: SurgeTestDoubleAccuracy)
+    }
 }

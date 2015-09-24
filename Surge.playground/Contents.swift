@@ -38,22 +38,66 @@ import XCPlayground
 //plot(sin(x), title: "Sine Wave")
 //plot(fft(sin(x)), title: "FFT")
 
-let x = [1.0, 2.0, 3.0]
-let y = [3.0, 4.0, 5.0]
-Double.power(x, y)
-//Double.sqrt(y)
-Double.divide(x, y)
-x.power(y)
-x.add(y)
-Double.negativeOnes(3)
-Double.abs(Double.copysign(Double.negativeOnes(3), x))
-[Double](negativeOnes: 4)
-
-protocol Addative {
-    func add( y: [Double]) -> [Double]
+struct Temp : DoubleConvertible {
+    enum Unit {
+        case Kelvin, Farenheight, Celsius
+    }
+    
+    static var defaultUnit = Unit.Kelvin
+    
+    var kelvin: Double
+    var celsius: Double {
+        get {
+            return kelvin - 273.15
+        }
+        set {
+            kelvin = newValue + 273.15
+        }
+    }
+    var farenheight: Double {
+        get {
+            return celsius * 9 / 5 + 32
+        }
+        set {
+            celsius = (newValue - 32) * 5 / 9
+        }
+    }
+    
+    func defaultValue() -> Double {
+        switch Temp.defaultUnit {
+        case .Kelvin:
+            return kelvin
+        case .Celsius:
+            return celsius
+        case .Farenheight:
+            return farenheight
+        }
+    }
+    
+    // MARK: DoubleConvertible Stuff
+    func doubleValue() -> Double {
+        return kelvin
+    }
+    init(value: Double) {
+        kelvin = value
+    }
 }
 
-Double.magnitude(x)
-meamg(x)
-measq(x)
-x.unit()
+var a = Temp(value: 3)
+var b = Temp(value: 2)
+let c = [a,b]
+Temp.sqrt(c)
+c / c
+
+b.farenheight = 32
+a.celsius = 100
+a.defaultValue()
+b.defaultValue()
+Temp.defaultUnit = .Celsius
+a.defaultValue()
+b.defaultValue()
+Temp.defaultUnit = .Farenheight
+a.defaultValue()
+
+let aa: [Double] = [1, 2, 3, 4]
+aa + aa

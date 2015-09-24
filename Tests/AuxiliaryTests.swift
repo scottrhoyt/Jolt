@@ -25,13 +25,11 @@ import Surge
 import XCTest
 
 class AuxiliaryTests: XCTestCase {
-    let n = 1000000
-
     func test_copysign() {
-        let signs = [Double]((0..<n).map {$0 % 2 == 0 ? 1.0 : -1.0})
+        let signs = [Double]((0..<SurgeTestCountMedium).map {$0 % 2 == 0 ? 1.0 : -1.0})
 
         var magnitudes = [Double]()
-        for _ in (0..<n).enumerate() {
+        for _ in (0..<SurgeTestCountMedium).enumerate() {
             magnitudes.append(Double(arc4random_uniform(10)))
         }
 

@@ -25,17 +25,14 @@ import Surge
 import XCTest
 
 class ExponentialTests: XCTestCase {
-    let n = 10000
-
+    
     func test_exp() {
-        let values = (0...n).map{_ in Double(arc4random_uniform(10))}
-        //measureAndValidateMappedFunctionWithAccuracy(values, member: exp, mapped: exp, accuracy: 0.0001)
-        values.mavmfwa(Foundation.exp, mapped: Double.exp, accuracy: 0.0001)
+        let values = randDoubles(SurgeTestCountMedium, lowerBound: -10, upperBound: 10)
+        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.exp, mapped: Double.exp, accuracy: SurgeTestDoubleAccuracy)
     }
 
     func test_exp2() {
-        let values = (0...n).map{_ in Double(arc4random_uniform(10))}
-        //measureAndValidateMappedFunctionWithAccuracy(values, member: exp2, mapped: exp2, accuracy: 0.0001)
-        values.mavmfwa(Foundation.exp2, mapped: Double.exp2, accuracy: 0.0001)
+        let values = randDoubles(SurgeTestCountMedium, lowerBound: -10, upperBound: 10)
+        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.exp2, mapped: Double.exp2, accuracy: SurgeTestDoubleAccuracy)
     }
 }

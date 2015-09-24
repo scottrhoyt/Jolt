@@ -23,7 +23,30 @@
 import Foundation
 import XCTest
 
+let SurgeTestCountLow = 1000
+let SurgeTestCountMedium = 100000
+let SurgeTestCountHigh = 10000000
+let SurgeTestDoubleAccuracy = 0.000001
+
 extension XCTestCase {
+    
+    func randDouble() -> Double {
+        return Double(arc4random())
+    }
+    
+    func randDoubles(count: Int) -> [Double] {
+        return (1...count).map {_ in randDouble() }
+    }
+    
+    func randDouble(lowerBound: Double, upperBound: Double) -> Double {
+        let r = Double(arc4random()) / Double(UInt64.max)
+        return (r * (upperBound - lowerBound)) + lowerBound
+    }
+    
+    func randDoubles(count: Int, lowerBound: Double, upperBound: Double) -> [Double] {
+        return (1...count).map {_ in randDouble(lowerBound, upperBound: upperBound) }
+    }
+    
     func measureAndValidateMappedFunctionWithAccuracy<C : CollectionType where C.Generator.Element: protocol<FloatLiteralConvertible, FloatingPointType>>(source: C, member: (C.Generator.Element) -> (C.Generator.Element), mapped: (C) -> ([C.Generator.Element]), accuracy: C.Generator.Element) {
         var expected = source.map(member)
 
@@ -33,20 +56,6 @@ extension XCTestCase {
         }
 
         for (i, _) in source.enumerate() {
-            XCTAssertEqualWithAccuracy(actual[i], expected[i], accuracy: accuracy)
-        }
-    }
-}
-
-extension CollectionType where Generator.Element : protocol<FloatLiteralConvertible, FloatingPointType> {
-    
-    func mavmfwa(member: (Generator.Element) -> (Generator.Element), mapped: (Self) -> ([Generator.Element]), accuracy: Generator.Element) {
-        var expected = self.map(member)
-        var actual: [Generator.Element] = []
-        
-        actual = mapped(self)
-        
-        for (i, _) in self.enumerate() {
             XCTAssertEqualWithAccuracy(actual[i], expected[i], accuracy: accuracy)
         }
     }

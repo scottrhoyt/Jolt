@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>classNames</key>
+	<dict>
+		<key>ArithmeticTests</key>
+		<dict>
+			<key>test_sqrt()</key>
+			<dict>
+				<key>com.apple.XCTPerformanceMetric_WallClockTime</key>
+				<dict>
+					<key>baselineAverage</key>
+					<real>0.00032712</real>
+					<key>baselineIntegrationDisplayName</key>
+					<string>Sep 24, 2015, 11:15:17 AM</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>AuxiliaryTests</key>
+		<dict>
+			<key>test_copysign()</key>
+			<dict>
+				<key>com.apple.XCTPerformanceMetric_WallClockTime</key>
+				<dict>
+					<key>baselineAverage</key>
+					<real>0.00019305</real>
+					<key>baselineIntegrationDisplayName</key>
+					<string>Sep 24, 2015, 11:15:17 AM</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>ExponentialTests</key>
+		<dict>
+			<key>test_exp()</key>
+			<dict>
+				<key>com.apple.XCTPerformanceMetric_WallClockTime</key>
+				<dict>
+					<key>baselineAverage</key>
+					<real>0.00014831</real>
+					<key>baselineIntegrationDisplayName</key>
+					<string>Sep 24, 2015, 11:15:17 AM</string>
+				</dict>
+			</dict>
+			<key>test_exp2()</key>
+			<dict>
+				<key>com.apple.XCTPerformanceMetric_WallClockTime</key>
+				<dict>
+					<key>baselineAverage</key>
+					<real>0.00039244</real>
+					<key>baselineIntegrationDisplayName</key>
+					<string>Sep 24, 2015, 11:15:17 AM</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>HyperbolicTests</key>
+		<dict>
+			<key>test_cosh()</key>
+			<dict>
+				<key>com.apple.XCTPerformanceMetric_WallClockTime</key>
+				<dict>
+					<key>baselineAverage</key>
+					<real>6.0868e-05</real>
+					<key>baselineIntegrationDisplayName</key>
+					<string>Sep 24, 2015, 11:15:17 AM</string>
+				</dict>
+			</dict>
+			<key>test_sinh()</key>
+			<dict>
+				<key>com.apple.XCTPerformanceMetric_WallClockTime</key>
+				<dict>
+					<key>baselineAverage</key>
+					<real>6.1083e-05</real>
+					<key>baselineIntegrationDisplayName</key>
+					<string>Sep 24, 2015, 11:15:17 AM</string>
+				</dict>
+			</dict>
+			<key>test_tanh()</key>
+			<dict>
+				<key>com.apple.XCTPerformanceMetric_WallClockTime</key>
+				<dict>
+					<key>baselineAverage</key>
+					<real>5.4321e-05</real>
+					<key>baselineIntegrationDisplayName</key>
+					<string>Sep 24, 2015, 11:15:17 AM</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>TrigonometricTests</key>
+		<dict>
+			<key>test_acos()</key>
+			<dict>
+				<key>com.apple.XCTPerformanceMetric_WallClockTime</key>
+				<dict>
+					<key>baselineAverage</key>
+					<real>0.00026554</real>
+					<key>baselineIntegrationDisplayName</key>
+					<string>Sep 24, 2015, 11:15:17 AM</string>
+				</dict>
+			</dict>
+			<key>test_asin()</key>
+			<dict>
+				<key>com.apple.XCTPerformanceMetric_WallClockTime</key>
+				<dict>
+					<key>baselineAverage</key>
+					<real>0.0002258</real>
+					<key>baselineIntegrationDisplayName</key>
+					<string>Sep 24, 2015, 11:15:17 AM</string>
+				</dict>
+			</dict>
+			<key>test_atan()</key>
+			<dict>
+				<key>com.apple.XCTPerformanceMetric_WallClockTime</key>
+				<dict>
+					<key>baselineAverage</key>
+					<real>0.00073929</real>
+					<key>baselineIntegrationDisplayName</key>
+					<string>Sep 24, 2015, 11:15:17 AM</string>
+				</dict>
+			</dict>
+			<key>test_cos()</key>
+			<dict>
+				<key>com.apple.XCTPerformanceMetric_WallClockTime</key>
+				<dict>
+					<key>baselineAverage</key>
+					<real>0.00030843</real>
+					<key>baselineIntegrationDisplayName</key>
+					<string>Sep 24, 2015, 11:15:17 AM</string>
+				</dict>
+			</dict>
+			<key>test_sin()</key>
+			<dict>
+				<key>com.apple.XCTPerformanceMetric_WallClockTime</key>
+				<dict>
+					<key>baselineAverage</key>
+					<real>0.00027471</real>
+					<key>baselineIntegrationDisplayName</key>
+					<string>Sep 24, 2015, 11:15:17 AM</string>
+				</dict>
+			</dict>
+			<key>test_tan()</key>
+			<dict>
+				<key>com.apple.XCTPerformanceMetric_WallClockTime</key>
+				<dict>
+					<key>baselineAverage</key>
+					<real>0.00031471</real>
+					<key>baselineIntegrationDisplayName</key>
+					<string>Sep 24, 2015, 11:15:17 AM</string>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>
