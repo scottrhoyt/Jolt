@@ -24,15 +24,15 @@ import Foundation
 import Surge
 import XCTest
 
-class ExponentialTests: XCTestCase {
+class ExponentialTests: SingleOperandTestCase<Double> {
     
     func test_exp() {
-        let values = randDoubles(SurgeTestCountMedium, lowerBound: -10, upperBound: 10)
-        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.exp, mapped: Double.exp, accuracy: SurgeTestDoubleAccuracy)
+        values = rands(SurgeTestCountMedium, lowerBound: -10, upperBound: 10)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.exp, mapped: Double.exp)
     }
 
     func test_exp2() {
-        let values = randDoubles(SurgeTestCountMedium, lowerBound: -10, upperBound: 10)
-        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.exp2, mapped: Double.exp2, accuracy: SurgeTestDoubleAccuracy)
+        values = rands(SurgeTestCountMedium, lowerBound: -10, upperBound: 10)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.exp2, mapped: Double.exp2)
     }
 }

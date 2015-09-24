@@ -24,9 +24,12 @@ import Foundation
 import Surge
 import XCTest
 
-class ArithmeticTests: XCTestCase {
+class ArithmeticTests: DoubleOperatorTestCase<Double> {
+    
     func test_sqrt() {
-        let values = randDoubles(SurgeTestCountMedium)
-        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.sqrt, mapped: Double.sqrt, accuracy: SurgeTestDoubleAccuracy)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.sqrt, mapped: Double.sqrt)
+    }
+    func test_add() {
+        measureAndValidateMappedFunctionWithAccuracy({(x: Double, y: Double) -> Double in return x + y }, mapped: Double.add)
     }
 }

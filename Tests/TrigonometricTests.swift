@@ -24,35 +24,31 @@ import Darwin
 import Surge
 import XCTest
 
-class TrigonometricTests: XCTestCase {
+class TrigonometricTests: SingleOperandTestCase<Double> {
     
     func test_sin() {
-        let values = randDoubles(SurgeTestCountMedium)
-        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.sin, mapped: Double.sin, accuracy: SurgeTestDoubleAccuracy)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.sin, mapped: Double.sin)
     }
 
     func test_cos() {
-        let values = randDoubles(SurgeTestCountMedium)
-        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.cos, mapped: Double.cos, accuracy: SurgeTestDoubleAccuracy)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.cos, mapped: Double.cos)
     }
 
     func test_tan() {
-        let values = randDoubles(SurgeTestCountMedium)
-        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.tan, mapped: Double.tan, accuracy: SurgeTestDoubleAccuracy)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.tan, mapped: Double.tan)
     }
 
     func test_asin() {
-        let values = randDoubles(SurgeTestCountMedium, lowerBound: -1, upperBound: 1)
-        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.asin, mapped: Double.asin, accuracy: SurgeTestDoubleAccuracy)
+        values = rands(SurgeTestCountMedium, lowerBound: -1, upperBound: 1)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.asin, mapped: Double.asin)
     }
 
     func test_acos() {
-        let values = randDoubles(SurgeTestCountMedium, lowerBound: -1, upperBound: 1)
-        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.acos, mapped: Double.acos, accuracy: SurgeTestDoubleAccuracy)
+        values = rands(SurgeTestCountMedium, lowerBound: -1, upperBound: 1)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.acos, mapped: Double.acos)
     }
 
     func test_atan() {
-        let values = randDoubles(SurgeTestCountMedium)
-        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.atan, mapped: Double.atan, accuracy: SurgeTestDoubleAccuracy)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.atan, mapped: Double.atan)
     }
 }

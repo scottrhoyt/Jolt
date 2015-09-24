@@ -24,35 +24,33 @@ import Darwin
 import Surge
 import XCTest
 
-class HyperbolicTests: XCTestCase {
+class HyperbolicTests: SingleOperandTestCase<Double> {
 
     func test_sinh() {
-        let values = randDoubles(SurgeTestCountMedium, lowerBound: -10, upperBound: 10)
-        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.sinh, mapped: Double.sinh, accuracy: SurgeTestDoubleAccuracy)
+        values = rands(SurgeTestCountMedium, lowerBound: -10, upperBound: 10)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.sinh, mapped: Double.sinh)
     }
 
     func test_cosh() {
-        let values = randDoubles(SurgeTestCountMedium, lowerBound: -10, upperBound: 10)
-        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.cosh, mapped: Double.cosh, accuracy: SurgeTestDoubleAccuracy)
+        values = rands(SurgeTestCountMedium, lowerBound: -10, upperBound: 10)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.cosh, mapped: Double.cosh)
     }
 
     func test_tanh() {
-        let values = randDoubles(SurgeTestCountMedium, lowerBound: -10, upperBound: 10)
-        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.tanh, mapped: Double.tanh, accuracy: SurgeTestDoubleAccuracy)
+        values = rands(SurgeTestCountMedium, lowerBound: -10, upperBound: 10)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.tanh, mapped: Double.tanh)
     }
 
     func test_asinh() {
-        let values = randDoubles(SurgeTestCountMedium)
-        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.asinh, mapped: Double.asinh, accuracy: SurgeTestDoubleAccuracy)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.asinh, mapped: Double.asinh)
     }
 
     func test_acosh() {
-        let values = randDoubles(SurgeTestCountMedium)
-        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.acosh, mapped: Double.acosh, accuracy: SurgeTestDoubleAccuracy)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.acosh, mapped: Double.acosh)
     }
 
     func test_atanh() {
-        let values = randDoubles(SurgeTestCountMedium, lowerBound: -1, upperBound: 1)
-        measureAndValidateMappedFunctionWithAccuracy(values, member: Darwin.atanh, mapped: Double.atanh, accuracy: SurgeTestDoubleAccuracy)
+        values = rands(SurgeTestCountMedium, lowerBound: -1, upperBound: 1)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.atanh, mapped: Double.atanh)
     }
 }
