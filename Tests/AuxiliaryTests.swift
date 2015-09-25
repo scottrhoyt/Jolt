@@ -28,6 +28,9 @@ class DoubleAuxiliaryTests: XCTestCase , SingleOperandTest {
     
     typealias OperandType = Double
     
+    let lowerBound: OperandType = -1e6
+    let upperBound: OperandType = 1e6
+    
     func test_copysign() {
         let signs = [OperandType]((0..<SurgeTestCountMedium).map {$0 % 2 == 0 ? 1.0 : -1.0})
 
@@ -50,42 +53,42 @@ class DoubleAuxiliaryTests: XCTestCase , SingleOperandTest {
     }
     
     func test_abs() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.fabs, mapped: OperandType.abs, lowerBound: -1e6, upperBound: 1e6)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.fabs, mapped: OperandType.abs, lowerBound: lowerBound, upperBound: upperBound)
     }
     
     func test_ceil() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.ceil, mapped: OperandType.ceil, lowerBound: -1e6, upperBound: 1e6)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.ceil, mapped: OperandType.ceil, lowerBound: lowerBound, upperBound: upperBound)
     }
     
     func test_floor() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.floor, mapped: OperandType.floor, lowerBound: -1e6, upperBound: 1e6)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.floor, mapped: OperandType.floor, lowerBound: lowerBound, upperBound: upperBound)
     }
     
     func test_round() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.round, mapped: OperandType.round, lowerBound: -1e6, upperBound: 1e6)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.round, mapped: OperandType.round, lowerBound: lowerBound, upperBound: upperBound)
     }
     
     func test_neg() {
-        measureAndValidateMappedFunctionWithAccuracy({ -1 * $0 }, mapped: OperandType.neg, lowerBound: -1e6, upperBound: 1e6)
+        measureAndValidateMappedFunctionWithAccuracy({ -1 * $0 }, mapped: OperandType.neg, lowerBound: lowerBound, upperBound: upperBound)
     }
     
     func test_rec() {
-        measureAndValidateMappedFunctionWithAccuracy({ 1 / $0 }, mapped: OperandType.rec, lowerBound: -1e6, upperBound: 1e6)
+        measureAndValidateMappedFunctionWithAccuracy({ 1 / $0 }, mapped: OperandType.rec, lowerBound: lowerBound, upperBound: upperBound)
     }
     
     func test_trunc() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.trunc, mapped: OperandType.trunc, lowerBound: -1e6, upperBound: 1e6)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.trunc, mapped: OperandType.trunc, lowerBound: lowerBound, upperBound: upperBound)
     }
     
     func test_clip() {
-        let low = OperandType.rand(-1e-6, upperBound: -1)
-        let high = OperandType.rand(1, upperBound: 1e6)
-        measureAndValidateMappedFunctionWithAccuracy( { $0 < low ? low : ($0 > high ? high : $0) } , mapped: { OperandType.clip($0, low, high) }, lowerBound: -1e6, upperBound: 1e6)
+        let low = OperandType.rand(lowerBound, upperBound: -1)
+        let high = OperandType.rand(1, upperBound: upperBound)
+        measureAndValidateMappedFunctionWithAccuracy( { $0 < low ? low : ($0 > high ? high : $0) } , mapped: { OperandType.clip($0, low, high) }, lowerBound: lowerBound, upperBound: upperBound)
     }
     
     func test_threshold() {
-        let low = OperandType.rand(-1e-6, upperBound: -1)
-        measureAndValidateMappedFunctionWithAccuracy( { $0 < low ? low : $0 } , mapped: { OperandType.threshold($0, low) }, lowerBound: -1e6, upperBound: 1e6)
+        let low = OperandType.rand(lowerBound, upperBound: -1)
+        measureAndValidateMappedFunctionWithAccuracy( { $0 < low ? low : $0 } , mapped: { OperandType.threshold($0, low) }, lowerBound: lowerBound, upperBound: upperBound)
     }
     
 }
@@ -94,6 +97,9 @@ class FloatAuxiliaryTests: XCTestCase , SingleOperandTest {
     
     typealias OperandType = Float
     
+    let lowerBound: OperandType = -1e3
+    let upperBound: OperandType = 1e3
+    
     func test_copysign() {
         let signs = [OperandType]((0..<SurgeTestCountMedium).map {$0 % 2 == 0 ? 1.0 : -1.0})
         
@@ -116,15 +122,15 @@ class FloatAuxiliaryTests: XCTestCase , SingleOperandTest {
     }
     
     func test_abs() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.fabs, mapped: OperandType.abs, lowerBound: -1e3, upperBound: 1e3)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.fabs, mapped: OperandType.abs, lowerBound: lowerBound, upperBound: upperBound)
     }
     
     func test_ceil() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.ceil, mapped: OperandType.ceil, lowerBound: -1e3, upperBound: 1e3)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.ceil, mapped: OperandType.ceil, lowerBound: lowerBound, upperBound: upperBound)
     }
     
     func test_floor() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.floor, mapped: OperandType.floor, lowerBound: -1e3, upperBound: 1e3)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.floor, mapped: OperandType.floor, lowerBound: lowerBound, upperBound: upperBound)
     }
     
     func test_round() {
@@ -132,25 +138,25 @@ class FloatAuxiliaryTests: XCTestCase , SingleOperandTest {
     }
     
     func test_neg() {
-        measureAndValidateMappedFunctionWithAccuracy({ -1 * $0 }, mapped: OperandType.neg, lowerBound: -1e3, upperBound: 1e3)
+        measureAndValidateMappedFunctionWithAccuracy({ -1 * $0 }, mapped: OperandType.neg, lowerBound: lowerBound, upperBound: upperBound)
     }
     
     func test_rec() {
-        measureAndValidateMappedFunctionWithAccuracy({ 1 / $0 }, mapped: OperandType.rec, lowerBound: -1e3, upperBound: 1e3)
+        measureAndValidateMappedFunctionWithAccuracy({ 1 / $0 }, mapped: OperandType.rec, lowerBound: lowerBound, upperBound: upperBound)
     }
     
     func test_trunc() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.trunc, mapped: OperandType.trunc, lowerBound: -1e3, upperBound: 1e3)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.trunc, mapped: OperandType.trunc, lowerBound: lowerBound, upperBound: upperBound)
     }
     
     func test_clip() {
-        let low = OperandType.rand(-1e-3, upperBound: -1)
-        let high = OperandType.rand(1, upperBound: 1e3)
-        measureAndValidateMappedFunctionWithAccuracy( { $0 < low ? low : ($0 > high ? high : $0) } , mapped: { OperandType.clip($0, low, high) }, lowerBound: -1e3, upperBound: 1e3)
+        let low = OperandType.rand(lowerBound, upperBound: -1)
+        let high = OperandType.rand(1, upperBound: upperBound)
+        measureAndValidateMappedFunctionWithAccuracy( { $0 < low ? low : ($0 > high ? high : $0) } , mapped: { OperandType.clip($0, low, high) }, lowerBound: lowerBound, upperBound: upperBound)
     }
     
     func test_threshold() {
-        let low = OperandType.rand(-1e-3, upperBound: -1)
-        measureAndValidateMappedFunctionWithAccuracy( { $0 < low ? low : $0 } , mapped: { OperandType.threshold($0, low) }, lowerBound: -1e3, upperBound: 1e3)
+        let low = OperandType.rand(lowerBound, upperBound: -1)
+        measureAndValidateMappedFunctionWithAccuracy( { $0 < low ? low : $0 } , mapped: { OperandType.threshold($0, low) }, lowerBound: lowerBound, upperBound: upperBound)
     }
 }

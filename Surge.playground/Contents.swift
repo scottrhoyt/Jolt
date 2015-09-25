@@ -100,4 +100,5 @@ Temp.defaultUnit = .Farenheight
 a.defaultValue()
 
 let aa: [Double] = [1, 2, 3, 4]
-aa + aa
+Double.clip(aa, 2.1, 2.9)
+Double.threshold(aa, 2.5)
