@@ -44,7 +44,7 @@ extension Float : FloatingPointAccuracy, GenRandom {
     }
     
     static func rand(lowerBound: Float, upperBound: Float) -> Float {
-        let r = Float(arc4random()) / Float(UInt64.max)
+        let r = Float(arc4random()) / Float(UInt32.max)
         return (r * (upperBound - lowerBound)) + lowerBound
     }
 }
@@ -82,39 +82,23 @@ extension SOTC where Self : XCTestCase {
     
 }
 
-class SingleOperandTestCase<T: protocol<FloatingPointAccuracy, GenRandom>>: XCTestCase {
+protocol DOTC : SOTC {
     
-    var values: [T]?
+    func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType, OperandType) -> (OperandType), mapped: ([OperandType], [OperandType]) -> ([OperandType]))
+    func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType, OperandType) -> (OperandType), mapped: ([OperandType], [OperandType]) -> ([OperandType]), lowerBound: OperandType, upperBound: OperandType)
     
-    override func setUp() {
-        super.setUp()
-        values = rands(SurgeTestCountMedium)
-    }
-    
-    func rands(count: Int) -> [T] {
-        return (0..<count).map {_ in T.rand() }
-    }
-    
-    func rands(count: Int, lowerBound: T, upperBound: T) -> [T] {
-        return (0..<count).map {_ in T.rand(lowerBound, upperBound: upperBound) }
-    }
-    
-    func measureAndValidateMappedFunctionWithAccuracy(member: (T) -> (T), mapped: ([T]) -> ([T])) {
-        measureAndValidateMappedFunctionWithAccuracy(values!, member: member, mapped: mapped, accuracy: T.accuracy)
-    }
-
 }
 
-class DoubleOperatorTestCase<T: protocol<FloatingPointAccuracy, GenRandom>> : SingleOperandTestCase<T> {
-    
-    var values2: [T]?
-    
-    override func setUp() {
-        super.setUp()
-        values2 = rands(SurgeTestCountMedium)
+extension DOTC where Self : XCTestCase {
+    func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType, OperandType) -> (OperandType), mapped: ([OperandType], [OperandType]) -> ([OperandType])) {
+        let values1 = rands(SurgeTestCountMedium)
+        let values2 = rands(SurgeTestCountMedium)
+        measureAndValidateMappedFunctionWithAccuracy(values1, source2: values2, member: member, mapped: mapped, accuracy: OperandType.accuracy)
     }
     
-    func measureAndValidateMappedFunctionWithAccuracy(member: (T, T) -> (T), mapped: ([T], [T]) -> ([T])) {
-        measureAndValidateMappedFunctionWithAccuracy(values!, source2: values2!, member: member, mapped: mapped, accuracy: T.accuracy)
+    func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType, OperandType) -> (OperandType), mapped: ([OperandType], [OperandType]) -> ([OperandType]), lowerBound: OperandType, upperBound: OperandType) {
+        let values1 = rands(SurgeTestCountMedium, lowerBound: lowerBound, upperBound: upperBound)
+        let values2 = rands(SurgeTestCountMedium, lowerBound: lowerBound, upperBound: upperBound)
+        measureAndValidateMappedFunctionWithAccuracy(values1, source2: values2, member: member, mapped: mapped, accuracy: OperandType.accuracy)
     }
 }

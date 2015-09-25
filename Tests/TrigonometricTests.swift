@@ -24,31 +24,77 @@ import Darwin
 import Surge
 import XCTest
 
-class TrigonometricTests: SingleOperandTestCase<Double> {
+class DoubleTrigonometricTests: XCTestCase, SOTC {
+    
+    typealias OperandType = Double
     
     func test_sin() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.sin, mapped: Double.sin)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.sin, mapped: OperandType.sin)
     }
 
     func test_cos() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.cos, mapped: Double.cos)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.cos, mapped: OperandType.cos)
     }
 
     func test_tan() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.tan, mapped: Double.tan)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.tan, mapped: OperandType.tan)
     }
 
     func test_asin() {
-        values = rands(SurgeTestCountMedium, lowerBound: -1, upperBound: 1)
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.asin, mapped: Double.asin)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.asin, mapped: OperandType.asin, lowerBound: -1, upperBound: 1)
     }
 
     func test_acos() {
-        values = rands(SurgeTestCountMedium, lowerBound: -1, upperBound: 1)
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.acos, mapped: Double.acos)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.acos, mapped: OperandType.acos, lowerBound: -1, upperBound: 1)
     }
 
     func test_atan() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.atan, mapped: Double.atan)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.atan, mapped: OperandType.atan)
+    }
+    
+    func test_rad2deg() {
+        measureAndValidateMappedFunctionWithAccuracy({$0 / OperandType(M_PI) * 180}, mapped: OperandType.rad2deg, lowerBound: OperandType(-2 * M_PI), upperBound: OperandType(2 * M_PI))
+    }
+    
+    func test_deg2rad() {
+        measureAndValidateMappedFunctionWithAccuracy( {$0 * OperandType(M_PI) / 180}, mapped: OperandType.deg2rad, lowerBound: OperandType(-2 * M_PI), upperBound: OperandType(2 * M_PI))
+    }
+    
+}
+
+class FloatTrigonometricTests: XCTestCase, SOTC {
+    
+    typealias OperandType = Float
+    
+    func test_sin() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.sin, mapped: OperandType.sin)
+    }
+    
+    func test_cos() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.cos, mapped: OperandType.cos)
+    }
+    
+    func test_tan() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.tan, mapped: OperandType.tan)
+    }
+    
+    func test_asin() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.asin, mapped: OperandType.asin, lowerBound: -1, upperBound: 1)
+    }
+    
+    func test_acos() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.acos, mapped: OperandType.acos, lowerBound: -1, upperBound: 1)
+    }
+    
+    func test_atan() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.atan, mapped: OperandType.atan)
+    }
+    
+    func test_rad2deg() {
+        measureAndValidateMappedFunctionWithAccuracy({$0 / OperandType(M_PI) * 180}, mapped: OperandType.rad2deg, lowerBound: OperandType(-2 * M_PI), upperBound: OperandType(2 * M_PI))
+    }
+    
+    func test_deg2rad() {
+        measureAndValidateMappedFunctionWithAccuracy( {$0 * OperandType(M_PI) / 180}, mapped: OperandType.deg2rad, lowerBound: OperandType(-2 * M_PI), upperBound: OperandType(2 * M_PI))
     }
 }

@@ -24,12 +24,26 @@ import Foundation
 import Surge
 import XCTest
 
-class ArithmeticTests: DoubleOperatorTestCase<Double> {
+class DoubleArithmeticTests: XCTestCase, DOTC {
+    
+    typealias OperandType = Double
     
     func test_sqrt() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.sqrt, mapped: Double.sqrt)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.sqrt, mapped: OperandType.sqrt)
     }
     func test_add() {
-        measureAndValidateMappedFunctionWithAccuracy({(x: Double, y: Double) -> Double in return x + y }, mapped: Double.add)
+        measureAndValidateMappedFunctionWithAccuracy({(x: OperandType, y: OperandType) -> OperandType in return x + y }, mapped: OperandType.add)
+    }
+}
+
+class FloatArithmeticTests: XCTestCase, DOTC {
+    
+    typealias OperandType = Float
+    
+    func test_sqrt() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.sqrt, mapped: OperandType.sqrt)
+    }
+    func test_add() {
+        measureAndValidateMappedFunctionWithAccuracy({(x: OperandType, y: OperandType) -> OperandType in return x + y }, mapped: OperandType.add)
     }
 }

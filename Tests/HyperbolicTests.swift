@@ -24,33 +24,60 @@ import Darwin
 import Surge
 import XCTest
 
-class HyperbolicTests: SingleOperandTestCase<Double> {
+class DoubleHyperbolicTests: XCTestCase, SOTC {
 
+    typealias OperandType = Double
+    
     func test_sinh() {
-        values = rands(SurgeTestCountMedium, lowerBound: -10, upperBound: 10)
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.sinh, mapped: Double.sinh)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.sinh, mapped: OperandType.sinh, lowerBound: -10, upperBound: 10)
     }
 
     func test_cosh() {
-        values = rands(SurgeTestCountMedium, lowerBound: -10, upperBound: 10)
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.cosh, mapped: Double.cosh)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.cosh, mapped: OperandType.cosh, lowerBound: -10, upperBound: 10)
     }
 
     func test_tanh() {
-        values = rands(SurgeTestCountMedium, lowerBound: -10, upperBound: 10)
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.tanh, mapped: Double.tanh)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.tanh, mapped: OperandType.tanh, lowerBound: -10, upperBound: 10)
     }
 
     func test_asinh() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.asinh, mapped: Double.asinh)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.asinh, mapped: OperandType.asinh)
     }
 
     func test_acosh() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.acosh, mapped: Double.acosh)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.acosh, mapped: OperandType.acosh)
     }
 
     func test_atanh() {
-        values = rands(SurgeTestCountMedium, lowerBound: -1, upperBound: 1)
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.atanh, mapped: Double.atanh)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.atanh, mapped: OperandType.atanh, lowerBound: -1, upperBound: 1)
+    }
+}
+
+class FloatHyperbolicTests: XCTestCase, SOTC {
+    
+    typealias OperandType = Float
+    
+    func test_sinh() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.sinh, mapped: OperandType.sinh, lowerBound: -5, upperBound: 5)
+    }
+    
+    func test_cosh() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.cosh, mapped: OperandType.cosh, lowerBound: -5, upperBound: 5)
+    }
+    
+    func test_tanh() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.tanh, mapped: OperandType.tanh, lowerBound: -5, upperBound: 5)
+    }
+    
+    func test_asinh() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.asinh, mapped: OperandType.asinh)
+    }
+    
+    func test_acosh() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.acosh, mapped: OperandType.acosh)
+    }
+    
+    func test_atanh() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.atanh, mapped: OperandType.atanh, lowerBound: -1, upperBound: 1)
     }
 }

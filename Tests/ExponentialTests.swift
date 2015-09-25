@@ -24,7 +24,7 @@ import Foundation
 import Surge
 import XCTest
 
-class ExponentialTests: XCTestCase, SOTC {
+class DoubleExponentialTests: XCTestCase, SOTC {
     
     typealias OperandType = Double
     
@@ -54,12 +54,12 @@ class ExponentialTests: XCTestCase, SOTC {
     
 }
 
-class ExponentialTests2: XCTestCase, SOTC {
+class FloatExponentialTests: XCTestCase, SOTC {
     
     typealias OperandType = Float
     
     func test_exp() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.exp, mapped: OperandType.exp, lowerBound: -10, upperBound: 10)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.exp, mapped: OperandType.exp, lowerBound: -5, upperBound: 5)
     }
     
     func test_exp2() {
