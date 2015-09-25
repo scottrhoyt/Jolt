@@ -32,16 +32,28 @@ class DoubleArithmeticTests: XCTestCase, DoubleOperandTest {
         measureAndValidateMappedFunctionWithAccuracy(Darwin.sqrt, mapped: OperandType.sqrt)
     }
     func test_add() {
-        measureAndValidateMappedFunctionWithAccuracy({(x: OperandType, y: OperandType) -> OperandType in return x + y }, mapped: OperandType.add)
+        measureAndValidateMappedFunctionWithAccuracy({$0 + $1 }, mapped: OperandType.add)
     }
     func test_subtract() {
-        measureAndValidateMappedFunctionWithAccuracy({(x: OperandType, y: OperandType) -> OperandType in return x - y }, mapped: OperandType.sub)
+        measureAndValidateMappedFunctionWithAccuracy({$0 - $1 }, mapped: OperandType.sub)
     }
     func test_multiply() {
-        measureAndValidateMappedFunctionWithAccuracy({(x: OperandType, y: OperandType) -> OperandType in return x * y }, mapped: OperandType.mul)
+        measureAndValidateMappedFunctionWithAccuracy({$0 * $1 }, mapped: OperandType.mul)
     }
     func test_divide() {
-        measureAndValidateMappedFunctionWithAccuracy({(x: OperandType, y: OperandType) -> OperandType in return x / y }, mapped: OperandType.div)
+        measureAndValidateMappedFunctionWithAccuracy({$0 / $1}, mapped: OperandType.div)
+    }
+    func test_mod() {
+        measureAndValidateMappedFunctionWithAccuracy({$0 % $1 }, mapped: OperandType.mod)
+    }
+    func test_remainder() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.remainder, mapped: OperandType.remainder)
+    }
+    func test_1() {
+        XCTAssertEqual(1, OperandType.one())
+    }
+    func test_0() {
+        XCTAssertEqual(0, OperandType.zero())
     }
 }
 
@@ -53,15 +65,27 @@ class FloatArithmeticTests: XCTestCase, DoubleOperandTest {
         measureAndValidateMappedFunctionWithAccuracy(Darwin.sqrt, mapped: OperandType.sqrt)
     }
     func test_add() {
-        measureAndValidateMappedFunctionWithAccuracy({(x: OperandType, y: OperandType) -> OperandType in return x + y }, mapped: OperandType.add)
+        measureAndValidateMappedFunctionWithAccuracy({$0 + $1 }, mapped: OperandType.add)
     }
     func test_subtract() {
-        measureAndValidateMappedFunctionWithAccuracy({(x: OperandType, y: OperandType) -> OperandType in return x - y }, mapped: OperandType.sub)
+        measureAndValidateMappedFunctionWithAccuracy({$0 - $1 }, mapped: OperandType.sub)
     }
     func test_multiply() {
-        measureAndValidateMappedFunctionWithAccuracy({(x: OperandType, y: OperandType) -> OperandType in return x * y }, mapped: OperandType.mul)
+        measureAndValidateMappedFunctionWithAccuracy({$0 * $1 }, mapped: OperandType.mul)
     }
     func test_divide() {
-        measureAndValidateMappedFunctionWithAccuracy({(x: OperandType, y: OperandType) -> OperandType in return x / y }, mapped: OperandType.div)
+        measureAndValidateMappedFunctionWithAccuracy({$0 / $1}, mapped: OperandType.div)
+    }
+    func test_mod() {
+        measureAndValidateMappedFunctionWithAccuracy({$0 % $1 }, mapped: OperandType.mod)
+    }
+    func test_remainder() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.remainder, mapped: OperandType.remainder)
+    }
+    func test_1() {
+        XCTAssertEqual(1, OperandType.one())
+    }
+    func test_0() {
+        XCTAssertEqual(0, OperandType.zero())
     }
 }
