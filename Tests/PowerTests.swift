@@ -15,6 +15,11 @@ class DoublePowerTests: XCTestCase, DoubleOperandTest {
     func test_pow() {
         measureAndValidateMappedFunctionWithAccuracy(Darwin.pow, mapped: OperandType.pow, lowerBound: 0, upperBound: 10)
     }
+    
+    func test_pow2() {
+        let val = OperandType.rand(0, upperBound: 10)
+        measureAndValidateMappedFunctionWithAccuracy({ Darwin.pow($0, val) }, mapped: { OperandType.pow($0, val) }, lowerBound: 0, upperBound: 10)
+    }
 
 }
 
@@ -24,6 +29,11 @@ class FloatPowerTests: XCTestCase, DoubleOperandTest {
     
     func test_pow() {
         measureAndValidateMappedFunctionWithAccuracy(Darwin.pow, mapped: OperandType.pow, lowerBound: 0, upperBound: 6, accuracy: 0.1)
+    }
+    
+    func test_pow2() {
+        let val = OperandType.rand(0, upperBound: 6)
+        measureAndValidateMappedFunctionWithAccuracy({ Darwin.pow($0, val) }, mapped: { OperandType.pow($0, val) }, lowerBound: 0, upperBound: 6)
     }
     
 }

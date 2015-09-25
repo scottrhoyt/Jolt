@@ -46,6 +46,9 @@ class DoubleArithmeticTests: XCTestCase, DoubleOperandTest {
     func test_mod() {
         measureAndValidateMappedFunctionWithAccuracy({$0 % $1 }, mapped: OperandType.mod)
     }
+    func test_remainder() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.remainder, mapped: OperandType.remainder)
+    }
     func test_addOperator() {
         measureAndValidateMappedFunctionWithAccuracy({$0 + $1 }, mapped: +)
     }
@@ -61,14 +64,59 @@ class DoubleArithmeticTests: XCTestCase, DoubleOperandTest {
     func test_modOperator() {
         measureAndValidateMappedFunctionWithAccuracy({$0 % $1 }, mapped: %)
     }
-    func test_remainder() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.remainder, mapped: OperandType.remainder)
+    func test_addOperator2() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({$0 + val }, mapped: {$0 + val })
+    }
+    func test_subtractOperator2() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({$0 - val }, mapped: {$0 - val })
+    }
+    func test_multiplyOperator2() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({$0 * val }, mapped: {$0 * val })
+    }
+    func test_divideOperator2() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({$0 / val }, mapped: {$0 / val })
+    }
+    func test_modOperator2() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({$0 % val }, mapped: {$0 % val })
+    }
+    func test_addOperator3() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({val + $0 }, mapped: { val + $0 })
+    }
+    func test_subtractOperator3() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({val - $0 }, mapped: { val - $0 })
+    }
+    func test_multiplyOperator3() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({val * $0}, mapped: { val * $0 })
+    }
+    func test_divideOperator3() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({ val / $0 }, mapped: { val / $0 })
+    }
+    func test_modOperator3() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({ val % $0 }, mapped: { val % $0 })
     }
     func test_1() {
         XCTAssertEqual(1, OperandType.one())
     }
     func test_0() {
         XCTAssertEqual(0, OperandType.zero())
+    }
+    func test_1s() {
+        let count = Int(arc4random_uniform(10))
+        XCTAssertEqual([OperandType](count: count, repeatedValue: OperandType(1)), OperandType.ones(count))
+    }
+    func test_0s() {
+        let count = Int(arc4random_uniform(10))
+        XCTAssertEqual([OperandType](count: count, repeatedValue: OperandType(0)), OperandType.zeros(count))
     }
 }
 
@@ -97,10 +145,73 @@ class FloatArithmeticTests: XCTestCase, DoubleOperandTest {
     func test_remainder() {
         measureAndValidateMappedFunctionWithAccuracy(Darwin.remainder, mapped: OperandType.remainder)
     }
+    func test_addOperator() {
+        measureAndValidateMappedFunctionWithAccuracy({$0 + $1 }, mapped: +)
+    }
+    func test_subtractOperator() {
+        measureAndValidateMappedFunctionWithAccuracy({$0 - $1 }, mapped: -)
+    }
+    func test_multiplyOperator() {
+        measureAndValidateMappedFunctionWithAccuracy({$0 * $1 }, mapped: *)
+    }
+    func test_divideOperator() {
+        measureAndValidateMappedFunctionWithAccuracy({$0 / $1}, mapped: /)
+    }
+    func test_modOperator() {
+        measureAndValidateMappedFunctionWithAccuracy({$0 % $1 }, mapped: %)
+    }
+    func test_addOperator2() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({$0 + val }, mapped: {$0 + val })
+    }
+    func test_subtractOperator2() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({$0 - val }, mapped: {$0 - val })
+    }
+    func test_multiplyOperator2() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({$0 * val }, mapped: {$0 * val })
+    }
+    func test_divideOperator2() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({$0 / val }, mapped: {$0 / val })
+    }
+    func test_modOperator2() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({$0 % val }, mapped: {$0 % val })
+    }
+    func test_addOperator3() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({val + $0 }, mapped: { val + $0 })
+    }
+    func test_subtractOperator3() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({val - $0 }, mapped: { val - $0 })
+    }
+    func test_multiplyOperator3() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({val * $0}, mapped: { val * $0 })
+    }
+    func test_divideOperator3() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({ val / $0 }, mapped: { val / $0 })
+    }
+    func test_modOperator3() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({ val % $0 }, mapped: { val % $0 })
+    }
     func test_1() {
         XCTAssertEqual(1, OperandType.one())
     }
     func test_0() {
         XCTAssertEqual(0, OperandType.zero())
+    }
+    func test_1s() {
+        let count = Int(arc4random_uniform(10))
+        XCTAssertEqual([OperandType](count: count, repeatedValue: OperandType(1)), OperandType.ones(count))
+    }
+    func test_0s() {
+        let count = Int(arc4random_uniform(10))
+        XCTAssertEqual([OperandType](count: count, repeatedValue: OperandType(0)), OperandType.zeros(count))
     }
 }

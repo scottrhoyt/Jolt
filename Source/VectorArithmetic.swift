@@ -122,3 +122,7 @@ public func %<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
 public func %<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
     return T.mod(lhs, [T](count: lhs.count, repeatedValue: rhs))
 }
+
+public func %<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
+    return T.mod([T](count: rhs.count, repeatedValue: lhs), rhs)
+}

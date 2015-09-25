@@ -24,6 +24,18 @@ extension DoubleOperandTest where Self : XCTestCase {
         measureAndValidateMappedFunctionWithAccuracy(values1, source2: values2, member: member, mapped: mapped, accuracy: OperandType.accuracy)
     }
     
+//    func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType) -> (OperandType), mapped: ([OperandType], OperandType) -> ([OperandType])) {
+//        let values1 = rands(SurgeTestCountMedium)
+//        let values2 = OperandType.rand()
+//        measureAndValidateMappedFunctionWithAccuracy(values1, source2: values2, member: member, mapped: mapped, accuracy: OperandType.accuracy)
+//    }
+//    
+//    func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType) -> (OperandType), mapped: (OperandType, [OperandType]) -> ([OperandType])) {
+//        let values1 = OperandType.rand()
+//        let values2 = rands(SurgeTestCountMedium)
+//        measureAndValidateMappedFunctionWithAccuracy(values1, source2: values2, member: member, mapped: mapped, accuracy: OperandType.accuracy)
+//    }
+    
     func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType, OperandType) -> (OperandType), mapped: ([OperandType], [OperandType]) -> ([OperandType]), lowerBound: OperandType, upperBound: OperandType, accuracy: OperandType)
     {
         let values1 = rands(SurgeTestCountMedium, lowerBound: lowerBound, upperBound: upperBound)

@@ -76,6 +76,18 @@ class DoubleAuxiliaryTests: XCTestCase , SingleOperandTest {
     func test_trunc() {
         measureAndValidateMappedFunctionWithAccuracy(Darwin.trunc, mapped: OperandType.trunc, lowerBound: -1e6, upperBound: 1e6)
     }
+    
+    func test_clip() {
+        let low = OperandType.rand(-1e-6, upperBound: -1)
+        let high = OperandType.rand(1, upperBound: 1e6)
+        measureAndValidateMappedFunctionWithAccuracy( { $0 < low ? low : ($0 > high ? high : $0) } , mapped: { OperandType.clip($0, low, high) }, lowerBound: -1e6, upperBound: 1e6)
+    }
+    
+    func test_threshold() {
+        let low = OperandType.rand(-1e-6, upperBound: -1)
+        measureAndValidateMappedFunctionWithAccuracy( { $0 < low ? low : $0 } , mapped: { OperandType.threshold($0, low) }, lowerBound: -1e6, upperBound: 1e6)
+    }
+    
 }
 
 class FloatAuxiliaryTests: XCTestCase , SingleOperandTest {
@@ -129,5 +141,16 @@ class FloatAuxiliaryTests: XCTestCase , SingleOperandTest {
     
     func test_trunc() {
         measureAndValidateMappedFunctionWithAccuracy(Darwin.trunc, mapped: OperandType.trunc, lowerBound: -1e3, upperBound: 1e3)
+    }
+    
+    func test_clip() {
+        let low = OperandType.rand(-1e-3, upperBound: -1)
+        let high = OperandType.rand(1, upperBound: 1e3)
+        measureAndValidateMappedFunctionWithAccuracy( { $0 < low ? low : ($0 > high ? high : $0) } , mapped: { OperandType.clip($0, low, high) }, lowerBound: -1e3, upperBound: 1e3)
+    }
+    
+    func test_threshold() {
+        let low = OperandType.rand(-1e-3, upperBound: -1)
+        measureAndValidateMappedFunctionWithAccuracy( { $0 < low ? low : $0 } , mapped: { OperandType.threshold($0, low) }, lowerBound: -1e3, upperBound: 1e3)
     }
 }
