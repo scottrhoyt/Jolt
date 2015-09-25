@@ -34,14 +34,14 @@ extension Double : VectorArithmetic {
         return results
     }
     
-    public static func multiply(x: [Double], _ y: [Double]) -> [Double] {
+    public static func mul(x: [Double], _ y: [Double]) -> [Double] {
         var results = [Double](count: x.count, repeatedValue: 0.0)
         vDSP_vmulD(x, 1, y, 1, &results, 1, vDSP_Length(x.count))
         
         return results
     }
     
-    public static func divide(x: [Double], _ y: [Double]) -> [Double] {
+    public static func div(x: [Double], _ y: [Double]) -> [Double] {
         var results = [Double](count: x.count, repeatedValue: 0.0)
         vvdiv(&results, x, y, [Int32(x.count)])
         
@@ -73,14 +73,14 @@ extension Float : VectorArithmetic {
         return results
     }
     
-    public static func multiply(x: [Float], _ y: [Float]) -> [Float] {
+    public static func mul(x: [Float], _ y: [Float]) -> [Float] {
         var results = [Float](count: x.count, repeatedValue: 0.0)
         vDSP_vmul(x, 1, y, 1, &results, 1, vDSP_Length(x.count))
         
         return results
     }
     
-    public static func divide(x: [Float], _ y: [Float]) -> [Float] {
+    public static func div(x: [Float], _ y: [Float]) -> [Float] {
         var results = [Float](count: x.count, repeatedValue: 0.0)
         vvdivf(&results, x, y, [Int32(x.count)])
         

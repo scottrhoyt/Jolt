@@ -42,12 +42,12 @@ extension DoubleConvertible {
     public static func add(x: [Self], _ y: [Self]) -> [Self] {
         return [Self].fromDoubleArray(Double.add(x.toDoubleArray(), y.toDoubleArray()))
     }
-    public static func multiply(x: [Self], _ y: [Self]) -> [Self] {
-        return [Self].fromDoubleArray(Double.multiply(x.toDoubleArray(), y.toDoubleArray()))
+    public static func mul(x: [Self], _ y: [Self]) -> [Self] {
+        return [Self].fromDoubleArray(Double.mul(x.toDoubleArray(), y.toDoubleArray()))
     }
     // TODO: Perhaps should be optional Overload?
-    public static func divide(x: [Self], _ y: [Self]) -> [Self] {
-        return [Self].fromDoubleArray(Double.divide(x.toDoubleArray(), y.toDoubleArray()))
+    public static func div(x: [Self], _ y: [Self]) -> [Self] {
+        return [Self].fromDoubleArray(Double.div(x.toDoubleArray(), y.toDoubleArray()))
     }
     public static func mod(x: [Self], _ y: [Self]) -> [Self] {
         return [Self].fromDoubleArray(Double.mod(x.toDoubleArray(), y.toDoubleArray()))

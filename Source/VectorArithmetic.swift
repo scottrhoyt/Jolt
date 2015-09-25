@@ -12,9 +12,9 @@ public protocol VectorArithmetic {
     
     // MARK: To Overload
     static func add(x: [Self], _ y: [Self]) -> [Self]
-    static func multiply(x: [Self], _ y: [Self]) -> [Self]
+    static func mul(x: [Self], _ y: [Self]) -> [Self]
     // TODO: Perhaps should be optional Overload?
-    static func divide(x: [Self], _ y: [Self]) -> [Self]
+    static func div(x: [Self], _ y: [Self]) -> [Self]
     static func mod(x: [Self], _ y: [Self]) -> [Self]
     static func remainder(x: [Self], _ y: [Self]) -> [Self]
     
@@ -27,7 +27,7 @@ public protocol VectorArithmetic {
     static func zeros(count: Int) -> [Self]
     static func ones(count: Int) -> [Self]
     static func negativeOnes(count: Int) -> [Self]
-    static func subtract(x: [Self], _ y: [Self]) -> [Self]
+    static func sub(x: [Self], _ y: [Self]) -> [Self]
     
 }
 
@@ -45,13 +45,13 @@ public extension VectorArithmetic {
         return [Self](count: count, repeatedValue: Self.negativeOne())
     }
     
-    public static func subtract(x: [Self], _ y: [Self]) -> [Self] {
+    public static func sub(x: [Self], _ y: [Self]) -> [Self] {
         return x + (y * Self.negativeOnes(y.count))
     }
     
     // TODO: Get rid of commented out default implementation
 //
-//    public static func divide(x: [Self], _ y: [Self]) -> [Self] {
+//    public static func div(x: [Self], _ y: [Self]) -> [Self] {
 //        return x * (Self.ones(y.count) / y)
 //    }
     
@@ -74,45 +74,45 @@ public func +<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
 }
 
 public func -<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
-    return T.subtract(lhs, rhs)
+    return T.sub(lhs, rhs)
 }
 
 public func -<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
     let rhsVect = Array<T>(count: lhs.count, repeatedValue: rhs)
-    return T.subtract(lhs, rhsVect)
+    return T.sub(lhs, rhsVect)
 }
 
 public func -<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
     let lhsVect = Array<T>(count: rhs.count, repeatedValue: lhs)
-    return T.subtract(lhsVect, rhs)
+    return T.sub(lhsVect, rhs)
 }
 
 public func *<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
-    return T.multiply(lhs, rhs)
+    return T.mul(lhs, rhs)
 }
 
 public func *<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
     let rhsVect = Array<T>(count: lhs.count, repeatedValue: rhs)
-    return T.multiply(lhs, rhsVect)
+    return T.mul(lhs, rhsVect)
 }
 
 public func *<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
     let lhsVect = Array<T>(count: rhs.count, repeatedValue: lhs)
-    return T.multiply(lhsVect, rhs)
+    return T.mul(lhsVect, rhs)
 }
 
 public func /<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
-    return T.divide(lhs, rhs)
+    return T.div(lhs, rhs)
 }
 
 public func /<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
     let rhsVect = Array<T>(count: lhs.count, repeatedValue: rhs)
-    return T.divide(lhs, rhsVect)
+    return T.div(lhs, rhsVect)
 }
 
 public func /<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
     let lhsVect = Array<T>(count: rhs.count, repeatedValue: lhs)
-    return T.divide(lhsVect, rhs)
+    return T.div(lhsVect, rhs)
 }
 
 public func %<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {

@@ -34,6 +34,15 @@ class DoubleArithmeticTests: XCTestCase, DoubleOperandTest {
     func test_add() {
         measureAndValidateMappedFunctionWithAccuracy({(x: OperandType, y: OperandType) -> OperandType in return x + y }, mapped: OperandType.add)
     }
+    func test_subtract() {
+        measureAndValidateMappedFunctionWithAccuracy({(x: OperandType, y: OperandType) -> OperandType in return x - y }, mapped: OperandType.sub)
+    }
+    func test_multiply() {
+        measureAndValidateMappedFunctionWithAccuracy({(x: OperandType, y: OperandType) -> OperandType in return x * y }, mapped: OperandType.mul)
+    }
+    func test_divide() {
+        measureAndValidateMappedFunctionWithAccuracy({(x: OperandType, y: OperandType) -> OperandType in return x / y }, mapped: OperandType.div)
+    }
 }
 
 class FloatArithmeticTests: XCTestCase, DoubleOperandTest {
@@ -45,5 +54,14 @@ class FloatArithmeticTests: XCTestCase, DoubleOperandTest {
     }
     func test_add() {
         measureAndValidateMappedFunctionWithAccuracy({(x: OperandType, y: OperandType) -> OperandType in return x + y }, mapped: OperandType.add)
+    }
+    func test_subtract() {
+        measureAndValidateMappedFunctionWithAccuracy({(x: OperandType, y: OperandType) -> OperandType in return x - y }, mapped: OperandType.sub)
+    }
+    func test_multiply() {
+        measureAndValidateMappedFunctionWithAccuracy({(x: OperandType, y: OperandType) -> OperandType in return x * y }, mapped: OperandType.mul)
+    }
+    func test_divide() {
+        measureAndValidateMappedFunctionWithAccuracy({(x: OperandType, y: OperandType) -> OperandType in return x / y }, mapped: OperandType.div)
     }
 }
