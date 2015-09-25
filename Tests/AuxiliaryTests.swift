@@ -29,21 +29,21 @@ class DoubleAuxiliaryTests: XCTestCase , SingleOperandTest {
     typealias OperandType = Double
     
     func test_copysign() {
-        let signs = [Double]((0..<SurgeTestCountMedium).map {$0 % 2 == 0 ? 1.0 : -1.0})
+        let signs = [OperandType]((0..<SurgeTestCountMedium).map {$0 % 2 == 0 ? 1.0 : -1.0})
 
-        var magnitudes = [Double]()
+        var magnitudes = [OperandType]()
         for _ in (0..<SurgeTestCountMedium).enumerate() {
-            magnitudes.append(Double(arc4random_uniform(10)))
+            magnitudes.append(OperandType(arc4random_uniform(10)))
         }
 
-        var expected: [Double] = []
+        var expected: [OperandType] = []
         for (sign, magnitude) in Zip2Sequence(signs, magnitudes) {
             expected.append(sign * abs(magnitude))
         }
 
-        var actual: [Double] = []
+        var actual: [OperandType] = []
         self.measureBlock {
-            actual = Double.copysign(signs, magnitudes)
+            actual = OperandType.copysign(signs, magnitudes)
         }
 
         XCTAssertEqual(actual, expected)
@@ -83,21 +83,21 @@ class FloatAuxiliaryTests: XCTestCase , SingleOperandTest {
     typealias OperandType = Float
     
     func test_copysign() {
-        let signs = [Float]((0..<SurgeTestCountMedium).map {$0 % 2 == 0 ? 1.0 : -1.0})
+        let signs = [OperandType]((0..<SurgeTestCountMedium).map {$0 % 2 == 0 ? 1.0 : -1.0})
         
-        var magnitudes = [Float]()
+        var magnitudes = [OperandType]()
         for _ in (0..<SurgeTestCountMedium).enumerate() {
-            magnitudes.append(Float(arc4random_uniform(10)))
+            magnitudes.append(OperandType(arc4random_uniform(10)))
         }
         
-        var expected: [Float] = []
+        var expected: [OperandType] = []
         for (sign, magnitude) in Zip2Sequence(signs, magnitudes) {
             expected.append(sign * abs(magnitude))
         }
         
-        var actual: [Float] = []
+        var actual: [OperandType] = []
         self.measureBlock {
-            actual = Float.copysign(signs, magnitudes)
+            actual = OperandType.copysign(signs, magnitudes)
         }
         
         XCTAssertEqual(actual, expected)
