@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0643E81BB5B5C500EA9001 /* OperationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0643E71BB5B5C500EA9001 /* OperationsTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3B3870211BA20EFD0022CB6E /* VectorTrigonometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3870201BA20EFD0022CB6E /* VectorTrigonometric.swift */; settings = {ASSET_TAGS = (); }; };
 		3B3870231BA2108C0022CB6E /* FloatingTypeTrigonometricExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3870221BA2108C0022CB6E /* FloatingTypeTrigonometricExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 		3B3870251BA212370022CB6E /* ArrayTrigonometricExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3870241BA212370022CB6E /* ArrayTrigonometricExtensions.swift */; settings = {ASSET_TAGS = (); }; };
@@ -75,6 +76,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B0643E71BB5B5C500EA9001 /* OperationsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationsTests.swift; sourceTree = "<group>"; };
 		3B3870201BA20EFD0022CB6E /* VectorTrigonometric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorTrigonometric.swift; sourceTree = "<group>"; };
 		3B3870221BA2108C0022CB6E /* FloatingTypeTrigonometricExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTypeTrigonometricExtensions.swift; sourceTree = "<group>"; };
 		3B3870241BA212370022CB6E /* ArrayTrigonometricExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTrigonometricExtensions.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				F8BD5C521A6C1C6400DD357E /* SurgeTests-Bridging-Header.h */,
 				3BC4647B1BB4E8D5004A2E81 /* StatisticsTests.swift */,
 				3B851F891BB4FC5D0012A5D1 /* PowerTests.swift */,
+				3B0643E71BB5B5C500EA9001 /* OperationsTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				F8BD5C5C1A6C1C6500DD357E /* HyperbolicTests.swift in Sources */,
 				3BC4647A1BB4E0B6004A2E81 /* ReductionTest.swift in Sources */,
 				F8BD5C5A1A6C1C6500DD357E /* AuxiliaryTests.swift in Sources */,
+				3B0643E81BB5B5C500EA9001 /* OperationsTests.swift in Sources */,
 				3BC464701BB4DE3C004A2E81 /* FloatingTypeTestExtensions.swift in Sources */,
 				F8BD5C5D1A6C1C6500DD357E /* TrigonometricTests.swift in Sources */,
 				3BC464741BB4DEA8004A2E81 /* SingleOperandTest.swift in Sources */,
