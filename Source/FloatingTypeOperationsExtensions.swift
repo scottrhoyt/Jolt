@@ -15,7 +15,7 @@ extension Double : VectorOperations {
         // TODO: Use Array Extensions
         // TODO: Is Foundation necessary?
         // FIXME: Is there a more effienct way?
-        return Foundation.sqrt(Double.sum(Double.power(x, 2.0)))
+        return Foundation.sqrt(Double.sum(Double.pow(x, 2.0)))
     }
     
     public static func unit(x: [Double]) -> [Double] {
@@ -39,7 +39,7 @@ extension Float : VectorOperations {
     public static func magnitude(x: [Float]) -> Float {
         // TODO: Use Array Extensions
         // TODO: Is Foundation necessary?
-        return Foundation.sqrt(Float.sum(Float.power(x, 2.0)))
+        return Foundation.sqrt(Float.sum(Float.pow(x, 2.0)))
     }
     
     public static func unit(x: [Float]) -> [Float] {

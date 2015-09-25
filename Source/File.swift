@@ -30,8 +30,8 @@ extension Array where Element : DoubleConvertible {
 extension DoubleConvertible {
     
     // MARK: Power
-    public static func power(x: [Self], _ y: [Self]) -> [Self] {
-        return [Self].fromDoubleArray(Double.power(x.toDoubleArray(), y.toDoubleArray()))
+    public static func pow(x: [Self], _ y: [Self]) -> [Self] {
+        return [Self].fromDoubleArray(Double.pow(x.toDoubleArray(), y.toDoubleArray()))
     }
     
     public static func sqrt(x: [Self]) -> [Self] {

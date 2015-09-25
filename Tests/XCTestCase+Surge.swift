@@ -37,7 +37,7 @@ extension XCTestCase {
         self.measureBlock {
             actual = mapped(source)
         }
-
+        
         validateWithAccuracy(expected, actual: actual, accuracy: accuracy)
     }
     
@@ -60,7 +60,7 @@ extension XCTestCase {
         self.measureBlock {
             actual = mapped(source1, source2)
         }
-        
+
         validateWithAccuracy(expected, actual: actual, accuracy: accuracy)
     }
     

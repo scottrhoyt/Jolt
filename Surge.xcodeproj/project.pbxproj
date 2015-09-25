@@ -29,6 +29,7 @@
 		3B45C58C1B9FC7B100E310DB /* FloatingTypeOperationsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45C58B1B9FC7B100E310DB /* FloatingTypeOperationsExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 		3B45C58E1B9FCBA300E310DB /* ArrayOperationsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45C58D1B9FCBA300E310DB /* ArrayOperationsExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 		3B5F90F01BA208F30081EDE5 /* ArrayStatisticsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5F90EF1BA208F30081EDE5 /* ArrayStatisticsExtensions.swift */; settings = {ASSET_TAGS = (); }; };
+		3B851F8A1BB4FC5D0012A5D1 /* PowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B851F891BB4FC5D0012A5D1 /* PowerTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3B8C573B1B9D101200361AF9 /* VectorArithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C573A1B9D101200361AF9 /* VectorArithmetic.swift */; settings = {ASSET_TAGS = (); }; };
 		3B8C573D1B9E575200361AF9 /* FloatingTypeArithmeticExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C573C1B9E575200361AF9 /* FloatingTypeArithmeticExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 		3B8C573F1B9E5EED00361AF9 /* VectorPower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C573E1B9E5EED00361AF9 /* VectorPower.swift */; settings = {ASSET_TAGS = (); }; };
@@ -88,18 +89,19 @@
 		3B3F1F521BB1DEC000AAE75F /* ArrayOtherExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayOtherExtensions.swift; sourceTree = "<group>"; };
 		3B3F1F551BB1E06F00AAE75F /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = File.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3B45C57F1B9EBC4600E310DB /* ArrayArithmeticExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayArithmeticExtensions.swift; sourceTree = "<group>"; };
-		3B45C5811B9EBD2B00E310DB /* ArrayPowerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayPowerExtensions.swift; sourceTree = "<group>"; };
+		3B45C5811B9EBD2B00E310DB /* ArrayPowerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ArrayPowerExtensions.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3B45C5831B9F899500E310DB /* VectorAuxiliary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorAuxiliary.swift; sourceTree = "<group>"; };
 		3B45C5851B9FA3E400E310DB /* FloatingTypeAuxiliaryExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTypeAuxiliaryExtensions.swift; sourceTree = "<group>"; };
 		3B45C5871B9FA82D00E310DB /* ArrayAuxiliaryExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayAuxiliaryExtensions.swift; sourceTree = "<group>"; };
 		3B45C5891B9FC64800E310DB /* VectorOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorOperations.swift; sourceTree = "<group>"; };
-		3B45C58B1B9FC7B100E310DB /* FloatingTypeOperationsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTypeOperationsExtensions.swift; sourceTree = "<group>"; };
+		3B45C58B1B9FC7B100E310DB /* FloatingTypeOperationsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FloatingTypeOperationsExtensions.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3B45C58D1B9FCBA300E310DB /* ArrayOperationsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayOperationsExtensions.swift; sourceTree = "<group>"; };
 		3B5F90EF1BA208F30081EDE5 /* ArrayStatisticsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayStatisticsExtensions.swift; sourceTree = "<group>"; };
+		3B851F891BB4FC5D0012A5D1 /* PowerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerTests.swift; sourceTree = "<group>"; };
 		3B8C573A1B9D101200361AF9 /* VectorArithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorArithmetic.swift; sourceTree = "<group>"; };
 		3B8C573C1B9E575200361AF9 /* FloatingTypeArithmeticExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FloatingTypeArithmeticExtensions.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		3B8C573E1B9E5EED00361AF9 /* VectorPower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorPower.swift; sourceTree = "<group>"; };
-		3B8C57401B9E5F6000361AF9 /* FloatingTypePowerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTypePowerExtensions.swift; sourceTree = "<group>"; };
+		3B8C573E1B9E5EED00361AF9 /* VectorPower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = VectorPower.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3B8C57401B9E5F6000361AF9 /* FloatingTypePowerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FloatingTypePowerExtensions.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3B8C57421B9E9C7300361AF9 /* VectorStatistics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorStatistics.swift; sourceTree = "<group>"; };
 		3B8C57441B9E9F1D00361AF9 /* FloatingTypeStatisticsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTypeStatisticsExtensions.swift; sourceTree = "<group>"; };
 		3B8D216F1BA235BE00CE9D1A /* VectorHyperbolic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorHyperbolic.swift; sourceTree = "<group>"; };
@@ -116,7 +118,7 @@
 		F84A6AB119A9A72F007B53E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8A1E1AA19917A79009735E2 /* Surge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Surge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A1E1AE19917A79009735E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8A1E1C419917B0A009735E2 /* Arithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arithmetic.swift; sourceTree = "<group>"; };
+		F8A1E1C419917B0A009735E2 /* Arithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Arithmetic.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F8A1E1C519917B0A009735E2 /* Auxiliary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auxiliary.swift; sourceTree = "<group>"; };
 		F8A1E1C619917B0A009735E2 /* Exponential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exponential.swift; sourceTree = "<group>"; };
 		F8A1E1C719917B0A009735E2 /* Hyperbolic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hyperbolic.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				F84A6AB019A9A72F007B53E1 /* Supporting Files */,
 				F8BD5C521A6C1C6400DD357E /* SurgeTests-Bridging-Header.h */,
 				3BC4647B1BB4E8D5004A2E81 /* StatisticsTests.swift */,
+				3B851F891BB4FC5D0012A5D1 /* PowerTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				3BC464701BB4DE3C004A2E81 /* FloatingTypeTestExtensions.swift in Sources */,
 				F8BD5C5D1A6C1C6500DD357E /* TrigonometricTests.swift in Sources */,
 				3BC464741BB4DEA8004A2E81 /* SingleOperandTest.swift in Sources */,
+				3B851F8A1BB4FC5D0012A5D1 /* PowerTests.swift in Sources */,
 				F8BD5C5E1A6C1C6500DD357E /* XCTestCase+Surge.swift in Sources */,
 				F8BD5C591A6C1C6500DD357E /* ArithmeticTests.swift in Sources */,
 				3BC4647C1BB4E8D5004A2E81 /* StatisticsTests.swift in Sources */,
