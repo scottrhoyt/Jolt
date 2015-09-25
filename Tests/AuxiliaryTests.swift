@@ -24,7 +24,10 @@ import Foundation
 import Surge
 import XCTest
 
-class AuxiliaryTests: XCTestCase {
+class DoubleAuxiliaryTests: XCTestCase , SingleOperandTest {
+    
+    typealias OperandType = Double
+    
     func test_copysign() {
         let signs = [Double]((0..<SurgeTestCountMedium).map {$0 % 2 == 0 ? 1.0 : -1.0})
 
@@ -44,5 +47,87 @@ class AuxiliaryTests: XCTestCase {
         }
 
         XCTAssertEqual(actual, expected)
+    }
+    
+    func test_abs() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.fabs, mapped: OperandType.abs, lowerBound: -1e6, upperBound: 1e6)
+    }
+    
+    func test_ceil() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.ceil, mapped: OperandType.ceil, lowerBound: -1e6, upperBound: 1e6)
+    }
+    
+    func test_floor() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.floor, mapped: OperandType.floor, lowerBound: -1e6, upperBound: 1e6)
+    }
+    
+    func test_round() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.round, mapped: OperandType.round, lowerBound: -1e6, upperBound: 1e6)
+    }
+    
+    func test_neg() {
+        measureAndValidateMappedFunctionWithAccuracy({ -1 * $0 }, mapped: OperandType.neg, lowerBound: -1e6, upperBound: 1e6)
+    }
+    
+    func test_rec() {
+        measureAndValidateMappedFunctionWithAccuracy({ 1 / $0 }, mapped: OperandType.rec, lowerBound: -1e6, upperBound: 1e6)
+    }
+    
+    func test_trunc() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.trunc, mapped: OperandType.trunc, lowerBound: -1e6, upperBound: 1e6)
+    }
+}
+
+class FloatAuxiliaryTests: XCTestCase , SingleOperandTest {
+    
+    typealias OperandType = Float
+    
+    func test_copysign() {
+        let signs = [Float]((0..<SurgeTestCountMedium).map {$0 % 2 == 0 ? 1.0 : -1.0})
+        
+        var magnitudes = [Float]()
+        for _ in (0..<SurgeTestCountMedium).enumerate() {
+            magnitudes.append(Float(arc4random_uniform(10)))
+        }
+        
+        var expected: [Float] = []
+        for (sign, magnitude) in Zip2Sequence(signs, magnitudes) {
+            expected.append(sign * abs(magnitude))
+        }
+        
+        var actual: [Float] = []
+        self.measureBlock {
+            actual = Float.copysign(signs, magnitudes)
+        }
+        
+        XCTAssertEqual(actual, expected)
+    }
+    
+    func test_abs() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.fabs, mapped: OperandType.abs, lowerBound: -1e3, upperBound: 1e3)
+    }
+    
+    func test_ceil() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.ceil, mapped: OperandType.ceil, lowerBound: -1e3, upperBound: 1e3)
+    }
+    
+    func test_floor() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.floor, mapped: OperandType.floor, lowerBound: -1e3, upperBound: 1e3)
+    }
+    
+    func test_round() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.round, mapped: OperandType.round, lowerBound: -1e3, upperBound: 1e3)
+    }
+    
+    func test_neg() {
+        measureAndValidateMappedFunctionWithAccuracy({ -1 * $0 }, mapped: OperandType.neg, lowerBound: -1e3, upperBound: 1e3)
+    }
+    
+    func test_rec() {
+        measureAndValidateMappedFunctionWithAccuracy({ 1 / $0 }, mapped: OperandType.rec, lowerBound: -1e3, upperBound: 1e3)
+    }
+    
+    func test_trunc() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.trunc, mapped: OperandType.trunc, lowerBound: -1e3, upperBound: 1e3)
     }
 }
