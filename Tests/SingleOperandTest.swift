@@ -10,26 +10,16 @@ import Foundation
 import XCTest
 
 
-protocol SingleOperandTestCase {
+protocol SingleOperandTest : RandomDataTest {
     
-    typealias OperandType : FloatingPointAccuracy, GenRandom
+    typealias OperandType : FloatingPointAccuracy
     
-    func rands(count: Int) -> [OperandType]
-    func rands(count: Int, lowerBound: OperandType, upperBound: OperandType) -> [OperandType]
     func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType) -> (OperandType), mapped: ([OperandType]) -> ([OperandType]))
     func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType) -> (OperandType), mapped: ([OperandType]) -> ([OperandType]), lowerBound: OperandType, upperBound: OperandType)
     
 }
 
-extension SingleOperandTestCase where Self : XCTestCase {
-    
-    func rands(count: Int) -> [OperandType] {
-        return (0..<count).map {_ in OperandType.rand() }
-    }
-    
-    func rands(count: Int, lowerBound: OperandType, upperBound: OperandType) -> [OperandType] {
-        return (0..<count).map {_ in OperandType.rand(lowerBound, upperBound: upperBound) }
-    }
+extension SingleOperandTest where Self : XCTestCase {
     
     func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType) -> (OperandType), mapped: ([OperandType]) -> ([OperandType])) {
         let values = rands(SurgeTestCountMedium)

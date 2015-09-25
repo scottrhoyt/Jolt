@@ -24,7 +24,7 @@ import Foundation
 import Surge
 import XCTest
 
-class DoubleExponentialTests: XCTestCase, SingleOperandTestCase {
+class DoubleExponentialTests: XCTestCase, SingleOperandTest {
     
     typealias OperandType = Double
     
@@ -54,7 +54,7 @@ class DoubleExponentialTests: XCTestCase, SingleOperandTestCase {
     
 }
 
-class FloatExponentialTests: XCTestCase, SingleOperandTestCase {
+class FloatExponentialTests: XCTestCase, SingleOperandTest {
     
     typealias OperandType = Float
     

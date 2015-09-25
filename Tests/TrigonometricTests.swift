@@ -24,7 +24,7 @@ import Darwin
 import Surge
 import XCTest
 
-class DoubleTrigonometricTests: XCTestCase, SingleOperandTestCase {
+class DoubleTrigonometricTests: XCTestCase, SingleOperandTest {
     
     typealias OperandType = Double
     
@@ -62,7 +62,7 @@ class DoubleTrigonometricTests: XCTestCase, SingleOperandTestCase {
     
 }
 
-class FloatTrigonometricTests: XCTestCase, SingleOperandTestCase {
+class FloatTrigonometricTests: XCTestCase, SingleOperandTest {
     
     typealias OperandType = Float
     

@@ -9,14 +9,14 @@
 import Foundation
 import XCTest
 
-protocol DoubleOperandTestCase : SingleOperandTestCase {
+protocol DoubleOperandTest : SingleOperandTest {
     
     func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType, OperandType) -> (OperandType), mapped: ([OperandType], [OperandType]) -> ([OperandType]))
     func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType, OperandType) -> (OperandType), mapped: ([OperandType], [OperandType]) -> ([OperandType]), lowerBound: OperandType, upperBound: OperandType)
     
 }
 
-extension DoubleOperandTestCase where Self : XCTestCase {
+extension DoubleOperandTest where Self : XCTestCase {
     func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType, OperandType) -> (OperandType), mapped: ([OperandType], [OperandType]) -> ([OperandType])) {
         let values1 = rands(SurgeTestCountMedium)
         let values2 = rands(SurgeTestCountMedium)
