@@ -33,7 +33,7 @@ class FloatPowerTests: XCTestCase, DoubleOperandTest {
     
     func test_pow2() {
         let val = OperandType.rand(0, upperBound: 6)
-        measureAndValidateMappedFunctionWithAccuracy({ Darwin.pow($0, val) }, mapped: { OperandType.pow($0, val) }, lowerBound: 0, upperBound: 6)
+        measureAndValidateMappedFunctionWithAccuracy({ Darwin.pow($0, val) }, mapped: { OperandType.pow($0, val) }, lowerBound: 0, upperBound: 6, accuracy: 0.1)
     }
     
 }
