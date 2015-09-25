@@ -41,11 +41,11 @@ class DoubleHyperbolicTests: XCTestCase, SingleOperandTest {
     }
 
     func test_asinh() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.asinh, mapped: OperandType.asinh)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.asinh, mapped: OperandType.asinh, lowerBound: -10, upperBound: 10)
     }
 
     func test_acosh() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.acosh, mapped: OperandType.acosh)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.acosh, mapped: OperandType.acosh, lowerBound: 1, upperBound: 10)
     }
 
     func test_atanh() {
@@ -70,11 +70,11 @@ class FloatHyperbolicTests: XCTestCase, SingleOperandTest {
     }
     
     func test_asinh() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.asinh, mapped: OperandType.asinh)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.asinh, mapped: OperandType.asinh, lowerBound: -10, upperBound: 10)
     }
     
     func test_acosh() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.acosh, mapped: OperandType.acosh)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.acosh, mapped: OperandType.acosh, lowerBound: 1, upperBound: 10)
     }
     
     func test_atanh() {

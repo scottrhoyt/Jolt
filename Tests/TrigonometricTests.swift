@@ -41,11 +41,11 @@ class DoubleTrigonometricTests: XCTestCase, SingleOperandTest {
     }
 
     func test_asin() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.asin, mapped: OperandType.asin, lowerBound: -1, upperBound: 1)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.asin, mapped: OperandType.asin, lowerBound: -0.99999999, upperBound: 0.99999999)
     }
 
     func test_acos() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.acos, mapped: OperandType.acos, lowerBound: -1, upperBound: 1)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.acos, mapped: OperandType.acos, lowerBound: -0.99999999, upperBound: 0.99999999)
     }
 
     func test_atan() {
@@ -79,11 +79,11 @@ class FloatTrigonometricTests: XCTestCase, SingleOperandTest {
     }
     
     func test_asin() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.asin, mapped: OperandType.asin, lowerBound: -1, upperBound: 1)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.asin, mapped: OperandType.asin, lowerBound: -0.99999999, upperBound: 0.99999999)
     }
     
     func test_acos() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.acos, mapped: OperandType.acos, lowerBound: -1, upperBound: 1)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.acos, mapped: OperandType.acos, lowerBound: -0.99999999, upperBound: 0.99999999)
     }
     
     func test_atan() {

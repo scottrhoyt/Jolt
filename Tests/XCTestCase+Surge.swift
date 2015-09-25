@@ -41,6 +41,18 @@ extension XCTestCase {
         validateWithAccuracy(expected, actual: actual, accuracy: accuracy)
     }
     
+    func measureAndValidateMappedFunctionWithAccuracy<C : CollectionType where C.Generator.Element: FloatingPointType>(source: C, reduction: (C) -> C.Generator.Element, mapped: (C) -> C.Generator.Element, accuracy: C.Generator.Element) {
+        let expected = reduction(source)
+        
+        var actual: C.Generator.Element?
+        
+        self.measureBlock {
+            actual = mapped(source)
+        }
+        
+        XCTAssertEqualWithAccuracy(actual!, expected, accuracy: accuracy)
+    }
+    
     func measureAndValidateMappedFunctionWithAccuracy<C : CollectionType where C.Generator.Element: FloatingPointType>(source1: C, source2: C, member: (C.Generator.Element, C.Generator.Element) -> (C.Generator.Element), mapped: (C, C) -> ([C.Generator.Element]), accuracy: C.Generator.Element) {
         let expected = zip(source1, source2).map(member)
         

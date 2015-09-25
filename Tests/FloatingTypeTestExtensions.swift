@@ -24,11 +24,11 @@ extension Double : FloatingPointAccuracy, GenRandom {
     }
     
     static func rand() -> Double {
-        return Double(arc4random())
+        return Double(arc4random()) / Double(UInt32.max)
     }
     
     static func rand(lowerBound: Double, upperBound: Double) -> Double {
-        let r = Double(arc4random()) / Double(UInt64.max)
+        let r = rand()
         return (r * (upperBound - lowerBound)) + lowerBound
     }
 }
@@ -40,11 +40,11 @@ extension Float : FloatingPointAccuracy, GenRandom {
     }
     
     static func rand() -> Float {
-        return Float(arc4random())
+        return Float(arc4random()) / Float(UInt32.max)
     }
     
     static func rand(lowerBound: Float, upperBound: Float) -> Float {
-        let r = Float(arc4random()) / Float(UInt32.max)
+        let r = rand()
         return (r * (upperBound - lowerBound)) + lowerBound
     }
 }
