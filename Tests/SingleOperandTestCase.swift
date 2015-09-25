@@ -49,6 +49,39 @@ extension Float : FloatingPointAccuracy, GenRandom {
     }
 }
 
+protocol SOTC {
+    
+    typealias OperandType : FloatingPointAccuracy, GenRandom
+    
+    func rands(count: Int) -> [OperandType]
+    func rands(count: Int, lowerBound: OperandType, upperBound: OperandType) -> [OperandType]
+    func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType) -> (OperandType), mapped: ([OperandType]) -> ([OperandType]))
+    func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType) -> (OperandType), mapped: ([OperandType]) -> ([OperandType]), lowerBound: OperandType, upperBound: OperandType)
+    
+}
+
+extension SOTC where Self : XCTestCase {
+    
+    func rands(count: Int) -> [OperandType] {
+        return (0..<count).map {_ in OperandType.rand() }
+    }
+    
+    func rands(count: Int, lowerBound: OperandType, upperBound: OperandType) -> [OperandType] {
+        return (0..<count).map {_ in OperandType.rand(lowerBound, upperBound: upperBound) }
+    }
+    
+    func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType) -> (OperandType), mapped: ([OperandType]) -> ([OperandType])) {
+        let values = rands(SurgeTestCountMedium)
+        measureAndValidateMappedFunctionWithAccuracy(values, member: member, mapped: mapped, accuracy: OperandType.accuracy)
+    }
+    
+    func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType) -> (OperandType), mapped: ([OperandType]) -> ([OperandType]), lowerBound: OperandType, upperBound: OperandType) {
+        let values = rands(SurgeTestCountMedium, lowerBound: lowerBound, upperBound: upperBound)
+        measureAndValidateMappedFunctionWithAccuracy(values, member: member, mapped: mapped, accuracy: OperandType.accuracy)
+    }
+    
+}
+
 class SingleOperandTestCase<T: protocol<FloatingPointAccuracy, GenRandom>>: XCTestCase {
     
     var values: [T]?

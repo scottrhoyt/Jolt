@@ -23,9 +23,9 @@
 import Foundation
 import XCTest
 
-let SurgeTestCountLow = 1000
-let SurgeTestCountMedium = 100000
-let SurgeTestCountHigh = 10000000
+let SurgeTestCountLow = 10
+let SurgeTestCountMedium = 1000
+let SurgeTestCountHigh = 100000
 let SurgeTestDoubleAccuracy = 0.000001
 
 extension XCTestCase {

@@ -24,15 +24,62 @@ import Foundation
 import Surge
 import XCTest
 
-class ExponentialTests: SingleOperandTestCase<Double> {
+class ExponentialTests: XCTestCase, SOTC {
+    
+    typealias OperandType = Double
     
     func test_exp() {
-        values = rands(SurgeTestCountMedium, lowerBound: -10, upperBound: 10)
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.exp, mapped: Double.exp)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.exp, mapped: OperandType.exp, lowerBound: -10, upperBound: 10)
     }
 
     func test_exp2() {
-        values = rands(SurgeTestCountMedium, lowerBound: -10, upperBound: 10)
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.exp2, mapped: Double.exp2)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.exp2, mapped: OperandType.exp2, lowerBound: -10, upperBound: 10)
     }
+    
+    func test_log() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.log, mapped: OperandType.log, lowerBound: 1e-10, upperBound: 1e10)
+    }
+    
+    func test_log2() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.log2, mapped: OperandType.log2, lowerBound: 1e-10, upperBound: 1e10)
+    }
+    
+    func test_log10() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.log10, mapped: OperandType.log10, lowerBound: 1e-10, upperBound: 1e10)
+    }
+    
+    func test_logb() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.logb, mapped: OperandType.logb, lowerBound: 1e-10, upperBound: 1e10)
+    }
+    
+}
+
+class ExponentialTests2: XCTestCase, SOTC {
+    
+    typealias OperandType = Float
+    
+    func test_exp() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.exp, mapped: OperandType.exp, lowerBound: -10, upperBound: 10)
+    }
+    
+    func test_exp2() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.exp2, mapped: OperandType.exp2, lowerBound: -10, upperBound: 10)
+    }
+    
+    func test_log() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.log, mapped: OperandType.log, lowerBound: 1e-10, upperBound: 1e10)
+    }
+    
+    func test_log2() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.log2, mapped: OperandType.log2, lowerBound: 1e-10, upperBound: 1e10)
+    }
+    
+    func test_log10() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.log10, mapped: OperandType.log10, lowerBound: 1e-10, upperBound: 1e10)
+    }
+    
+    func test_logb() {
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.logb, mapped: OperandType.logb, lowerBound: 1e-10, upperBound: 1e10)
+    }
+    
 }
