@@ -22,6 +22,10 @@
 
 import Accelerate
 
+public enum MatrixError : ErrorType {
+    case InvalidMatrixDimensions, MatrixNotInvertible, MatrixNotSquare
+}
+
 public struct Matrix<T where T: FloatingPointType, T: FloatLiteralConvertible> {
     
     public typealias Element = T
@@ -37,9 +41,16 @@ public struct Matrix<T where T: FloatingPointType, T: FloatLiteralConvertible> {
         self.grid = [Element](count: rows * columns, repeatedValue: repeatedValue)
     }
 
-    public init(_ contents: [[Element]]) {
+    public init(_ contents: [[Element]]) throws {
         let m: Int = contents.count
         let n: Int = contents[0].count
+        
+        for content in contents {
+            if content.count != n {
+                throw MatrixError.InvalidMatrixDimensions
+            }
+        }
+        
         let repeatedValue: Element = 0.0
 
         self.init(rows: m, columns: n, repeatedValue: repeatedValue)
