@@ -46,6 +46,21 @@ class DoubleArithmeticTests: XCTestCase, DoubleOperandTest {
     func test_mod() {
         measureAndValidateMappedFunctionWithAccuracy({$0 % $1 }, mapped: OperandType.mod)
     }
+    func test_addOperator() {
+        measureAndValidateMappedFunctionWithAccuracy({$0 + $1 }, mapped: +)
+    }
+    func test_subtractOperator() {
+        measureAndValidateMappedFunctionWithAccuracy({$0 - $1 }, mapped: -)
+    }
+    func test_multiplyOperator() {
+        measureAndValidateMappedFunctionWithAccuracy({$0 * $1 }, mapped: *)
+    }
+    func test_divideOperator() {
+        measureAndValidateMappedFunctionWithAccuracy({$0 / $1}, mapped: /)
+    }
+    func test_modOperator() {
+        measureAndValidateMappedFunctionWithAccuracy({$0 % $1 }, mapped: %)
+    }
     func test_remainder() {
         measureAndValidateMappedFunctionWithAccuracy(Darwin.remainder, mapped: OperandType.remainder)
     }
