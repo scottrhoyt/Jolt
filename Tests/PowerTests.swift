@@ -23,7 +23,7 @@ class FloatPowerTests: XCTestCase, DoubleOperandTest {
     typealias OperandType = Float
     
     func test_pow() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.pow, mapped: OperandType.pow, lowerBound: 0, upperBound: 7, accuracy: 0.1)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.pow, mapped: OperandType.pow, lowerBound: 0, upperBound: 6, accuracy: 0.1)
     }
     
 }

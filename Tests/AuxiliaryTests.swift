@@ -116,7 +116,7 @@ class FloatAuxiliaryTests: XCTestCase , SingleOperandTest {
     }
     
     func test_round() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.round, mapped: OperandType.round, lowerBound: -1e3, upperBound: 1e3)
+        measureAndValidateMappedFunctionWithAccuracy(Darwin.round, mapped: OperandType.round, lowerBound: -1e2, upperBound: 1e2)
     }
     
     func test_neg() {
