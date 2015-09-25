@@ -13,20 +13,15 @@ protocol ReductionTest : RandomDataTest {
     
     typealias OperandType : FloatingPointAccuracy
     
-    func measureAndValidateMappedFunctionWithAccuracy(reduction: ([OperandType]) -> (OperandType), mapped: ([OperandType]) -> (OperandType))
-    func measureAndValidateMappedFunctionWithAccuracy(reduction: ([OperandType]) -> (OperandType), mapped: ([OperandType]) -> (OperandType), accuracy: OperandType)
+    func measureAndValidateMappedFunctionWithAccuracy(reduction: ([OperandType]) -> (OperandType), mapped: ([OperandType]) -> (OperandType), lowerBound: OperandType?, upperBound: OperandType?, accuracy: OperandType)
     
 }
 
 extension ReductionTest where Self : XCTestCase {
     
-    func measureAndValidateMappedFunctionWithAccuracy(reduction: ([OperandType]) -> (OperandType), mapped: ([OperandType]) -> (OperandType)) {
-        measureAndValidateMappedFunctionWithAccuracy(reduction, mapped: mapped, accuracy: OperandType.accuracy)
-    }
-    
-    func measureAndValidateMappedFunctionWithAccuracy(reduction: ([OperandType]) -> (OperandType), mapped: ([OperandType]) -> (OperandType), accuracy: OperandType)
+    func measureAndValidateMappedFunctionWithAccuracy(reduction: ([OperandType]) -> (OperandType), mapped: (([OperandType]) -> (OperandType)), lowerBound: OperandType? = nil, upperBound: OperandType? = nil, accuracy: OperandType = OperandType.accuracy)
     {
-        let values = rands(SurgeTestCountMedium)
+        let values = rands(SurgeTestCountMedium, lowerBound: lowerBound, upperBound: upperBound)
         measureAndValidateMappedFunctionWithAccuracy(values, reduction: reduction, mapped: mapped, accuracy: accuracy)
 
     }

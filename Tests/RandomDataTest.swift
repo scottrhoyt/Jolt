@@ -12,18 +12,13 @@ protocol RandomDataTest {
     
     typealias OperandType : GenRandom
     
-    func rands(count: Int) -> [OperandType]
-    func rands(count: Int, lowerBound: OperandType, upperBound: OperandType) -> [OperandType]
+    func rands(count: Int, lowerBound: OperandType?, upperBound: OperandType?) -> [OperandType]
     
 }
 
 extension RandomDataTest {
     
-    func rands(count: Int) -> [OperandType] {
-        return (0..<count).map {_ in OperandType.rand() }
-    }
-    
-    func rands(count: Int, lowerBound: OperandType, upperBound: OperandType) -> [OperandType] {
+    func rands(count: Int, lowerBound: OperandType? = nil, upperBound: OperandType? = nil) -> [OperandType] {
         return (0..<count).map {_ in OperandType.rand(lowerBound, upperBound: upperBound) }
     }
     

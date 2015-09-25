@@ -13,8 +13,7 @@ protocol FloatingPointAccuracy : FloatingPointType {
 }
 
 protocol GenRandom {
-    static func rand() -> Self
-    static func rand(lowerBound: Self, upperBound: Self) -> Self
+    static func rand(lowerBound: Self?, upperBound: Self?) -> Self
 }
 
 extension Double : FloatingPointAccuracy, GenRandom {
@@ -23,13 +22,12 @@ extension Double : FloatingPointAccuracy, GenRandom {
         return 0.000001
     }
     
-    static func rand() -> Double {
-        return Double(arc4random()) / Double(UInt32.max)
-    }
-    
-    static func rand(lowerBound: Double, upperBound: Double) -> Double {
-        let r = rand()
-        return (r * (upperBound - lowerBound)) + lowerBound
+    static func rand(lowerBound: Double? = nil, upperBound: Double? = nil) -> Double {
+        let r = Double(arc4random()) / Double(UInt32.max)
+        if let lb = lowerBound, ub = upperBound {
+            return (r * (ub - lb)) + lb
+        }
+        return r
     }
 }
 
@@ -39,12 +37,11 @@ extension Float : FloatingPointAccuracy, GenRandom {
         return 0.0001
     }
     
-    static func rand() -> Float {
-        return Float(arc4random()) / Float(UInt32.max)
-    }
-    
-    static func rand(lowerBound: Float, upperBound: Float) -> Float {
-        let r = rand()
-        return (r * (upperBound - lowerBound)) + lowerBound
+    static func rand(lowerBound: Float? = nil, upperBound: Float? = nil) -> Float {
+        let r = Float(arc4random()) / Float(UInt32.max)
+        if let lb = lowerBound, ub = upperBound {
+            return (r * (ub - lb)) + lb
+        }
+        return r
     }
 }

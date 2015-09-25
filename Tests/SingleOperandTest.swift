@@ -14,20 +14,17 @@ protocol SingleOperandTest : RandomDataTest {
     
     typealias OperandType : FloatingPointAccuracy
     
-    func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType) -> (OperandType), mapped: ([OperandType]) -> ([OperandType]))
-    func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType) -> (OperandType), mapped: ([OperandType]) -> ([OperandType]), lowerBound: OperandType, upperBound: OperandType, accuracy: OperandType)
+    func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType) -> (OperandType), mapped: ([OperandType]) -> ([OperandType]), lowerBound: OperandType?, upperBound: OperandType?, accuracy: OperandType)
     
 }
 
 extension SingleOperandTest where Self : XCTestCase {
     
-    func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType) -> (OperandType), mapped: ([OperandType]) -> ([OperandType])) {
-        let values = rands(SurgeTestCountMedium)
-        measureAndValidateMappedFunctionWithAccuracy(values, member: member, mapped: mapped, accuracy: OperandType.accuracy)
-    }
     
-    func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType) -> (OperandType), mapped: ([OperandType]) -> ([OperandType]), lowerBound: OperandType, upperBound: OperandType, accuracy: OperandType = OperandType.accuracy) {
+    func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType) -> (OperandType), mapped: (([OperandType]) -> ([OperandType])), lowerBound: OperandType? = nil, upperBound: OperandType? = nil, accuracy: OperandType = OperandType.accuracy) {
+        
         let values = rands(SurgeTestCountMedium, lowerBound: lowerBound, upperBound: upperBound)
+        
         measureAndValidateMappedFunctionWithAccuracy(values, member: member, mapped: mapped, accuracy: accuracy)
     }
     
