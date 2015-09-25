@@ -49,7 +49,7 @@ extension Float : FloatingPointAccuracy, GenRandom {
     }
 }
 
-protocol SOTC {
+protocol SingleOperandTestCase {
     
     typealias OperandType : FloatingPointAccuracy, GenRandom
     
@@ -60,7 +60,7 @@ protocol SOTC {
     
 }
 
-extension SOTC where Self : XCTestCase {
+extension SingleOperandTestCase where Self : XCTestCase {
     
     func rands(count: Int) -> [OperandType] {
         return (0..<count).map {_ in OperandType.rand() }
@@ -82,14 +82,14 @@ extension SOTC where Self : XCTestCase {
     
 }
 
-protocol DOTC : SOTC {
+protocol DoubleOperandTestCase : SingleOperandTestCase {
     
     func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType, OperandType) -> (OperandType), mapped: ([OperandType], [OperandType]) -> ([OperandType]))
     func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType, OperandType) -> (OperandType), mapped: ([OperandType], [OperandType]) -> ([OperandType]), lowerBound: OperandType, upperBound: OperandType)
     
 }
 
-extension DOTC where Self : XCTestCase {
+extension DoubleOperandTestCase where Self : XCTestCase {
     func measureAndValidateMappedFunctionWithAccuracy(member: (OperandType, OperandType) -> (OperandType), mapped: ([OperandType], [OperandType]) -> ([OperandType])) {
         let values1 = rands(SurgeTestCountMedium)
         let values2 = rands(SurgeTestCountMedium)

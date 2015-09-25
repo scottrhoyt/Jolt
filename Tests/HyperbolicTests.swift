@@ -24,7 +24,7 @@ import Darwin
 import Surge
 import XCTest
 
-class DoubleHyperbolicTests: XCTestCase, SOTC {
+class DoubleHyperbolicTests: XCTestCase, SingleOperandTestCase {
 
     typealias OperandType = Double
     
@@ -53,7 +53,7 @@ class DoubleHyperbolicTests: XCTestCase, SOTC {
     }
 }
 
-class FloatHyperbolicTests: XCTestCase, SOTC {
+class FloatHyperbolicTests: XCTestCase, SingleOperandTestCase {
     
     typealias OperandType = Float
     

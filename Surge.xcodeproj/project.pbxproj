@@ -29,7 +29,7 @@
 		3B45C58C1B9FC7B100E310DB /* FloatingTypeOperationsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45C58B1B9FC7B100E310DB /* FloatingTypeOperationsExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 		3B45C58E1B9FCBA300E310DB /* ArrayOperationsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45C58D1B9FCBA300E310DB /* ArrayOperationsExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 		3B5F90F01BA208F30081EDE5 /* ArrayStatisticsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5F90EF1BA208F30081EDE5 /* ArrayStatisticsExtensions.swift */; settings = {ASSET_TAGS = (); }; };
-		3B67B9B81BB4AA5A00D8CECE /* SingleOperandTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67B9B71BB4AA5A00D8CECE /* SingleOperandTestCase.swift */; settings = {ASSET_TAGS = (); }; };
+		3B67B9B81BB4AA5A00D8CECE /* OperandTestCaseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67B9B71BB4AA5A00D8CECE /* OperandTestCaseProtocols.swift */; settings = {ASSET_TAGS = (); }; };
 		3B8C573B1B9D101200361AF9 /* VectorArithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C573A1B9D101200361AF9 /* VectorArithmetic.swift */; settings = {ASSET_TAGS = (); }; };
 		3B8C573D1B9E575200361AF9 /* FloatingTypeArithmeticExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C573C1B9E575200361AF9 /* FloatingTypeArithmeticExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 		3B8C573F1B9E5EED00361AF9 /* VectorPower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C573E1B9E5EED00361AF9 /* VectorPower.swift */; settings = {ASSET_TAGS = (); }; };
@@ -91,7 +91,7 @@
 		3B45C58B1B9FC7B100E310DB /* FloatingTypeOperationsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTypeOperationsExtensions.swift; sourceTree = "<group>"; };
 		3B45C58D1B9FCBA300E310DB /* ArrayOperationsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayOperationsExtensions.swift; sourceTree = "<group>"; };
 		3B5F90EF1BA208F30081EDE5 /* ArrayStatisticsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayStatisticsExtensions.swift; sourceTree = "<group>"; };
-		3B67B9B71BB4AA5A00D8CECE /* SingleOperandTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleOperandTestCase.swift; sourceTree = "<group>"; };
+		3B67B9B71BB4AA5A00D8CECE /* OperandTestCaseProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperandTestCaseProtocols.swift; sourceTree = "<group>"; };
 		3B8C573A1B9D101200361AF9 /* VectorArithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorArithmetic.swift; sourceTree = "<group>"; };
 		3B8C573C1B9E575200361AF9 /* FloatingTypeArithmeticExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTypeArithmeticExtensions.swift; sourceTree = "<group>"; };
 		3B8C573E1B9E5EED00361AF9 /* VectorPower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorPower.swift; sourceTree = "<group>"; };
@@ -229,7 +229,7 @@
 				F8BD5C581A6C1C6500DD357E /* XCTestCase+Surge.swift */,
 				F84A6AB019A9A72F007B53E1 /* Supporting Files */,
 				F8BD5C521A6C1C6400DD357E /* SurgeTests-Bridging-Header.h */,
-				3B67B9B71BB4AA5A00D8CECE /* SingleOperandTestCase.swift */,
+				3B67B9B71BB4AA5A00D8CECE /* OperandTestCaseProtocols.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -416,7 +416,7 @@
 				F8BD5C5A1A6C1C6500DD357E /* AuxiliaryTests.swift in Sources */,
 				F8BD5C5D1A6C1C6500DD357E /* TrigonometricTests.swift in Sources */,
 				F8BD5C5E1A6C1C6500DD357E /* XCTestCase+Surge.swift in Sources */,
-				3B67B9B81BB4AA5A00D8CECE /* SingleOperandTestCase.swift in Sources */,
+				3B67B9B81BB4AA5A00D8CECE /* OperandTestCaseProtocols.swift in Sources */,
 				F8BD5C591A6C1C6500DD357E /* ArithmeticTests.swift in Sources */,
 				F8BD5C5B1A6C1C6500DD357E /* ExponentialTests.swift in Sources */,
 			);

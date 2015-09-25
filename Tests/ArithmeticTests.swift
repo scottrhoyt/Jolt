@@ -24,7 +24,7 @@ import Foundation
 import Surge
 import XCTest
 
-class DoubleArithmeticTests: XCTestCase, DOTC {
+class DoubleArithmeticTests: XCTestCase, DoubleOperandTestCase {
     
     typealias OperandType = Double
     
@@ -36,7 +36,7 @@ class DoubleArithmeticTests: XCTestCase, DOTC {
     }
 }
 
-class FloatArithmeticTests: XCTestCase, DOTC {
+class FloatArithmeticTests: XCTestCase, DoubleOperandTestCase {
     
     typealias OperandType = Float
     
