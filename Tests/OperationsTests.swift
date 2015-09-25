@@ -64,7 +64,7 @@ class FloatOperationsTests: XCTestCase, ReductionTest {
         let vector2 = rands(SurgeTestCountMedium)
         let expected = zip(vector1, vector2).reduce(OperandType.zero(), combine: { $0 + $1.0 * $1.1 })
         let actual = OperandType.dot(vector1, vector2)
-        XCTAssertEqualWithAccuracy(expected, actual, accuracy: OperandType.accuracy)
+        XCTAssertEqualWithAccuracy(expected, actual, accuracy: 0.001)
     }
     
     func test_Operator() {
