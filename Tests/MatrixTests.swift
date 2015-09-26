@@ -18,20 +18,7 @@ class MatrixTests: XCTestCase, RandomDataTest {
 
     func test_matrix_init_fails_with_bad_input_dimensions() {
         b = [1.0, 2.0]
-
-        var didFail = false;
-        
-        do {
-            let _ = try Matrix([a,b])
-        }
-        catch MatrixError.InvalidMatrixDimensions {
-            didFail = true
-        }
-        catch {
-            didFail = false
-        }
-        
-        XCTAssertTrue(didFail)
+        checkIfThrows({ try _ = Matrix([self.a,self.b]) }, error: MatrixError.InvalidMatrixDimensions)
     }
     
     func test_matrix_init_with_contents() {
@@ -65,41 +52,15 @@ class MatrixTests: XCTestCase, RandomDataTest {
     }
     
     func test_add_invalid_dimensions_throws() {
-        let mat1 = randMatrix(2, 2)
-        let mat2 = randMatrix(3, 3)
-        var didFail = false
-        do {
-            try mat1 + mat2
-        }
-        catch MatrixError.InvalidMatrixDimensions {
-            didFail = true
-        }
-        catch {
-            didFail = false
-        }
-        
-        XCTAssertTrue(didFail)
+        checkIfThrows({ try zeroMatrix(2, 2) + zeroMatrix(3, 3) }, error: MatrixError.InvalidMatrixDimensions)
     }
     
     func test_mul_invalid_dimensions_throws() {
-        let mat1 = randMatrix(2, 2)
-        let mat2 = randMatrix(3, 3)
-        var didFail = false
-        do {
-            try mat1 * mat2
-        }
-        catch MatrixError.InvalidMatrixDimensions {
-            didFail = true
-        }
-        catch {
-            didFail = false
-        }
-        
-        XCTAssertTrue(didFail)
+        checkIfThrows({ try zeroMatrix(2, 2) * zeroMatrix(3, 3) }, error: MatrixError.InvalidMatrixDimensions)
     }
     
     func test_inverse_not_square_throws() {
-        checkIfThrows({ try OperandType.inv(zerosMatrix(2, 3)) }, error: MatrixError.MatrixNotSquare)
+        checkIfThrows({ try OperandType.inv(zeroMatrix(2, 3)) }, error: MatrixError.MatrixNotSquare)
     }
     
     // MARK: - Utilities
@@ -127,7 +88,7 @@ class MatrixTests: XCTestCase, RandomDataTest {
         return try! Matrix(matArray)
     }
     
-    func zerosMatrix(rows: Int, _ columns: Int) -> Matrix<OperandType> {
+    func zeroMatrix(rows: Int, _ columns: Int) -> Matrix<OperandType> {
         var matArray = [[OperandType]]()
         for var m = 0; m < rows; m++ {
             matArray.append(Array<OperandType>(count: columns, repeatedValue: OperandType(0)))
