@@ -143,13 +143,13 @@ extension MatrixOperations {
     
     // MARK: Helper functions
     static func checkAddDimensions(x: Matrix<Self>, _ y: Matrix<Self>) throws {
-        guard x.columns == y.columns && x.rows == y.rows else {
+        if !(x.columns == y.columns && x.rows == y.rows) {
             throw MatrixError.InvalidMatrixDimensions
         }
     }
     
     static func checkMulDimensions(x: Matrix<Self>, _ y: Matrix<Self>) throws {
-        guard x.columns == y.rows else {
+        if !(x.columns == y.rows) {
             throw MatrixError.InvalidMatrixDimensions
         }
     }
