@@ -10,26 +10,26 @@ import Foundation
 
 public typealias VectorAll = protocol<VectorPower, VectorArithmetic>
 
-public protocol FloatConvertible : VectorAll {
+public protocol FloatingPointOperationsConvertible : VectorAll {
     typealias FloatConversionType : VectorAll, FloatingPointType
     
-    func value() -> FloatConversionType
-    init(value: FloatConversionType)
+    var floatingPointValue: FloatConversionType { get }
+    init(floatingPointValue: FloatConversionType)
 }
 
-extension Array where Element : FloatConvertible {
+extension Array where Element : FloatingPointOperationsConvertible {
     
     func toValueArray() -> [Element.FloatConversionType] {
-        return self.map( { return $0.value() } )
+        return self.map( { return $0.floatingPointValue } )
     }
     
     static func fromValueArray(x: [Element.FloatConversionType]) -> [Element] {
-        return x.map({ return Element(value: $0) })
+        return x.map({ return Element(floatingPointValue: $0) })
     }
     
 }
 
-extension FloatConvertible {
+extension FloatingPointOperationsConvertible {
     
     // MARK: Power
     public static func pow(x: [Self], _ y: [Self]) -> [Self] {
@@ -61,13 +61,13 @@ extension FloatConvertible {
     // MARK: Overload if not FloatLiteralConvertible, Optional Otherwise
     public static func zero() -> Self
     {
-        return Self(value: FloatConversionType(0))
+        return Self(floatingPointValue: FloatConversionType(0))
     }
     public static func one() -> Self {
-        return Self(value: FloatConversionType(1))
+        return Self(floatingPointValue: FloatConversionType(1))
     }
     public static func negativeOne() -> Self {
-        return Self(value: FloatConversionType(-1))
+        return Self(floatingPointValue: FloatConversionType(-1))
     }
     
 }

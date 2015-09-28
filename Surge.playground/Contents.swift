@@ -39,7 +39,7 @@ import SurgeOperators
 //plot(sin(x), title: "Sine Wave")
 //plot(fft(sin(x)), title: "FFT")
 
-struct Temp : DoubleConvertible {
+struct Temp : FloatingPointOperationsConvertible {
     enum Unit {
         case Kelvin, Farenheight, Celsius
     }
@@ -76,16 +76,16 @@ struct Temp : DoubleConvertible {
     }
     
     // MARK: DoubleConvertible Stuff
-    func doubleValue() -> Double {
+    var floatingPointValue: Double {
         return kelvin
     }
-    init(value: Double) {
-        kelvin = value
+    init(floatingPointValue: Double) {
+        kelvin = floatingPointValue
     }
 }
 
-var a = Temp(value: 3)
-var b = Temp(value: 2)
+var a = Temp(floatingPointValue: 3)
+var b = Temp(floatingPointValue: 2)
 let c = [a,b]
 Temp.sqrt(c)
 c / c
