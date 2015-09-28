@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3B0643E81BB5B5C500EA9001 /* OperationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0643E71BB5B5C500EA9001 /* OperationsTests.swift */; settings = {ASSET_TAGS = (); }; };
+		3B2C8C9F1BB777AB00984C7C /* SurgeOperators.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2C8C9E1BB777AB00984C7C /* SurgeOperators.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B2C8CB51BB777DF00984C7C /* VectorOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C8CB41BB777DF00984C7C /* VectorOperators.swift */; settings = {ASSET_TAGS = (); }; };
 		3B3870211BA20EFD0022CB6E /* VectorTrigonometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3870201BA20EFD0022CB6E /* VectorTrigonometric.swift */; settings = {ASSET_TAGS = (); }; };
 		3B3870231BA2108C0022CB6E /* FloatingTypeTrigonometricExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3870221BA2108C0022CB6E /* FloatingTypeTrigonometricExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 		3B3870251BA212370022CB6E /* ArrayTrigonometricExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3870241BA212370022CB6E /* ArrayTrigonometricExtensions.swift */; settings = {ASSET_TAGS = (); }; };
@@ -68,6 +70,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3B2C8CB61BB77B6800984C7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8A1E1A119917A79009735E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B2C8C9B1BB777AB00984C7C;
+			remoteInfo = SurgeOperators;
+		};
 		F84A6AB719A9A771007B53E1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F8A1E1A119917A79009735E2 /* Project object */;
@@ -79,6 +88,10 @@
 
 /* Begin PBXFileReference section */
 		3B0643E71BB5B5C500EA9001 /* OperationsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationsTests.swift; sourceTree = "<group>"; };
+		3B2C8C9C1BB777AB00984C7C /* SurgeOperators.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SurgeOperators.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B2C8C9E1BB777AB00984C7C /* SurgeOperators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SurgeOperators.h; sourceTree = "<group>"; };
+		3B2C8CA01BB777AB00984C7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B2C8CB41BB777DF00984C7C /* VectorOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorOperators.swift; sourceTree = "<group>"; };
 		3B3870201BA20EFD0022CB6E /* VectorTrigonometric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorTrigonometric.swift; sourceTree = "<group>"; };
 		3B3870221BA2108C0022CB6E /* FloatingTypeTrigonometricExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTypeTrigonometricExtensions.swift; sourceTree = "<group>"; };
 		3B3870241BA212370022CB6E /* ArrayTrigonometricExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTrigonometricExtensions.swift; sourceTree = "<group>"; };
@@ -144,6 +157,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3B2C8C981BB777AB00984C7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F84A6AAB19A9A72F007B53E1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,6 +183,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B2C8C9D1BB777AB00984C7C /* SurgeOperators */ = {
+			isa = PBXGroup;
+			children = (
+				3B2C8CB31BB777BE00984C7C /* Operators */,
+				3B2C8C9E1BB777AB00984C7C /* SurgeOperators.h */,
+				3B2C8CA01BB777AB00984C7C /* Info.plist */,
+			);
+			path = SurgeOperators;
+			sourceTree = "<group>";
+		};
+		3B2C8CB31BB777BE00984C7C /* Operators */ = {
+			isa = PBXGroup;
+			children = (
+				3B2C8CB41BB777DF00984C7C /* VectorOperators.swift */,
+			);
+			name = Operators;
+			path = ../Source;
+			sourceTree = "<group>";
+		};
 		3B38701C1BA20E620022CB6E /* VectorProtocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +337,7 @@
 			children = (
 				F8A1E1AC19917A79009735E2 /* Source */,
 				F84A6AAF19A9A72F007B53E1 /* Tests */,
+				3B2C8C9D1BB777AB00984C7C /* SurgeOperators */,
 				F8A1E1D419917C17009735E2 /* Frameworks */,
 				F8A1E1AB19917A79009735E2 /* Products */,
 			);
@@ -308,6 +348,7 @@
 			children = (
 				F8A1E1AA19917A79009735E2 /* Surge.framework */,
 				F84A6AAE19A9A72F007B53E1 /* SurgeTests.xctest */,
+				3B2C8C9C1BB777AB00984C7C /* SurgeOperators.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -357,6 +398,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		3B2C8C991BB777AB00984C7C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B2C8C9F1BB777AB00984C7C /* SurgeOperators.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8A1E1A719917A79009735E2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -368,6 +417,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3B2C8C9B1BB777AB00984C7C /* SurgeOperators */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B2C8CB11BB777AB00984C7C /* Build configuration list for PBXNativeTarget "SurgeOperators" */;
+			buildPhases = (
+				3B2C8C971BB777AB00984C7C /* Sources */,
+				3B2C8C981BB777AB00984C7C /* Frameworks */,
+				3B2C8C991BB777AB00984C7C /* Headers */,
+				3B2C8C9A1BB777AB00984C7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SurgeOperators;
+			productName = SurgeOperators;
+			productReference = 3B2C8C9C1BB777AB00984C7C /* SurgeOperators.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		F84A6AAD19A9A72F007B53E1 /* SurgeTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F84A6AB419A9A72F007B53E1 /* Build configuration list for PBXNativeTarget "SurgeTests" */;
@@ -379,6 +446,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3B2C8CB71BB77B6800984C7C /* PBXTargetDependency */,
 				F84A6AB819A9A771007B53E1 /* PBXTargetDependency */,
 			);
 			name = SurgeTests;
@@ -415,6 +483,9 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Mattt Thompson";
 				TargetAttributes = {
+					3B2C8C9B1BB777AB00984C7C = {
+						CreatedOnToolsVersion = 7.0;
+					};
 					F84A6AAD19A9A72F007B53E1 = {
 						CreatedOnToolsVersion = 6.0;
 					};
@@ -437,11 +508,19 @@
 			targets = (
 				F8A1E1A919917A79009735E2 /* Surge */,
 				F84A6AAD19A9A72F007B53E1 /* SurgeTests */,
+				3B2C8C9B1BB777AB00984C7C /* SurgeOperators */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3B2C8C9A1BB777AB00984C7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F84A6AAC19A9A72F007B53E1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -459,6 +538,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3B2C8C971BB777AB00984C7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B2C8CB51BB777DF00984C7C /* VectorOperators.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F84A6AAA19A9A72F007B53E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -531,6 +618,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3B2C8CB71BB77B6800984C7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B2C8C9B1BB777AB00984C7C /* SurgeOperators */;
+			targetProxy = 3B2C8CB61BB77B6800984C7C /* PBXContainerItemProxy */;
+		};
 		F84A6AB819A9A771007B53E1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F8A1E1A919917A79009735E2 /* Surge */;
@@ -539,6 +631,48 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		3B2C8CAD1BB777AB00984C7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SurgeOperators/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.scotthoyt.SurgeOperators;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3B2C8CAE1BB777AB00984C7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SurgeOperators/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.scotthoyt.SurgeOperators;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		F84A6AB519A9A72F007B53E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -689,6 +823,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3B2C8CB11BB777AB00984C7C /* Build configuration list for PBXNativeTarget "SurgeOperators" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B2C8CAD1BB777AB00984C7C /* Debug */,
+				3B2C8CAE1BB777AB00984C7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F84A6AB419A9A72F007B53E1 /* Build configuration list for PBXNativeTarget "SurgeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

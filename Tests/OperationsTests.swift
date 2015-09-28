@@ -8,6 +8,7 @@
 
 import XCTest
 import Surge
+import SurgeOperators
 
 class DoubleOperationsTests: XCTestCase, ReductionTest {
 

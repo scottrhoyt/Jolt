@@ -23,6 +23,7 @@
 import Foundation
 import Surge
 import XCTest
+import SurgeOperators
 
 class DoubleArithmeticTests: XCTestCase, DoubleOperandTest {
     

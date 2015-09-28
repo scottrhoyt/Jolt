@@ -20,7 +20,7 @@ extension Double : VectorOperations {
     
     public static func unit(x: [Double]) -> [Double] {
         // FIXME: Is there a more effienct way?
-        return x / magnitude(x)
+        return Double.div(x, [Double](count: x.count, repeatedValue:magnitude(x)))
     }
     
     public static func dot(x: [Double], _ y: [Double]) -> Double {
@@ -44,7 +44,7 @@ extension Float : VectorOperations {
     
     public static func unit(x: [Float]) -> [Float] {
         // FIXME: Is there a more effienct way?
-        return x / magnitude(x)
+        return Float.div(x, [Float](count: x.count, repeatedValue:magnitude(x)))
     }
     
     public static func dot(x: [Float], _ y: [Float]) -> Float {
