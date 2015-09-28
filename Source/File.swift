@@ -10,62 +10,64 @@ import Foundation
 
 public typealias VectorAll = protocol<VectorPower, VectorArithmetic>
 
-public protocol DoubleConvertible : VectorAll {
-    func doubleValue() -> Double
-    init(value: Double)
+public protocol FloatConvertible : VectorAll {
+    typealias FloatConversionType : VectorAll, FloatingPointType
+    
+    func value() -> FloatConversionType
+    init(value: FloatConversionType)
 }
 
-extension Array where Element : DoubleConvertible {
+extension Array where Element : FloatConvertible {
     
-    func toDoubleArray() -> [Double] {
-        return self.map( { return $0.doubleValue() } )
+    func toValueArray() -> [Element.FloatConversionType] {
+        return self.map( { return $0.value() } )
     }
     
-    static func fromDoubleArray(x: [Double]) -> [Element] {
+    static func fromValueArray(x: [Element.FloatConversionType]) -> [Element] {
         return x.map({ return Element(value: $0) })
     }
     
 }
 
-extension DoubleConvertible {
+extension FloatConvertible {
     
     // MARK: Power
     public static func pow(x: [Self], _ y: [Self]) -> [Self] {
-        return [Self].fromDoubleArray(Double.pow(x.toDoubleArray(), y.toDoubleArray()))
+        return [Self].fromValueArray(FloatConversionType.pow(x.toValueArray(), y.toValueArray()))
     }
     
     public static func sqrt(x: [Self]) -> [Self] {
-        return [Self].fromDoubleArray(Double.sqrt(x.toDoubleArray()))
+        return [Self].fromValueArray(FloatConversionType.sqrt(x.toValueArray()))
     }
     
     // MARK: Arithmetic
     public static func add(x: [Self], _ y: [Self]) -> [Self] {
-        return [Self].fromDoubleArray(Double.add(x.toDoubleArray(), y.toDoubleArray()))
+        return [Self].fromValueArray(FloatConversionType.add(x.toValueArray(), y.toValueArray()))
     }
     public static func mul(x: [Self], _ y: [Self]) -> [Self] {
-        return [Self].fromDoubleArray(Double.mul(x.toDoubleArray(), y.toDoubleArray()))
+        return [Self].fromValueArray(FloatConversionType.mul(x.toValueArray(), y.toValueArray()))
     }
     // TODO: Perhaps should be optional Overload?
     public static func div(x: [Self], _ y: [Self]) -> [Self] {
-        return [Self].fromDoubleArray(Double.div(x.toDoubleArray(), y.toDoubleArray()))
+        return [Self].fromValueArray(FloatConversionType.div(x.toValueArray(), y.toValueArray()))
     }
     public static func mod(x: [Self], _ y: [Self]) -> [Self] {
-        return [Self].fromDoubleArray(Double.mod(x.toDoubleArray(), y.toDoubleArray()))
+        return [Self].fromValueArray(FloatConversionType.mod(x.toValueArray(), y.toValueArray()))
     }
     public static func remainder(x: [Self], _ y: [Self]) -> [Self] {
-        return [Self].fromDoubleArray(Double.remainder(x.toDoubleArray(), y.toDoubleArray()))
+        return [Self].fromValueArray(FloatConversionType.remainder(x.toValueArray(), y.toValueArray()))
     }
     
     // MARK: Overload if not FloatLiteralConvertible, Optional Otherwise
     public static func zero() -> Self
     {
-        return Self(value: 0)
+        return Self(value: FloatConversionType(0))
     }
     public static func one() -> Self {
-        return Self(value: 1)
+        return Self(value: FloatConversionType(1))
     }
     public static func negativeOne() -> Self {
-        return Self(value: -1)
+        return Self(value: FloatConversionType(-1))
     }
     
 }
