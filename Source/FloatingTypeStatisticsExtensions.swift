@@ -152,10 +152,10 @@ extension Float : VectorStatistics {
     }
     
     public static func correlation(x: [Float], _ y: [Float]) -> Float {
-        let varianceX = variance(x)
-        let varianceY = variance(y)
+        let stdevX = stdev(x)
+        let stdevY = stdev(y)
         let covar = covariance(x, y)
-        let correlation = covar / (varianceX * varianceY)
+        let correlation = covar / (stdevX * stdevY)
         return correlation
     }
     
