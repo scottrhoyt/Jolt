@@ -10,14 +10,14 @@ import Foundation
 
 public typealias VectorAll = protocol<VectorPower, VectorArithmetic>
 
-public protocol FloatingPointOperationsConvertible : VectorAll {
+public protocol VectorOperationsConvertible : VectorAll {
     typealias FloatConversionType : VectorAll, FloatingPointType
     
     var floatingPointValue: FloatConversionType { get }
     init(floatingPointValue: FloatConversionType)
 }
 
-extension Array where Element : FloatingPointOperationsConvertible {
+extension Array where Element : VectorOperationsConvertible {
     
     func toValueArray() -> [Element.FloatConversionType] {
         return self.map( { return $0.floatingPointValue } )
@@ -29,7 +29,7 @@ extension Array where Element : FloatingPointOperationsConvertible {
     
 }
 
-extension FloatingPointOperationsConvertible {
+extension VectorOperationsConvertible {
     
     // MARK: Power
     public static func pow(x: [Self], _ y: [Self]) -> [Self] {

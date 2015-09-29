@@ -22,7 +22,7 @@
 		3B3F1F4F1BB1DCDD00AAE75F /* VectorOther.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F1F4E1BB1DCDD00AAE75F /* VectorOther.swift */; settings = {ASSET_TAGS = (); }; };
 		3B3F1F511BB1DD7000AAE75F /* FloatingTypeOtherExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F1F501BB1DD7000AAE75F /* FloatingTypeOtherExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 		3B3F1F531BB1DEC000AAE75F /* ArrayOtherExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F1F521BB1DEC000AAE75F /* ArrayOtherExtensions.swift */; settings = {ASSET_TAGS = (); }; };
-		3B3F1F561BB1E06F00AAE75F /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F1F551BB1E06F00AAE75F /* File.swift */; settings = {ASSET_TAGS = (); }; };
+		3B3F1F561BB1E06F00AAE75F /* VectorOperationsConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F1F551BB1E06F00AAE75F /* VectorOperationsConvertible.swift */; settings = {ASSET_TAGS = (); }; };
 		3B45C5801B9EBC4600E310DB /* ArrayArithmeticExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45C57F1B9EBC4600E310DB /* ArrayArithmeticExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 		3B45C5821B9EBD2B00E310DB /* ArrayPowerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45C5811B9EBD2B00E310DB /* ArrayPowerExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 		3B45C5841B9F899500E310DB /* VectorAuxiliary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45C5831B9F899500E310DB /* VectorAuxiliary.swift */; settings = {ASSET_TAGS = (); }; };
@@ -104,7 +104,7 @@
 		3B3F1F4E1BB1DCDD00AAE75F /* VectorOther.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorOther.swift; sourceTree = "<group>"; };
 		3B3F1F501BB1DD7000AAE75F /* FloatingTypeOtherExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTypeOtherExtensions.swift; sourceTree = "<group>"; };
 		3B3F1F521BB1DEC000AAE75F /* ArrayOtherExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayOtherExtensions.swift; sourceTree = "<group>"; };
-		3B3F1F551BB1E06F00AAE75F /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = File.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3B3F1F551BB1E06F00AAE75F /* VectorOperationsConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = VectorOperationsConvertible.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3B45C57F1B9EBC4600E310DB /* ArrayArithmeticExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayArithmeticExtensions.swift; sourceTree = "<group>"; };
 		3B45C5811B9EBD2B00E310DB /* ArrayPowerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ArrayPowerExtensions.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3B45C5831B9F899500E310DB /* VectorAuxiliary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorAuxiliary.swift; sourceTree = "<group>"; };
@@ -267,12 +267,12 @@
 			name = Done;
 			sourceTree = "<group>";
 		};
-		3B3F1F541BB1E05F00AAE75F /* DoubleConvertible */ = {
+		3B3F1F541BB1E05F00AAE75F /* VectorOperationsConvertible */ = {
 			isa = PBXGroup;
 			children = (
-				3B3F1F551BB1E06F00AAE75F /* File.swift */,
+				3B3F1F551BB1E06F00AAE75F /* VectorOperationsConvertible.swift */,
 			);
-			name = DoubleConvertible;
+			name = VectorOperationsConvertible;
 			sourceTree = "<group>";
 		};
 		3BC4646C1BB4DDCF004A2E81 /* TestExtensions */ = {
@@ -374,7 +374,7 @@
 		F8A1E1C319917B0A009735E2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				3B3F1F541BB1E05F00AAE75F /* DoubleConvertible */,
+				3B3F1F541BB1E05F00AAE75F /* VectorOperationsConvertible */,
 				3B38701F1BA20EB90022CB6E /* Done */,
 				3B38701E1BA20E880022CB6E /* ArrayExtensions */,
 				3B38701D1BA20E770022CB6E /* FloatingTypeExtensions */,
@@ -583,7 +583,7 @@
 				3B45C58E1B9FCBA300E310DB /* ArrayOperationsExtensions.swift in Sources */,
 				3B8D21741BA2379400CE9D1A /* ArrayHyperbolicExtensions.swift in Sources */,
 				F8A1E1D119917B0A009735E2 /* Trigonometric.swift in Sources */,
-				3B3F1F561BB1E06F00AAE75F /* File.swift in Sources */,
+				3B3F1F561BB1E06F00AAE75F /* VectorOperationsConvertible.swift in Sources */,
 				F8A1E1CE19917B0A009735E2 /* Hyperbolic.swift in Sources */,
 				3B3870291BA213780022CB6E /* FloatingTypeFFTExtensions.swift in Sources */,
 				3B8C573F1B9E5EED00361AF9 /* VectorPower.swift in Sources */,
@@ -830,6 +830,7 @@
 				3B2C8CAE1BB777AB00984C7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F84A6AB419A9A72F007B53E1 /* Build configuration list for PBXNativeTarget "SurgeTests" */ = {
 			isa = XCConfigurationList;
