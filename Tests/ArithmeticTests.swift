@@ -29,9 +29,6 @@ class DoubleArithmeticTests: XCTestCase, DoubleOperandTest {
     
     typealias OperandType = Double
     
-    func test_sqrt() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.sqrt, mapped: OperandType.sqrt)
-    }
     func test_add() {
         measureAndValidateMappedFunctionWithAccuracy({$0 + $1 }, mapped: OperandType.add)
     }
@@ -125,9 +122,6 @@ class FloatArithmeticTests: XCTestCase, DoubleOperandTest {
     
     typealias OperandType = Float
     
-    func test_sqrt() {
-        measureAndValidateMappedFunctionWithAccuracy(Darwin.sqrt, mapped: OperandType.sqrt)
-    }
     func test_add() {
         measureAndValidateMappedFunctionWithAccuracy({$0 + $1 }, mapped: OperandType.add)
     }
