@@ -39,6 +39,23 @@ extension Double : VectorStatistics {
         return result
     }
     
+    public static func stdevp(x: [Double]) -> Double {
+        var mean: Double = 0
+        var stdev: Double = 0
+        
+        vDSP_normalizeD(x, 1, nil, 1, &mean, &stdev, vDSP_Length(x.count))
+        return stdev
+    }
+    
+    public static func normalize(x: [Double]) -> [Double] {
+        var mean: Double = 0
+        var stdev: Double = 0
+        var results = [Double](x)
+        
+        vDSP_normalizeD(x, 1, &results, 1, &mean, &stdev, vDSP_Length(x.count))
+        return results
+    }
+    
 }
 
 extension Float : VectorStatistics {
@@ -69,6 +86,23 @@ extension Float : VectorStatistics {
         vDSP_meanv(x, 1, &result, vDSP_Length(x.count))
         
         return result
+    }
+    
+    public static func stdevp(x: [Float]) -> Float {
+        var mean: Float = 0
+        var stdev: Float = 0
+        
+        vDSP_normalize(x, 1, nil, 1, &mean, &stdev, vDSP_Length(x.count))
+        return stdev
+    }
+    
+    public static func normalize(x: [Float]) -> [Float] {
+        var mean: Float = 0
+        var stdev: Float = 0
+        var results = [Float](x)
+        
+        vDSP_normalize(x, 1, &results, 1, &mean, &stdev, vDSP_Length(x.count))
+        return results
     }
     
 }

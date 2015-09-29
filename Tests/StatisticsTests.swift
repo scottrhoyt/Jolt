@@ -31,6 +31,24 @@ class DoubleStatisticsTests: XCTestCase, ReductionTest {
         let reduction = { (data: [OperandType]) in return data.reduce(OperandType(0), combine: { $0 + $1 / OperandType(data.count) }) }
         measureAndValidateMappedFunctionWithAccuracy(reduction, mapped: OperandType.mean)
     }
+    
+    func test_stddev() {
+        let reduction = {
+            (data: [OperandType]) -> OperandType in
+            let mean = OperandType.mean(data)
+            let reduction = data.reduce(OperandType(0), combine: { $0 + Foundation.pow($1 - mean, 2) })
+            return Foundation.sqrt(reduction / OperandType(data.count))
+        }
+        measureAndValidateMappedFunctionWithAccuracy(reduction, mapped: OperandType.stdevp)
+    }
+    
+    func test_normalize() {
+        let data = OperandType.normalize(rands(SurgeTestCountMedium))
+        let mean = OperandType.mean(data)
+        let stdev = OperandType.stdevp(data)
+        XCTAssertEqualWithAccuracy(mean, 0, accuracy: OperandType.accuracy)
+        XCTAssertEqualWithAccuracy(stdev, 1.0, accuracy: OperandType.accuracy)
+    }
 
 }
 
@@ -56,6 +74,24 @@ class FloatStatisticsTests: XCTestCase, ReductionTest {
     func test_mean() {
         let reduction = { (data: [OperandType]) in return data.reduce(OperandType(0), combine: { $0 + $1 / OperandType(data.count) }) }
         measureAndValidateMappedFunctionWithAccuracy(reduction, mapped: OperandType.mean)
+    }
+    
+    func test_stddev() {
+        let reduction = {
+            (data: [OperandType]) -> OperandType in
+            let mean = OperandType.mean(data)
+            let reduction = data.reduce(OperandType(0), combine: { $0 + Foundation.pow($1 - mean, 2) })
+            return Foundation.sqrt(reduction / OperandType(data.count))
+        }
+        measureAndValidateMappedFunctionWithAccuracy(reduction, mapped: OperandType.stdevp)
+    }
+    
+    func test_normalize() {
+        let data = OperandType.normalize(rands(SurgeTestCountMedium))
+        let mean = OperandType.mean(data)
+        let stdev = OperandType.stdevp(data)
+        XCTAssertEqualWithAccuracy(mean, 0, accuracy: OperandType.accuracy)
+        XCTAssertEqualWithAccuracy(stdev, 1.0, accuracy: OperandType.accuracy)
     }
     
 }
