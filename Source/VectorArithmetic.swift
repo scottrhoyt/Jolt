@@ -35,6 +35,10 @@ public protocol VectorArithmetic {
     //MARK: Optional Overload
     static func add(x: Self, _ y: [Self]) -> [Self]
     static func mul(x: Self, _ y: [Self]) -> [Self]
+    static func mod(x: [Self], _ y: Self) -> [Self]
+    static func remainder(x: [Self], _ y: Self) -> [Self]
+    static func mod(x: Self, _ y: [Self]) -> [Self]
+    static func remainder(x: Self, _ y: [Self]) -> [Self]
     static func zeros(count: Int) -> [Self]
     static func ones(count: Int) -> [Self]
     static func negativeOnes(count: Int) -> [Self]
@@ -49,6 +53,23 @@ public extension VectorArithmetic {
     static func mul(x: Self, _ y: [Self]) -> [Self] {
         return Self.mul(y, x)
     }
+    
+    static func mod(x: [Self], _ y: Self) -> [Self] {
+        return Self.mod(x, [Self](count: x.count, repeatedValue: y))
+    }
+    
+    static func remainder(x: [Self], _ y: Self) -> [Self] {
+        return Self.remainder(x, [Self](count: x.count, repeatedValue: y))
+    }
+    
+    static func mod(x: Self, _ y: [Self]) -> [Self] {
+        return Self.mod([Self](count: y.count, repeatedValue: x), y)
+    }
+    
+    static func remainder(x: Self, _ y: [Self]) -> [Self] {
+        return Self.mod([Self](count: y.count, repeatedValue: x), y)
+    }
+
     
     public static func zeros(count: Int) -> [Self] {
         return [Self](count: count, repeatedValue: Self.zero())

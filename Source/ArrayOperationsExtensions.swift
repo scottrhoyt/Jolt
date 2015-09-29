@@ -17,7 +17,9 @@ extension Array where Element : VectorOperations {
     public func magnitude() -> Element {
         return Element.magnitude(self)
     }
+    
+    public func dot(y: [Element]) -> Element {
+        return Element.dot(self, y)
+    }
 
 }
-
-// TODO: Add rest of the Vector operations

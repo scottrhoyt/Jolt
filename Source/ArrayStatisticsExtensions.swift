@@ -14,6 +14,36 @@ extension Array where Element : VectorStatistics {
         return Element.sum(self)
     }
     
-}
+    public func min() -> Element {
+        return Element.min(self)
+    }
 
-// TODO: Add rest of array functions
+    public func max() -> Element {
+        return Element.max(self)
+    }
+
+    public func mean() -> Element {
+        return Element.mean(self)
+    }
+
+    public func normalize() -> [Element] {
+        return Element.normalize(self)
+    }
+
+    public func variance() -> Element {
+        return Element.variance(self)
+    }
+
+    public func stdev() -> Element {
+        return Element.stdev(self)
+    }
+
+    public func covariance(y: [Element]) -> Element {
+        return Element.covariance(self, y)
+    }
+
+    public func correlation(y: [Element]) -> Element {
+        return Element.correlation(self, y)
+    }
+    
+}

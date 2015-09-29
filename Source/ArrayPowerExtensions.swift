@@ -8,8 +8,6 @@
 
 import Foundation
 
-// TODO: Add Rest of power functions
-
 extension Array where Element : VectorPower {
     
     public func pow(y: [Element]) -> [Element] {
@@ -19,4 +17,9 @@ extension Array where Element : VectorPower {
     public func pow(y: Element) -> [Element] {
         return Element.pow(self, y)
     }
+    
+    public func sqrt() -> [Element] {
+        return Element.sqrt(self)
+    }
+    
 }

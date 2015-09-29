@@ -8,14 +8,54 @@
 
 import Foundation
 
-// TODO: Add rest of Arithmetic functions
-
 extension Array where Element : VectorArithmetic {
-    public init(negativeOnes: Int) {
-        self = Element.negativeOnes(negativeOnes)
-    }
     
     public func add(y: [Element]) -> [Element] {
         return Element.add(self, y)
     }
+    
+    public func sub(y: [Element]) -> [Element] {
+        return Element.sub(self, y)
+    }
+    
+    public func mul(y: [Element]) -> [Element] {
+        return Element.mul(self, y)
+    }
+
+    public func div(y: [Element]) -> [Element] {
+        return Element.div(self, y)
+    }
+    
+    public func add(y: Element) -> [Element] {
+        return Element.add(self, y)
+    }
+    
+    public func sub(y: Element) -> [Element] {
+        return Element.sub(self, y)
+    }
+    
+    public func mul(y: Element) -> [Element] {
+        return Element.mul(self, y)
+    }
+    
+    public func div(y: Element) -> [Element] {
+        return Element.div(self, y)
+    }
+    
+    public func mod(y: [Element]) -> [Element] {
+        return Element.mod(self, y)
+    }
+    
+    public func remainder(y: [Element]) -> [Element] {
+        return Element.remainder(self, y)
+    }
+    
+    public func mod(y: Element) -> [Element] {
+        return Element.mod(self, y)
+    }
+
+    public func remainder(y: Element) -> [Element] {
+        return Element.remainder(self, y)
+    }
+    
 }
