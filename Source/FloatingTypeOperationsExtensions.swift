@@ -12,11 +12,7 @@ import Accelerate
 extension Double : VectorOperations {
     
     public static func magnitude(x: [Double]) -> Double {
-        // FIXME: Is there a more effienct vector function?
-        var result: Double = 0.0
-        vDSP_svesqD(x, 1, &result, vDSP_Length(x.count))
-        
-        return Foundation.sqrt(result)
+        return cblas_dnrm2(Int32(x.count), x, 1)
     }
     
     public static func unit(x: [Double]) -> [Double] {
@@ -38,11 +34,7 @@ extension Double : VectorOperations {
 extension Float : VectorOperations {
     
     public static func magnitude(x: [Float]) -> Float {
-        // FIXME: Is there a more effienct vector function?
-        var result: Float = 0.0
-        vDSP_svesq(x, 1, &result, vDSP_Length(x.count))
-
-        return Foundation.sqrt(result)
+        return cblas_snrm2(Int32(x.count), x, 1)
     }
     
     public static func unit(x: [Float]) -> [Float] {
