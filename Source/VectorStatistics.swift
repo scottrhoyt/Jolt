@@ -15,13 +15,13 @@ public protocol VectorStatistics {
     static func min(x: [Self]) -> Self
     static func max(x: [Self]) -> Self
     static func mean(x: [Self]) -> Self
-    static func stdev(x: [Self]) -> Self
-    static func variance(x: [Self]) -> Self
-    static func stdevp(x: [Self]) -> Self
-    static func variancep(x: [Self]) -> Self
-    static func covariance(x: [Self], _ y: [Self]) -> Self
-    static func covariancep(x: [Self], _ y: [Self]) -> Self
-    static func correlation(x: [Self], _ y: [Self]) -> Self
+//    static func stdev(x: [Self]) -> Self
+//    static func variance(x: [Self]) -> Self
+//    static func stdevp(x: [Self]) -> Self
+//    static func variancep(x: [Self]) -> Self
+//    static func covariance(x: [Self], _ y: [Self]) -> Self
+//    static func covariancep(x: [Self], _ y: [Self]) -> Self
+//    static func correlation(x: [Self], _ y: [Self]) -> Self
     // MARK: Optional Overload if conforming to Vector
     
 }
