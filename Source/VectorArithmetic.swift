@@ -67,7 +67,7 @@ public extension VectorArithmetic {
     }
     
     static func remainder(x: Self, _ y: [Self]) -> [Self] {
-        return Self.mod([Self](count: y.count, repeatedValue: x), y)
+        return Self.remainder([Self](count: y.count, repeatedValue: x), y)
     }
 
     

@@ -64,11 +64,11 @@ public func %<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
 }
 
 public func %<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
-    return T.mod(lhs, [T](count: lhs.count, repeatedValue: rhs))
+    return T.mod(lhs, rhs)
 }
 
 public func %<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
-    return T.mod([T](count: rhs.count, repeatedValue: lhs), rhs)
+    return T.mod(lhs, rhs)
 }
 
 // FIXME: Is there a better operator for dot?

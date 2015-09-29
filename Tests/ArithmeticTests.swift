@@ -47,6 +47,14 @@ class DoubleArithmeticTests: XCTestCase, DoubleOperandTest {
     func test_remainder() {
         measureAndValidateMappedFunctionWithAccuracy(Darwin.remainder, mapped: OperandType.remainder)
     }
+    func test_remainder2() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({ Darwin.remainder($0, val) }, mapped: { OperandType.remainder($0, val) })
+    }
+    func test_remainder3() {
+        let val = OperandType.rand()
+        measureAndValidateMappedFunctionWithAccuracy({ Darwin.remainder(val, $0) }, mapped: { OperandType.remainder(val, $0) })
+    }
     func test_addOperator() {
         measureAndValidateMappedFunctionWithAccuracy({$0 + $1 }, mapped: +)
     }
