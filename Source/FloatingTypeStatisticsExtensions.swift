@@ -39,7 +39,7 @@ extension Double : VectorStatistics {
         return result
     }
     
-    public static func stdevp(x: [Double]) -> Double {
+    public static func stdev(x: [Double]) -> Double {
         var mean: Double = 0
         var stdev: Double = 0
         
@@ -88,7 +88,7 @@ extension Float : VectorStatistics {
         return result
     }
     
-    public static func stdevp(x: [Float]) -> Float {
+    public static func stdev(x: [Float]) -> Float {
         var mean: Float = 0
         var stdev: Float = 0
         

@@ -39,13 +39,13 @@ class DoubleStatisticsTests: XCTestCase, ReductionTest {
             let reduction = data.reduce(OperandType(0), combine: { $0 + Foundation.pow($1 - mean, 2) })
             return Foundation.sqrt(reduction / OperandType(data.count))
         }
-        measureAndValidateMappedFunctionWithAccuracy(reduction, mapped: OperandType.stdevp)
+        measureAndValidateMappedFunctionWithAccuracy(reduction, mapped: OperandType.stdev)
     }
     
     func test_normalize() {
         let data = OperandType.normalize(rands(SurgeTestCountMedium))
         let mean = OperandType.mean(data)
-        let stdev = OperandType.stdevp(data)
+        let stdev = OperandType.stdev(data)
         XCTAssertEqualWithAccuracy(mean, 0, accuracy: OperandType.accuracy)
         XCTAssertEqualWithAccuracy(stdev, 1.0, accuracy: OperandType.accuracy)
     }
@@ -83,13 +83,13 @@ class FloatStatisticsTests: XCTestCase, ReductionTest {
             let reduction = data.reduce(OperandType(0), combine: { $0 + Foundation.pow($1 - mean, 2) })
             return Foundation.sqrt(reduction / OperandType(data.count))
         }
-        measureAndValidateMappedFunctionWithAccuracy(reduction, mapped: OperandType.stdevp)
+        measureAndValidateMappedFunctionWithAccuracy(reduction, mapped: OperandType.stdev)
     }
     
     func test_normalize() {
         let data = OperandType.normalize(rands(SurgeTestCountMedium))
         let mean = OperandType.mean(data)
-        let stdev = OperandType.stdevp(data)
+        let stdev = OperandType.stdev(data)
         XCTAssertEqualWithAccuracy(mean, 0, accuracy: OperandType.accuracy)
         XCTAssertEqualWithAccuracy(stdev, 1.0, accuracy: OperandType.accuracy)
     }
