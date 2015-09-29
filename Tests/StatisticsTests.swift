@@ -57,6 +57,12 @@ class DoubleStatisticsTests: XCTestCase, ReductionTest {
         let variance = OperandType.variance(data)
         XCTAssertEqualWithAccuracy(variance, pow(scaleFactor, 2), accuracy: OperandType.accuracy)
     }
+    
+    func test_correlation() {
+        let data = rands(SurgeTestCountMedium, lowerBound: -1, upperBound: 1)
+        XCTAssertEqualWithAccuracy(1, OperandType.correlation(data, data), accuracy: OperandType.accuracy)
+        XCTAssertEqualWithAccuracy(-1, OperandType.correlation(-1 * data, data), accuracy: OperandType.accuracy)
+    }
 
 }
 
@@ -107,6 +113,12 @@ class FloatStatisticsTests: XCTestCase, ReductionTest {
         let data = OperandType.normalize(rands(SurgeTestCountMedium)) * scaleFactor
         let variance = OperandType.variance(data)
         XCTAssertEqualWithAccuracy(variance, pow(scaleFactor, 2), accuracy: OperandType.accuracy)
+    }
+    
+    func test_correlation() {
+        let data = rands(SurgeTestCountMedium, lowerBound: -1, upperBound: 1)
+        XCTAssertEqualWithAccuracy(1, OperandType.correlation(data, data), accuracy: OperandType.accuracy)
+        XCTAssertEqualWithAccuracy(-1, OperandType.correlation(-1 * data, data), accuracy: OperandType.accuracy)
     }
     
 }

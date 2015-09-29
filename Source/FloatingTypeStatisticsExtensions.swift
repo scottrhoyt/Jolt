@@ -65,11 +65,23 @@ extension Double : VectorStatistics {
         return Foundation.pow(stdev, 2)
     }
     
-//    public static func covariance(x: [Double], _ y: [Double]) -> Double {
-//        let meanX = mean(x)
-//        let meanY = mean(y)
-//        let variationsX = x - meanX
-//    }
+    public static func covariance(x: [Double], _ y: [Double]) -> Double {
+        let meanX = mean(x)
+        let meanY = mean(y)
+        let variationsX = Double.sub(x, meanX)
+        let variationsY = Double.sub(y, meanY)
+        let varmul = Double.mul(variationsX, variationsY)
+        let covariance = mean(varmul)
+        return covariance
+    }
+    
+    public static func correlation(x: [Double], _ y: [Double]) -> Double {
+        let stdevX = stdev(x)
+        let stdevY = stdev(y)
+        let covar = covariance(x, y)
+        let correlation = covar / (stdevX * stdevY)
+        return correlation
+    }
     
 }
 
@@ -127,6 +139,24 @@ extension Float : VectorStatistics {
         
         vDSP_normalize(x, 1, nil, 1, &mean, &stdev, vDSP_Length(x.count))
         return Foundation.pow(stdev, 2)
+    }
+    
+    public static func covariance(x: [Float], _ y: [Float]) -> Float {
+        let meanX = mean(x)
+        let meanY = mean(y)
+        let variationsX = Float.sub(x, meanX)
+        let variationsY = Float.sub(y, meanY)
+        let varmul = Float.mul(variationsX, variationsY)
+        let covariance = mean(varmul)
+        return covariance
+    }
+    
+    public static func correlation(x: [Float], _ y: [Float]) -> Float {
+        let varianceX = variance(x)
+        let varianceY = variance(y)
+        let covar = covariance(x, y)
+        let correlation = covar / (varianceX * varianceY)
+        return correlation
     }
     
 }

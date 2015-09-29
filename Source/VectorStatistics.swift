@@ -20,9 +20,9 @@ public protocol VectorStatistics {
     static func variance(x: [Self]) -> Self
     static func stdev(x: [Self]) -> Self
 //    static func variances(x: [Self]) -> Self
-//    static func covariance(x: [Self], _ y: [Self]) -> Self
+    static func covariance(x: [Self], _ y: [Self]) -> Self
 //    static func covariances(x: [Self], _ y: [Self]) -> Self
-//    static func correlation(x: [Self], _ y: [Self]) -> Self
+    static func correlation(x: [Self], _ y: [Self]) -> Self
     // MARK: Optional Overload if conforming to Vector
     
 }
