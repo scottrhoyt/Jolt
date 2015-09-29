@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import SurgeOperators
 
 class DoubleStatisticsTests: XCTestCase, ReductionTest {
 
@@ -48,6 +49,13 @@ class DoubleStatisticsTests: XCTestCase, ReductionTest {
         let stdev = OperandType.stdev(data)
         XCTAssertEqualWithAccuracy(mean, 0, accuracy: OperandType.accuracy)
         XCTAssertEqualWithAccuracy(stdev, 1.0, accuracy: OperandType.accuracy)
+    }
+    
+    func test_variance() {
+        let scaleFactor: OperandType = 2
+        let data = OperandType.normalize(rands(SurgeTestCountMedium)) * scaleFactor
+        let variance = OperandType.variance(data)
+        XCTAssertEqualWithAccuracy(variance, pow(scaleFactor, 2), accuracy: OperandType.accuracy)
     }
 
 }
@@ -92,6 +100,13 @@ class FloatStatisticsTests: XCTestCase, ReductionTest {
         let stdev = OperandType.stdev(data)
         XCTAssertEqualWithAccuracy(mean, 0, accuracy: OperandType.accuracy)
         XCTAssertEqualWithAccuracy(stdev, 1.0, accuracy: OperandType.accuracy)
+    }
+    
+    func test_variance() {
+        let scaleFactor: OperandType = 2
+        let data = OperandType.normalize(rands(SurgeTestCountMedium)) * scaleFactor
+        let variance = OperandType.variance(data)
+        XCTAssertEqualWithAccuracy(variance, pow(scaleFactor, 2), accuracy: OperandType.accuracy)
     }
     
 }

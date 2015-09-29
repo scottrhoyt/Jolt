@@ -56,6 +56,15 @@ extension Double : VectorStatistics {
         return results
     }
     
+    public static func variance(x: [Double]) -> Double {
+        // FIXME: Is there a better way to calculate variance?
+        var mean: Double = 0
+        var stdev: Double = 0
+        
+        vDSP_normalizeD(x, 1, nil, 1, &mean, &stdev, vDSP_Length(x.count))
+        return Foundation.pow(stdev, 2)
+    }
+    
 }
 
 extension Float : VectorStatistics {
@@ -103,6 +112,15 @@ extension Float : VectorStatistics {
         
         vDSP_normalize(x, 1, &results, 1, &mean, &stdev, vDSP_Length(x.count))
         return results
+    }
+    
+    public static func variance(x: [Float]) -> Float {
+        // FIXME: Is there a better way to calculate variance?
+        var mean: Float = 0
+        var stdev: Float = 0
+        
+        vDSP_normalize(x, 1, nil, 1, &mean, &stdev, vDSP_Length(x.count))
+        return Foundation.pow(stdev, 2)
     }
     
 }

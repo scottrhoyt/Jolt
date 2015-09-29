@@ -17,7 +17,7 @@ public protocol VectorStatistics {
     static func mean(x: [Self]) -> Self
     static func normalize(x: [Self]) -> [Self]
 //    static func stdevs(x: [Self]) -> Self
-//    static func variance(x: [Self]) -> Self
+    static func variance(x: [Self]) -> Self
     static func stdev(x: [Self]) -> Self
 //    static func variances(x: [Self]) -> Self
 //    static func covariance(x: [Self], _ y: [Self]) -> Self
