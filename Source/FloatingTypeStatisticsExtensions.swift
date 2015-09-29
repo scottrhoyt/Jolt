@@ -58,28 +58,18 @@ extension Double : VectorStatistics {
     
     public static func variance(x: [Double]) -> Double {
         // FIXME: Is there a better way to calculate variance?
-        var mean: Double = 0
-        var stdev: Double = 0
-        
-        vDSP_normalizeD(x, 1, nil, 1, &mean, &stdev, vDSP_Length(x.count))
-        return Foundation.pow(stdev, 2)
+        return Foundation.pow(stdev(x), 2)
     }
     
     public static func covariance(x: [Double], _ y: [Double]) -> Double {
-        let meanX = mean(x)
-        let meanY = mean(y)
-        let variationsX = Double.sub(x, meanX)
-        let variationsY = Double.sub(y, meanY)
-        let varmul = Double.mul(variationsX, variationsY)
-        let covariance = mean(varmul)
+        // TODO: Is there a more efficient vector function?
+        let covariance = mean(Double.mul(Double.sub(x, mean(x)), Double.sub(y, mean(y))))
         return covariance
     }
     
     public static func correlation(x: [Double], _ y: [Double]) -> Double {
-        let stdevX = stdev(x)
-        let stdevY = stdev(y)
-        let covar = covariance(x, y)
-        let correlation = covar / (stdevX * stdevY)
+        // TODO: Is there a more efficient vector function?
+        let correlation = covariance(x, y) / (stdev(x) * stdev(y))
         return correlation
     }
     
@@ -134,28 +124,18 @@ extension Float : VectorStatistics {
     
     public static func variance(x: [Float]) -> Float {
         // FIXME: Is there a better way to calculate variance?
-        var mean: Float = 0
-        var stdev: Float = 0
-        
-        vDSP_normalize(x, 1, nil, 1, &mean, &stdev, vDSP_Length(x.count))
-        return Foundation.pow(stdev, 2)
+        return Foundation.pow(stdev(x), 2)
     }
     
     public static func covariance(x: [Float], _ y: [Float]) -> Float {
-        let meanX = mean(x)
-        let meanY = mean(y)
-        let variationsX = Float.sub(x, meanX)
-        let variationsY = Float.sub(y, meanY)
-        let varmul = Float.mul(variationsX, variationsY)
-        let covariance = mean(varmul)
+        // TODO: Is there a more efficient vector function?
+        let covariance = mean(Float.mul(Float.sub(x, mean(x)), Float.sub(y, mean(y))))
         return covariance
     }
     
     public static func correlation(x: [Float], _ y: [Float]) -> Float {
-        let stdevX = stdev(x)
-        let stdevY = stdev(y)
-        let covar = covariance(x, y)
-        let correlation = covar / (stdevX * stdevY)
+        // TODO: Is there a more efficient vector function?
+        let correlation = covariance(x, y) / (stdev(x) * stdev(y))
         return correlation
     }
     
