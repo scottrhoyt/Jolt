@@ -14,7 +14,7 @@ class DoubleOtherTests: XCTestCase, ReductionTest {
     
     func test_asum() {
         let reduction = { (data: [OperandType]) in return data.reduce(OperandType(0), combine: { $0 + abs($1) }) }
-        measureAndValidateMappedFunctionWithAccuracy(reduction, mapped: OperandType.asum, lowerBound: -1e6, upperBound: 1e6)
+        measureAndValidateMappedFunctionWithAccuracy(reduction, mapped: OperandType.asum, lowerBound: -1e6, upperBound: 1e5)
     }
     
     func test_measq() {
