@@ -78,3 +78,9 @@ public func %<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
 public func %<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
     return T.mod([T](count: rhs.count, repeatedValue: lhs), rhs)
 }
+
+// FIXME: Is there a better operator for dot?
+infix operator • {}
+public func •<T: VectorOperations>(lhs: [T], rhs: [T]) -> T {
+    return T.dot(lhs, rhs)
+}
