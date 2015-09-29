@@ -19,7 +19,7 @@ extension Array where Element : VectorTrigonometric {
     }
 
     public func tan() -> [Element] {
-        return Element.sin(self)
+        return Element.tan(self)
     }
 
     public func asin() -> [Element] {

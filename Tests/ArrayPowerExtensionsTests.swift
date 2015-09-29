@@ -11,18 +11,18 @@ import Surge
 
 private enum PowerCalls : VectorPower {
     
-    case CalledPow, CalledPow2, CalledSqrt
+    case Pow, Pow2, Sqrt
     
     static func pow(x: [PowerCalls], _ y: [PowerCalls]) -> [PowerCalls] {
-        return [.CalledPow]
+        return [.Pow]
     }
     
     static func sqrt(x: [PowerCalls]) -> [PowerCalls] {
-        return [.CalledSqrt]
+        return [.Sqrt]
     }
     
     static func pow(x: [PowerCalls], _ y: PowerCalls) -> [PowerCalls] {
-        return [.CalledPow2]
+        return [.Pow2]
     }
     
 }
@@ -32,18 +32,18 @@ class ArrayPowerTests: XCTestCase {
     func test_array_calls_pow() {
         let a = [PowerCalls]()
         let b = [PowerCalls]()
-        XCTAssertEqual(PowerCalls.CalledPow, a.pow(b)[0])
+        XCTAssertEqual(PowerCalls.Pow, a.pow(b)[0])
     }
     
     func test_array_calls_pow2() {
         let a = [PowerCalls]()
-        let b = PowerCalls.CalledPow
-        XCTAssertEqual(PowerCalls.CalledPow2, a.pow(b)[0])
+        let b = PowerCalls.Pow
+        XCTAssertEqual(PowerCalls.Pow2, a.pow(b)[0])
     }
     
     func test_array_calls_sqrt() {
         let a = [PowerCalls]()
-        XCTAssertEqual(PowerCalls.CalledSqrt, a.sqrt()[0])
+        XCTAssertEqual(PowerCalls.Sqrt, a.sqrt()[0])
     }
 
 }
