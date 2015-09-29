@@ -70,6 +70,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3B02BBA71BBA719600C1EFAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8A1E1A119917A79009735E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8A1E1A919917A79009735E2;
+			remoteInfo = Surge;
+		};
 		3B2C8CB61BB77B6800984C7C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F8A1E1A119917A79009735E2 /* Project object */;
@@ -429,6 +436,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3B02BBA81BBA719600C1EFAB /* PBXTargetDependency */,
 			);
 			name = SurgeOperators;
 			productName = SurgeOperators;
@@ -618,6 +626,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3B02BBA81BBA719600C1EFAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8A1E1A919917A79009735E2 /* Surge */;
+			targetProxy = 3B02BBA71BBA719600C1EFAB /* PBXContainerItemProxy */;
+		};
 		3B2C8CB71BB77B6800984C7C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3B2C8C9B1BB777AB00984C7C /* SurgeOperators */;
