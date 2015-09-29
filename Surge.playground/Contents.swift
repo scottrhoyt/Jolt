@@ -39,7 +39,7 @@ import SurgeOperators
 //plot(sin(x), title: "Sine Wave")
 //plot(fft(sin(x)), title: "FFT")
 
-struct Temp : FloatingPointOperationsConvertible {
+struct Temp : VectorOperationsConvertible {
     enum Unit {
         case Kelvin, Farenheight, Celsius
     }

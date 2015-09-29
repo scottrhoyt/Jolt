@@ -44,12 +44,38 @@ extension VectorOperationsConvertible {
     public static func add(x: [Self], _ y: [Self]) -> [Self] {
         return [Self].fromValueArray(FloatConversionType.add(x.toValueArray(), y.toValueArray()))
     }
+    public static func sub(x: [Self], _ y: [Self]) -> [Self] {
+        return [Self].fromValueArray(FloatConversionType.sub(x.toValueArray(), y.toValueArray()))
+    }
     public static func mul(x: [Self], _ y: [Self]) -> [Self] {
         return [Self].fromValueArray(FloatConversionType.mul(x.toValueArray(), y.toValueArray()))
     }
-    // TODO: Perhaps should be optional Overload?
     public static func div(x: [Self], _ y: [Self]) -> [Self] {
         return [Self].fromValueArray(FloatConversionType.div(x.toValueArray(), y.toValueArray()))
+    }
+    public static func add(x: [Self], _ y: Self) -> [Self] {
+        return [Self].fromValueArray(FloatConversionType.add(x.toValueArray(), y.floatingPointValue))
+    }
+    public static func sub(x: [Self], _ y: Self) -> [Self] {
+        return [Self].fromValueArray(FloatConversionType.sub(x.toValueArray(), y.floatingPointValue))
+    }
+    public static func mul(x: [Self], _ y: Self) -> [Self] {
+        return [Self].fromValueArray(FloatConversionType.mul(x.toValueArray(), y.floatingPointValue))
+    }
+    public static func div(x: [Self], _ y: Self) -> [Self] {
+        return [Self].fromValueArray(FloatConversionType.div(x.toValueArray(), y.floatingPointValue))
+    }
+    public static func add(x: Self, _ y: [Self]) -> [Self] {
+        return [Self].fromValueArray(FloatConversionType.add(x.floatingPointValue, y.toValueArray()))
+    }
+    public static func sub(x: Self, _ y: [Self]) -> [Self] {
+        return [Self].fromValueArray(FloatConversionType.sub(x.floatingPointValue, y.toValueArray()))
+    }
+    public static func mul(x: Self, _ y: [Self]) -> [Self] {
+        return [Self].fromValueArray(FloatConversionType.mul(x.floatingPointValue, y.toValueArray()))
+    }
+    public static func div(x: Self, _ y: [Self]) -> [Self] {
+        return [Self].fromValueArray(FloatConversionType.div(x.floatingPointValue, y.toValueArray()))
     }
     public static func mod(x: [Self], _ y: [Self]) -> [Self] {
         return [Self].fromValueArray(FloatConversionType.mod(x.toValueArray(), y.toValueArray()))
