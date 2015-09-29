@@ -27,17 +27,16 @@ extension VectorArithmetic where Self : FloatLiteralConvertible {
 
 extension Double : VectorArithmetic {
     
-    // FIXME: Is there a better way to do add/subtract other than using a scaling function?
     public static func add(x: [Double], _ y: [Double]) -> [Double] {
         var results = [Double](y)
-        cblas_daxpy(Int32(x.count), 1.0, x, 1, &results, 1)
+        vDSP_vaddD(x, 1, y, 1, &results, 1, vDSP_Length(x.count))
         
         return results
     }
     
     public static func sub(x: [Double], _ y: [Double]) -> [Double] {
         var results = [Double](x)
-        cblas_daxpy(Int32(y.count), -1.0, y, 1, &results, 1)
+        vDSP_vsubD(y, 1, x, 1, &results, 1, vDSP_Length(x.count))
         
         return results
     }
@@ -74,17 +73,16 @@ extension Double : VectorArithmetic {
 
 extension Float : VectorArithmetic {
     
-    // FIXME: Is there a better way to do add/subtract other than using a scaling function?
     public static func add(x: [Float], _ y: [Float]) -> [Float] {
         var results = [Float](y)
-        cblas_saxpy(Int32(x.count), 1.0, x, 1, &results, 1)
+        vDSP_vadd(x, 1, y, 1, &results, 1, vDSP_Length(x.count))
         
         return results
     }
     
     public static func sub(x: [Float], _ y: [Float]) -> [Float] {
         var results = [Float](x)
-        cblas_saxpy(Int32(y.count), -1.0, y, 1, &results, 1)
+        vDSP_vsub(y, 1, x, 1, &results, 1, vDSP_Length(x.count))
         
         return results
     }

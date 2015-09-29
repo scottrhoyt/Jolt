@@ -65,6 +65,12 @@ extension Double : VectorStatistics {
         return Foundation.pow(stdev, 2)
     }
     
+//    public static func covariance(x: [Double], _ y: [Double]) -> Double {
+//        let meanX = mean(x)
+//        let meanY = mean(y)
+//        let variationsX = x - meanX
+//    }
+    
 }
 
 extension Float : VectorStatistics {
