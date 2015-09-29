@@ -14,6 +14,23 @@ extension Array where Element : VectorExponential {
         return Element.exp(self)
     }
     
-    // TODO: Implement rest of array functions
+    public func exp2() -> [Element] {
+        return Element.exp2(self)
+    }
+
+    public func log() -> [Element] {
+        return Element.log(self)
+    }
+
+    public func log2() -> [Element] {
+        return Element.log2(self)
+    }
     
+    public func log10() -> [Element] {
+        return Element.log10(self)
+    }
+
+    public func logb() -> [Element] {
+        return Element.logb(self)
+    }
 }

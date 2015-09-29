@@ -10,8 +10,16 @@ import Foundation
 
 extension Array where Element : VectorOther {
     
-    // TODO: Implement the rest
     public func asum() -> Element {
         return Element.asum(self)
     }
+    
+    public func meamg() -> Element {
+        return Element.meamg(self)
+    }
+
+    public func measq() -> Element {
+        return Element.measq(self)
+    }
+    
 }
