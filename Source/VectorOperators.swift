@@ -16,13 +16,11 @@ public func +<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
 }
 
 public func +<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
-    let rhsVect = Array<T>(count: lhs.count, repeatedValue: rhs)
-    return T.add(lhs, rhsVect)
+    return T.add(lhs, rhs)
 }
 
 public func +<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
-    let lhsVect = Array<T>(count: rhs.count, repeatedValue: lhs)
-    return T.add(lhsVect, rhs)
+    return T.add(lhs, rhs)
 }
 
 public func -<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
@@ -30,13 +28,11 @@ public func -<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
 }
 
 public func -<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
-    let rhsVect = Array<T>(count: lhs.count, repeatedValue: rhs)
-    return T.sub(lhs, rhsVect)
+    return T.sub(lhs, rhs)
 }
 
 public func -<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
-    let lhsVect = Array<T>(count: rhs.count, repeatedValue: lhs)
-    return T.sub(lhsVect, rhs)
+    return T.sub(lhs, rhs)
 }
 
 public func *<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
@@ -44,13 +40,11 @@ public func *<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
 }
 
 public func *<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
-    let rhsVect = Array<T>(count: lhs.count, repeatedValue: rhs)
-    return T.mul(lhs, rhsVect)
+    return T.mul(lhs, rhs)
 }
 
 public func *<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
-    let lhsVect = Array<T>(count: rhs.count, repeatedValue: lhs)
-    return T.mul(lhsVect, rhs)
+    return T.mul(lhs, rhs)
 }
 
 public func /<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
@@ -58,13 +52,11 @@ public func /<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
 }
 
 public func /<T: VectorArithmetic>(lhs: [T], rhs: T) -> [T] {
-    let rhsVect = Array<T>(count: lhs.count, repeatedValue: rhs)
-    return T.div(lhs, rhsVect)
+    return T.div(lhs, rhs)
 }
 
 public func /<T: VectorArithmetic>(lhs: T, rhs: [T]) -> [T] {
-    let lhsVect = Array<T>(count: rhs.count, repeatedValue: lhs)
-    return T.div(lhsVect, rhs)
+    return T.div(lhs, rhs)
 }
 
 public func %<T: VectorArithmetic>(lhs: [T], rhs: [T]) -> [T] {
