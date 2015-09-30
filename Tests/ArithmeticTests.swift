@@ -110,20 +110,6 @@ class DoubleArithmeticTests: XCTestCase, DoubleOperandTest {
         let val = OperandType.rand()
         measureAndValidateMappedFunctionWithAccuracy({ val % $0 }, mapped: { val % $0 })
     }
-    func test_1() {
-        XCTAssertEqual(1, OperandType.one())
-    }
-    func test_0() {
-        XCTAssertEqual(0, OperandType.zero())
-    }
-    func test_1s() {
-        let count = Int(arc4random_uniform(10))
-        XCTAssertEqual([OperandType](count: count, repeatedValue: OperandType(1)), OperandType.ones(count))
-    }
-    func test_0s() {
-        let count = Int(arc4random_uniform(10))
-        XCTAssertEqual([OperandType](count: count, repeatedValue: OperandType(0)), OperandType.zeros(count))
-    }
 }
 
 class FloatArithmeticTests: XCTestCase, DoubleOperandTest {
@@ -202,19 +188,5 @@ class FloatArithmeticTests: XCTestCase, DoubleOperandTest {
     func test_modOperator3() {
         let val = OperandType.rand()
         measureAndValidateMappedFunctionWithAccuracy({ val % $0 }, mapped: { val % $0 })
-    }
-    func test_1() {
-        XCTAssertEqual(1, OperandType.one())
-    }
-    func test_0() {
-        XCTAssertEqual(0, OperandType.zero())
-    }
-    func test_1s() {
-        let count = Int(arc4random_uniform(10))
-        XCTAssertEqual([OperandType](count: count, repeatedValue: OperandType(1)), OperandType.ones(count))
-    }
-    func test_0s() {
-        let count = Int(arc4random_uniform(10))
-        XCTAssertEqual([OperandType](count: count, repeatedValue: OperandType(0)), OperandType.zeros(count))
     }
 }

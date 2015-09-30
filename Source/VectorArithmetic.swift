@@ -27,11 +27,6 @@ public protocol VectorArithmetic {
     static func div(x: [Self], _ y: Self) -> [Self]
     static func div(x: Self, _ y: [Self]) -> [Self]
     
-    // MARK: Overload if not FloatLiteralConvertible, Optional Otherwise
-    static func zero() -> Self
-    static func one() -> Self
-    static func negativeOne() -> Self
-    
     //MARK: Optional Overload
     static func add(x: Self, _ y: [Self]) -> [Self]
     static func mul(x: Self, _ y: [Self]) -> [Self]
@@ -39,9 +34,7 @@ public protocol VectorArithmetic {
     static func remainder(x: [Self], _ y: Self) -> [Self]
     static func mod(x: Self, _ y: [Self]) -> [Self]
     static func remainder(x: Self, _ y: [Self]) -> [Self]
-    static func zeros(count: Int) -> [Self]
-    static func ones(count: Int) -> [Self]
-    static func negativeOnes(count: Int) -> [Self]
+    
 }
 
 public extension VectorArithmetic {
@@ -68,19 +61,6 @@ public extension VectorArithmetic {
     
     static func remainder(x: Self, _ y: [Self]) -> [Self] {
         return Self.remainder([Self](count: y.count, repeatedValue: x), y)
-    }
-
-    
-    public static func zeros(count: Int) -> [Self] {
-        return [Self](count: count, repeatedValue: Self.zero())
-    }
-    
-    public static func ones(count: Int) -> [Self] {
-        return [Self](count: count, repeatedValue: Self.one())
-    }
-    
-    public static func negativeOnes(count: Int) -> [Self] {
-        return [Self](count: count, repeatedValue: Self.negativeOne())
     }
     
 }

@@ -69,18 +69,6 @@ private enum ArithmeticCalls : VectorArithmetic {
         return [.Remainder2]
     }
     
-    static func zero() -> ArithmeticCalls {
-        return .Zero
-    }
-    
-    static func one() -> ArithmeticCalls {
-        return .One
-    }
-    
-    static func negativeOne() -> ArithmeticCalls {
-        return .NegativeOne
-    }
-    
 }
 
 class ArrayArithmeticExtensionsTests: XCTestCase {
@@ -101,10 +89,6 @@ class ArrayArithmeticExtensionsTests: XCTestCase {
         XCTAssertEqual(ArithmeticCalls.Sub2, [ArithmeticCalls]().sub(ArithmeticCalls.Sub2)[0])
     }
     
-//    func test_calls_sub3() {
-//        XCTAssertEqual(ArithmeticCalls.Sub3, [ArithmeticCalls]().sub([ArithmeticCalls]())[0])
-//    }
-    
     func test_calls_mul1() {
         XCTAssertEqual(ArithmeticCalls.Mul1, [ArithmeticCalls]().mul([ArithmeticCalls]())[0])
     }
@@ -121,10 +105,6 @@ class ArrayArithmeticExtensionsTests: XCTestCase {
         XCTAssertEqual(ArithmeticCalls.Div2, [ArithmeticCalls]().div(ArithmeticCalls.Div2)[0])
     }
     
-//    func test_calls_div3() {
-//        XCTAssertEqual(ArithmeticCalls.Div3, [ArithmeticCalls]().add([ArithmeticCalls]())[0])
-//    }
-    
     func test_calls_mod1() {
         XCTAssertEqual(ArithmeticCalls.Mod1, [ArithmeticCalls]().mod([ArithmeticCalls]())[0])
     }
@@ -140,17 +120,5 @@ class ArrayArithmeticExtensionsTests: XCTestCase {
     func test_calls_remainder2() {
         XCTAssertEqual(ArithmeticCalls.Remainder2, [ArithmeticCalls]().remainder(ArithmeticCalls.Remainder2)[0])
     }
-    
-//    func test_calls_one() {
-//        XCTAssertEqual(ArithmeticCalls.One, [ArithmeticCalls]().add([ArithmeticCalls]())[0])
-//    }
-//    
-//    func test_calls_zero() {
-//        XCTAssertEqual(ArithmeticCalls.Zero, [ArithmeticCalls]().add([ArithmeticCalls]())[0])
-//    }
-//    
-//    func test_calls_negativeOne() {
-//        XCTAssertEqual(ArithmeticCalls.NegativeOne, [ArithmeticCalls]().add([ArithmeticCalls]())[0])
-//    }
 
 }

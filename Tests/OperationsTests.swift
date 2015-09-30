@@ -29,7 +29,7 @@ class DoubleOperationsTests: XCTestCase, ReductionTest {
     func test_dot() {
         let vector1 = rands(SurgeTestCountMedium)
         let vector2 = rands(SurgeTestCountMedium)
-        let expected = zip(vector1, vector2).reduce(OperandType.zero(), combine: { $0 + $1.0 * $1.1 })
+        let expected = zip(vector1, vector2).reduce(OperandType(0), combine: { $0 + $1.0 * $1.1 })
         let actual = OperandType.dot(vector1, vector2)
         XCTAssertEqualWithAccuracy(expected, actual, accuracy: OperandType.accuracy)
     }
@@ -63,7 +63,7 @@ class FloatOperationsTests: XCTestCase, ReductionTest {
     func test_dot() {
         let vector1 = rands(SurgeTestCountMedium)
         let vector2 = rands(SurgeTestCountMedium)
-        let expected = zip(vector1, vector2).reduce(OperandType.zero(), combine: { $0 + $1.0 * $1.1 })
+        let expected = zip(vector1, vector2).reduce(OperandType(0), combine: { $0 + $1.0 * $1.1 })
         let actual = OperandType.dot(vector1, vector2)
         XCTAssertEqualWithAccuracy(expected, actual, accuracy: 0.001)
     }

@@ -9,22 +9,6 @@
 import Foundation
 import Accelerate
 
-extension VectorArithmetic where Self : FloatLiteralConvertible {
-    
-    public static func zero() -> Self {
-        return 0.0
-    }
-    
-    public static func one() -> Self {
-        return 1.0
-    }
-    
-    public static func negativeOne() -> Self {
-        return -1.0
-    }
-    
-}
-
 extension Double : VectorArithmetic {
     
     public static func add(x: [Double], _ y: [Double]) -> [Double] {
