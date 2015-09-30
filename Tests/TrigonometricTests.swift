@@ -60,6 +60,15 @@ class DoubleTrigonometricTests: XCTestCase, SingleOperandTest {
         measureAndValidateMappedFunctionWithAccuracy( {$0 * OperandType(M_PI) / 180}, mapped: OperandType.deg2rad, lowerBound: OperandType(-2 * M_PI), upperBound: OperandType(2 * M_PI))
     }
     
+    func test_sincos() {
+        let data = rands(SurgeTestCountMedium)
+        let results = OperandType.sincos(data)
+        let sins = OperandType.sin(data)
+        let coss = OperandType.cos(data)
+        validateWithAccuracy(results.sin, actual: sins, accuracy: OperandType.accuracy)
+        validateWithAccuracy(results.cos, actual: coss, accuracy: OperandType.accuracy)
+    }
+    
 }
 
 class FloatTrigonometricTests: XCTestCase, SingleOperandTest {
@@ -96,5 +105,14 @@ class FloatTrigonometricTests: XCTestCase, SingleOperandTest {
     
     func test_deg2rad() {
         measureAndValidateMappedFunctionWithAccuracy( {$0 * OperandType(M_PI) / 180}, mapped: OperandType.deg2rad, lowerBound: OperandType(-2 * M_PI), upperBound: OperandType(2 * M_PI))
+    }
+    
+    func test_sincos() {
+        let data = rands(SurgeTestCountMedium)
+        let results = OperandType.sincos(data)
+        let sins = OperandType.sin(data)
+        let coss = OperandType.cos(data)
+        validateWithAccuracy(results.sin, actual: sins, accuracy: OperandType.accuracy)
+        validateWithAccuracy(results.cos, actual: coss, accuracy: OperandType.accuracy)
     }
 }
