@@ -115,4 +115,5 @@ class FloatTrigonometricTests: XCTestCase, SingleOperandTest {
         validateWithAccuracy(results.sin, actual: sins, accuracy: OperandType.accuracy)
         validateWithAccuracy(results.cos, actual: coss, accuracy: OperandType.accuracy)
     }
+    
 }
