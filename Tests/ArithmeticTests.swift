@@ -183,7 +183,7 @@ class FloatArithmeticTests: XCTestCase, DoubleOperandTest {
     }
     func test_divideOperator3() {
         let val = OperandType.rand()
-        measureAndValidateMappedFunctionWithAccuracy({ val / $0 }, mapped: { val / $0 })
+        measureAndValidateMappedFunctionWithAccuracy({ val / $0 }, mapped: { val / $0 }, accuracy: 0.001)
     }
     func test_modOperator3() {
         let val = OperandType.rand()
