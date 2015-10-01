@@ -5,8 +5,7 @@
 //  Created by Scott Hoyt on 9/24/15.
 //  Copyright © 2015 Mattt Thompson. All rights reserved.
 //
-
-import Foundation
+import Darwin
 
 protocol FloatingPointAccuracy : FloatingPointType {
     static var accuracy: Self { get }

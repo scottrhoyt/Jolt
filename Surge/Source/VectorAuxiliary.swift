@@ -6,7 +6,7 @@
 //  Copyright © 2015 Mattt Thompson. All rights reserved.
 //
 
-import Foundation
+
 
 public protocol VectorAuxiliary {
     

@@ -6,7 +6,7 @@
 //  Copyright © 2015 Mattt Thompson. All rights reserved.
 //
 
-import Foundation
+
 
 public protocol VectorArithmetic {
     // FIXME: Should potentially add scalar ops separately to optimize (e.g. [1.0, 2.0] + 2) Can use vdsp or cblas for that

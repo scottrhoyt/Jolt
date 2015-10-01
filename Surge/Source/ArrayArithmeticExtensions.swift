@@ -6,8 +6,6 @@
 //  Copyright © 2015 Mattt Thompson. All rights reserved.
 //
 
-import Foundation
-
 extension Array where Element : VectorArithmetic {
     
     public func add(y: [Element]) -> [Element] {
