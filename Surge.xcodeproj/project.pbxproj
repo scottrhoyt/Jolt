@@ -356,7 +356,7 @@
 			name = ArrayExtensions;
 			sourceTree = "<group>";
 		};
-		3B38701F1BA20EB90022CB6E /* Done */ = {
+		3B38701F1BA20EB90022CB6E /* Globals */ = {
 			isa = PBXGroup;
 			children = (
 				F8A1E1C519917B0A009735E2 /* Auxiliary.swift */,
@@ -368,7 +368,7 @@
 				F8A1E1C419917B0A009735E2 /* Arithmetic.swift */,
 				3BF8A56A1BBE1C9F00F511D2 /* Statistics.swift */,
 			);
-			name = Done;
+			name = Globals;
 			sourceTree = "<group>";
 		};
 		3B3F1F541BB1E05F00AAE75F /* VectorOperationsConvertible */ = {
@@ -507,7 +507,7 @@
 			isa = PBXGroup;
 			children = (
 				3B3F1F541BB1E05F00AAE75F /* VectorOperationsConvertible */,
-				3B38701F1BA20EB90022CB6E /* Done */,
+				3B38701F1BA20EB90022CB6E /* Globals */,
 				3B38701E1BA20E880022CB6E /* ArrayExtensions */,
 				3B38701D1BA20E770022CB6E /* FloatingTypeExtensions */,
 				3B38701C1BA20E620022CB6E /* VectorProtocols */,
