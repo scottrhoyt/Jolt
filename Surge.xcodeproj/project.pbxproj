@@ -61,6 +61,16 @@
 		3BC464781BB4DF78004A2E81 /* RandomDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC464771BB4DF78004A2E81 /* RandomDataTest.swift */; };
 		3BC4647A1BB4E0B6004A2E81 /* ReductionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC464791BB4E0B6004A2E81 /* ReductionTest.swift */; };
 		3BC4647C1BB4E8D5004A2E81 /* StatisticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4647B1BB4E8D5004A2E81 /* StatisticsTests.swift */; };
+		3BE2CA381BBE6455008D6399 /* PowerCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA361BBE642F008D6399 /* PowerCalls.swift */; settings = {ASSET_TAGS = (); }; };
+		3BE2CA3A1BBE64A4008D6399 /* OperationsCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA391BBE64A4008D6399 /* OperationsCalls.swift */; settings = {ASSET_TAGS = (); }; };
+		3BE2CA3C1BBE64CC008D6399 /* OtherCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA3B1BBE64CC008D6399 /* OtherCalls.swift */; settings = {ASSET_TAGS = (); }; };
+		3BE2CA3E1BBE64EA008D6399 /* HyperbolicCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA3D1BBE64EA008D6399 /* HyperbolicCalls.swift */; settings = {ASSET_TAGS = (); }; };
+		3BE2CA401BBE6506008D6399 /* ExponentialCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA3F1BBE6506008D6399 /* ExponentialCalls.swift */; settings = {ASSET_TAGS = (); }; };
+		3BE2CA421BBE6527008D6399 /* TrigonometricCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA411BBE6527008D6399 /* TrigonometricCalls.swift */; settings = {ASSET_TAGS = (); }; };
+		3BE2CA441BBE6540008D6399 /* FFTCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA431BBE6540008D6399 /* FFTCalls.swift */; settings = {ASSET_TAGS = (); }; };
+		3BE2CA461BBE655F008D6399 /* StatisticsCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA451BBE655F008D6399 /* StatisticsCalls.swift */; settings = {ASSET_TAGS = (); }; };
+		3BE2CA481BBE6581008D6399 /* AuxiliaryCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA471BBE6581008D6399 /* AuxiliaryCalls.swift */; settings = {ASSET_TAGS = (); }; };
+		3BE2CA4A1BBE65A0008D6399 /* ArithmeticCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA491BBE65A0008D6399 /* ArithmeticCalls.swift */; settings = {ASSET_TAGS = (); }; };
 		3BF8A56B1BBE1C9F00F511D2 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8A56A1BBE1C9F00F511D2 /* Statistics.swift */; settings = {ASSET_TAGS = (); }; };
 		E65C5BE419FF9CF600149FF1 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65C5BE319FF9CF600149FF1 /* Matrix.swift */; };
 		F8A1E1CB19917B0A009735E2 /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C419917B0A009735E2 /* Arithmetic.swift */; };
@@ -162,6 +172,16 @@
 		3BC464771BB4DF78004A2E81 /* RandomDataTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomDataTest.swift; sourceTree = "<group>"; };
 		3BC464791BB4E0B6004A2E81 /* ReductionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReductionTest.swift; sourceTree = "<group>"; };
 		3BC4647B1BB4E8D5004A2E81 /* StatisticsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsTests.swift; sourceTree = "<group>"; };
+		3BE2CA361BBE642F008D6399 /* PowerCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerCalls.swift; sourceTree = "<group>"; };
+		3BE2CA391BBE64A4008D6399 /* OperationsCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationsCalls.swift; sourceTree = "<group>"; };
+		3BE2CA3B1BBE64CC008D6399 /* OtherCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherCalls.swift; sourceTree = "<group>"; };
+		3BE2CA3D1BBE64EA008D6399 /* HyperbolicCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HyperbolicCalls.swift; sourceTree = "<group>"; };
+		3BE2CA3F1BBE6506008D6399 /* ExponentialCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExponentialCalls.swift; sourceTree = "<group>"; };
+		3BE2CA411BBE6527008D6399 /* TrigonometricCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrigonometricCalls.swift; sourceTree = "<group>"; };
+		3BE2CA431BBE6540008D6399 /* FFTCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFTCalls.swift; sourceTree = "<group>"; };
+		3BE2CA451BBE655F008D6399 /* StatisticsCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsCalls.swift; sourceTree = "<group>"; };
+		3BE2CA471BBE6581008D6399 /* AuxiliaryCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuxiliaryCalls.swift; sourceTree = "<group>"; };
+		3BE2CA491BBE65A0008D6399 /* ArithmeticCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArithmeticCalls.swift; sourceTree = "<group>"; };
 		3BF8A56A1BBE1C9F00F511D2 /* Statistics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		E65C5BE319FF9CF600149FF1 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		F84A6AAE19A9A72F007B53E1 /* SurgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -370,9 +390,27 @@
 			name = OperandTestProtocols;
 			sourceTree = "<group>";
 		};
+		3BE2CA351BBE63F9008D6399 /* TestingObjects */ = {
+			isa = PBXGroup;
+			children = (
+				3BE2CA361BBE642F008D6399 /* PowerCalls.swift */,
+				3BE2CA391BBE64A4008D6399 /* OperationsCalls.swift */,
+				3BE2CA3B1BBE64CC008D6399 /* OtherCalls.swift */,
+				3BE2CA3D1BBE64EA008D6399 /* HyperbolicCalls.swift */,
+				3BE2CA3F1BBE6506008D6399 /* ExponentialCalls.swift */,
+				3BE2CA411BBE6527008D6399 /* TrigonometricCalls.swift */,
+				3BE2CA431BBE6540008D6399 /* FFTCalls.swift */,
+				3BE2CA451BBE655F008D6399 /* StatisticsCalls.swift */,
+				3BE2CA471BBE6581008D6399 /* AuxiliaryCalls.swift */,
+				3BE2CA491BBE65A0008D6399 /* ArithmeticCalls.swift */,
+			);
+			name = TestingObjects;
+			sourceTree = "<group>";
+		};
 		F84A6AAF19A9A72F007B53E1 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				3BE2CA351BBE63F9008D6399 /* TestingObjects */,
 				3B02BBAA1BBB35CD00C1EFAB /* ArrayExtensionTests */,
 				3B02BBA91BBB35B000C1EFAB /* VectorTests */,
 				3BC464711BB4DE5A004A2E81 /* Protocols */,
@@ -611,20 +649,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE2CA3A1BBE64A4008D6399 /* OperationsCalls.swift in Sources */,
 				3B295A701BBB4B73002774E6 /* ArrayHyperbolicExtensionsTests.swift in Sources */,
+				3BE2CA3E1BBE64EA008D6399 /* HyperbolicCalls.swift in Sources */,
 				3B295A721BBB4CEB002774E6 /* ArrayExponentialExtensionsTests.swift in Sources */,
+				3BE2CA421BBE6527008D6399 /* TrigonometricCalls.swift in Sources */,
 				3B295A761BBB51D5002774E6 /* ArrayFFTExtensionsTests.swift in Sources */,
+				3BE2CA441BBE6540008D6399 /* FFTCalls.swift in Sources */,
 				3B295A7C1BBB55F2002774E6 /* ArrayArithmeticExtensionsTests.swift in Sources */,
 				3BC464781BB4DF78004A2E81 /* RandomDataTest.swift in Sources */,
+				3BE2CA401BBE6506008D6399 /* ExponentialCalls.swift in Sources */,
 				3BC464761BB4DED2004A2E81 /* DoubleOperandTest.swift in Sources */,
 				3B295A741BBB4FAF002774E6 /* ArrayTrigonometricExtensionsTests.swift in Sources */,
+				3BE2CA381BBE6455008D6399 /* PowerCalls.swift in Sources */,
 				F8BD5C5C1A6C1C6500DD357E /* HyperbolicTests.swift in Sources */,
 				3B295A781BBB524E002774E6 /* ArrayStatiscticsExtensions.swift in Sources */,
 				3BC4647A1BB4E0B6004A2E81 /* ReductionTest.swift in Sources */,
 				3B295A6C1BBB48DA002774E6 /* ArrayOperationsExtensionsTests.swift in Sources */,
 				3BC02D951BB5D59D00815D52 /* MatrixTests.swift in Sources */,
+				3BE2CA481BBE6581008D6399 /* AuxiliaryCalls.swift in Sources */,
+				3BE2CA3C1BBE64CC008D6399 /* OtherCalls.swift in Sources */,
 				F8BD5C5A1A6C1C6500DD357E /* AuxiliaryTests.swift in Sources */,
 				3B295A7A1BBB5418002774E6 /* ArrayAuxiliaryExtensionsTests.swift in Sources */,
+				3BE2CA4A1BBE65A0008D6399 /* ArithmeticCalls.swift in Sources */,
 				3B0643E81BB5B5C500EA9001 /* OperationsTests.swift in Sources */,
 				3BC02D931BB5C3E600815D52 /* OtherTests.swift in Sources */,
 				3BC464701BB4DE3C004A2E81 /* FloatingTypeTestExtensions.swift in Sources */,
@@ -632,6 +679,7 @@
 				3BC464741BB4DEA8004A2E81 /* SingleOperandTest.swift in Sources */,
 				3B295A6A1BBB3C2E002774E6 /* ArrayTest.swift in Sources */,
 				3B851F8A1BB4FC5D0012A5D1 /* PowerTests.swift in Sources */,
+				3BE2CA461BBE655F008D6399 /* StatisticsCalls.swift in Sources */,
 				3B295A6E1BBB4A49002774E6 /* ArrayOtherExtensionsTests.swift in Sources */,
 				3B02BBAC1BBB360000C1EFAB /* ArrayPowerExtensionsTests.swift in Sources */,
 				F8BD5C5E1A6C1C6500DD357E /* XCTestCase+Surge.swift in Sources */,

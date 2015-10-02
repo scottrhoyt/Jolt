@@ -9,14 +9,6 @@
 import XCTest
 import Surge
 
-private enum FFTCalls : VectorFFT {
-    case FFT
-    
-    static func fft(input: [FFTCalls]) -> [FFTCalls] {
-        return [.FFT]
-    }
-}
-
 class ArrayFFTExtensionsTests: XCTestCase {
 
     func test_calls_fft() {

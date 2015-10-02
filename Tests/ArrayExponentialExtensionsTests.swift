@@ -9,36 +9,6 @@
 import XCTest
 import Surge
 
-private enum ExponentialCalls : VectorExponential {
-    
-    case Exp, Exp2, Log, Log2, Log10, Logb
-    
-    static func exp(x: [ExponentialCalls]) -> [ExponentialCalls] {
-        return [.Exp]
-    }
-    
-    static func exp2(x: [ExponentialCalls]) -> [ExponentialCalls] {
-        return [.Exp2]
-    }
-    
-    static func log(x: [ExponentialCalls]) -> [ExponentialCalls] {
-        return [.Log]
-    }
-    
-    static func log2(x: [ExponentialCalls]) -> [ExponentialCalls] {
-        return [.Log2]
-    }
-    
-    static func log10(x: [ExponentialCalls]) -> [ExponentialCalls] {
-        return [.Log10]
-    }
-    
-    static func logb(x: [ExponentialCalls]) -> [ExponentialCalls] {
-        return [.Logb]
-    }
-    
-}
-
 class ArrayExponentialExtensionsTests: XCTestCase {
 
     func test_calls_exp() {

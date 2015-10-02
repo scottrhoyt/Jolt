@@ -9,24 +9,6 @@
 import XCTest
 import Surge
 
-private enum PowerCalls : VectorPower {
-    
-    case Pow, Pow2, Sqrt
-    
-    static func pow(x: [PowerCalls], _ y: [PowerCalls]) -> [PowerCalls] {
-        return [.Pow]
-    }
-    
-    static func sqrt(x: [PowerCalls]) -> [PowerCalls] {
-        return [.Sqrt]
-    }
-    
-    static func pow(x: [PowerCalls], _ y: PowerCalls) -> [PowerCalls] {
-        return [.Pow2]
-    }
-    
-}
-
 class ArrayPowerTests: XCTestCase {
     
     func test_array_calls_pow() {

@@ -9,24 +9,6 @@
 import XCTest
 import Surge
 
-private enum OperationsCalls : VectorOperations {
-    
-    case Dot, Magnitude, Unit
-    
-    static func dot(x: [OperationsCalls], _ y: [OperationsCalls]) -> OperationsCalls {
-        return .Dot
-    }
-    
-    static func magnitude(x: [OperationsCalls]) -> OperationsCalls {
-        return .Magnitude
-    }
-    
-    static func unit(x: [OperationsCalls]) -> [OperationsCalls] {
-        return [.Unit]
-    }
-    
-}
-
 class ArrayOperationsExtensionsTests: XCTestCase {
 
     func test_calls_dot() {

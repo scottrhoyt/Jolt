@@ -9,24 +9,6 @@
 import XCTest
 import Surge
 
-private enum OtherCalls : VectorOther {
-    
-    case Asum, Meamg, Measq
-    
-    static func asum(x: [OtherCalls]) -> OtherCalls {
-        return .Asum
-    }
-    
-    static func meamg(x: [OtherCalls]) -> OtherCalls {
-        return .Meamg
-    }
-    
-    static func measq(x: [OtherCalls]) -> OtherCalls {
-        return .Measq
-    }
-    
-}
-
 class ArrayOtherExtensionsTests: XCTestCase {
 
     func test_calls_asum() {
