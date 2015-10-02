@@ -6,6 +6,7 @@
 //  Copyright © 2015 Scott Hoyt. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <Surge/Surge.h>
 
 //! Project version number for SurgeOperators.
