@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Surge/Surge.h>
 
 //! Project version number for SurgeOperators.
 FOUNDATION_EXPORT double SurgeOperatorsVersionNumber;

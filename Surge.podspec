@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.9'
 
-  s.source_files = 'Surge/Source/*.swift'
+  s.source_files = 'Surge/Source/**/*.swift'
   s.module_name = 'Surge'
   s.frameworks = 'Accelerate'
   #s.dependency 'SurgeOperators', :path => '~/Development/Surge'
