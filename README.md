@@ -15,9 +15,13 @@ Though, keep in mind: _Accelerate is not a silver bullet_. Under certain conditi
 
 ---
 
+## Acknowledgements
+
+This project was forked from Mattt Thompson's ([@mattt](https://twitter.com/mattt)) original [Surge](https://github.com/mattt/Surge) project.
+
 ## Requirements
 
-This fork of Surge targets Swift 2.0, iOS 8.0+.
+Surge targets Swift 2.0, iOS 8.0+/OSX 10.9+
 
 ## Performance
 
@@ -58,19 +62,11 @@ _The infrastructure and best practices for distributing Swift libraries are curr
 
 ### Arithmetic
 
-- `sum`
-- `asum`
-- `max`
-- `min`
-- `mean`
-- `meamg`
-- `measq`
 - `add`
 - `mul`
 - `div`
 - `mod`
 - `remainder`
-- `sqrt`
 
 ### Auxilliary
 
@@ -111,9 +107,27 @@ _The infrastructure and best practices for distributing Swift libraries are curr
 - `inv`
 - `transpose`
 
+### Other
+
+- `asum`
+- `meamg`
+- `measq`
+
 ### Power
 
 - `pow`
+- `sqrt`
+
+### Statistics
+
+- `sum`
+- `min`
+- `max`
+- `mean`
+- `variance`
+- `stdev`
+- `covariance`
+- `correlation`
 
 ### Trigonometric
 
@@ -126,6 +140,13 @@ _The infrastructure and best practices for distributing Swift libraries are curr
 - `atan`
 - `rad2deg`
 - `deg2rad`
+
+### Vector Operations
+
+- `dot`
+- `magnitude`
+- `unit`
+- `normalize`
 
 ## Usage
 
