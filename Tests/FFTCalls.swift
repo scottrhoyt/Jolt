@@ -9,7 +9,7 @@
 import Surge
 
 enum FFTCalls : VectorFFT {
-    case FFT
+    case FFT, None
     
     static func fft(input: [FFTCalls]) -> [FFTCalls] {
         return [.FFT]

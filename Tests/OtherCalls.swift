@@ -10,7 +10,7 @@ import Surge
 
 enum OtherCalls : VectorOther {
     
-    case Asum, Meamg, Measq
+    case Asum, Meamg, Measq, None
     
     static func asum(x: [OtherCalls]) -> OtherCalls {
         return .Asum

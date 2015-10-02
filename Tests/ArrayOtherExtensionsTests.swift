@@ -10,19 +10,21 @@ import XCTest
 import Surge
 
 class ArrayOtherExtensionsTests: XCTestCase {
+    
+    let testVector = [OtherCalls]()
 
     func test_calls_asum() {
-        let a = [OtherCalls]()
+        let a = testVector
         XCTAssertEqual(OtherCalls.Asum, a.asum())
     }
     
     func test_calls_meamg() {
-        let a = [OtherCalls]()
+        let a = testVector
         XCTAssertEqual(OtherCalls.Meamg, a.meamg())
     }
     
     func test_calls_measq() {
-        let a = [OtherCalls]()
+        let a = testVector
         XCTAssertEqual(OtherCalls.Measq, a.measq())
     }
 

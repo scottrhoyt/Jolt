@@ -10,29 +10,31 @@ import XCTest
 import Surge
 
 class ArrayExponentialExtensionsTests: XCTestCase {
+    
+    let testVector = [ExponentialCalls]()
 
     func test_calls_exp() {
-        XCTAssertEqual(ExponentialCalls.Exp, [ExponentialCalls]().exp()[0])
+        XCTAssertEqual(ExponentialCalls.Exp, testVector.exp()[0])
     }
     
     func test_calls_exp2() {
-        XCTAssertEqual(ExponentialCalls.Exp2, [ExponentialCalls]().exp2()[0])
+        XCTAssertEqual(ExponentialCalls.Exp2, testVector.exp2()[0])
     }
     
     func test_calls_log() {
-        XCTAssertEqual(ExponentialCalls.Log, [ExponentialCalls]().log()[0])
+        XCTAssertEqual(ExponentialCalls.Log, testVector.log()[0])
     }
     
     func test_calls_log2() {
-        XCTAssertEqual(ExponentialCalls.Log2, [ExponentialCalls]().log2()[0])
+        XCTAssertEqual(ExponentialCalls.Log2, testVector.log2()[0])
     }
     
     func test_calls_log10() {
-        XCTAssertEqual(ExponentialCalls.Log10, [ExponentialCalls]().log10()[0])
+        XCTAssertEqual(ExponentialCalls.Log10, testVector.log10()[0])
     }
     
     func test_calls_logb() {
-        XCTAssertEqual(ExponentialCalls.Logb, [ExponentialCalls]().logb()[0])
+        XCTAssertEqual(ExponentialCalls.Logb, testVector.logb()[0])
     }
 
 }

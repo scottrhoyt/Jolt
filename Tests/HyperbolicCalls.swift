@@ -10,7 +10,7 @@ import Surge
 
 enum HyperbolicCalls : VectorHyperbolic {
     
-    case Cosh, Sinh, Tanh, Acosh, Asinh, Atanh
+    case Cosh, Sinh, Tanh, Acosh, Asinh, Atanh, None
     
     static func cosh(x: [HyperbolicCalls]) -> [HyperbolicCalls] {
         return [.Cosh]

@@ -10,7 +10,7 @@ import Surge
 
 enum ExponentialCalls : VectorExponential {
     
-    case Exp, Exp2, Log, Log2, Log10, Logb
+    case Exp, Exp2, Log, Log2, Log10, Logb, None
     
     static func exp(x: [ExponentialCalls]) -> [ExponentialCalls] {
         return [.Exp]

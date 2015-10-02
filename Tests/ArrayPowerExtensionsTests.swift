@@ -11,20 +11,22 @@ import Surge
 
 class ArrayPowerTests: XCTestCase {
     
+    let testVector = [PowerCalls]()
+    
     func test_array_calls_pow() {
-        let a = [PowerCalls]()
-        let b = [PowerCalls]()
+        let a = testVector
+        let b = testVector
         XCTAssertEqual(PowerCalls.Pow, a.pow(b)[0])
     }
     
     func test_array_calls_pow2() {
-        let a = [PowerCalls]()
-        let b = PowerCalls.Pow
+        let a = testVector
+        let b = PowerCalls.None
         XCTAssertEqual(PowerCalls.Pow2, a.pow(b)[0])
     }
     
     func test_array_calls_sqrt() {
-        let a = [PowerCalls]()
+        let a = testVector
         XCTAssertEqual(PowerCalls.Sqrt, a.sqrt()[0])
     }
 

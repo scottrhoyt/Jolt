@@ -10,40 +10,42 @@ import XCTest
 import Surge
 
 class ArrayTrigonometricExtensionsTests: XCTestCase {
+    
+    let testVector = [TrigonometricCalls]()
 
     func test_calls_cos() {
-        XCTAssertEqual(TrigonometricCalls.Cos, [TrigonometricCalls]().cos()[0])
+        XCTAssertEqual(TrigonometricCalls.Cos, testVector.cos()[0])
     }
 
     func test_calls_sin() {
-        XCTAssertEqual(TrigonometricCalls.Sin, [TrigonometricCalls]().sin()[0])
+        XCTAssertEqual(TrigonometricCalls.Sin, testVector.sin()[0])
     }
     
     func test_calls_tan() {
-        XCTAssertEqual(TrigonometricCalls.Tan, [TrigonometricCalls]().tan()[0])
+        XCTAssertEqual(TrigonometricCalls.Tan, testVector.tan()[0])
     }
     
     func test_calls_acos() {
-        XCTAssertEqual(TrigonometricCalls.Acos, [TrigonometricCalls]().acos()[0])
+        XCTAssertEqual(TrigonometricCalls.Acos, testVector.acos()[0])
     }
     
     func test_calls_asin() {
-        XCTAssertEqual(TrigonometricCalls.Asin, [TrigonometricCalls]().asin()[0])
+        XCTAssertEqual(TrigonometricCalls.Asin, testVector.asin()[0])
     }
     
     func test_calls_atan() {
-        XCTAssertEqual(TrigonometricCalls.Atan, [TrigonometricCalls]().atan()[0])
+        XCTAssertEqual(TrigonometricCalls.Atan, testVector.atan()[0])
     }
     
     func test_calls_deg2rad() {
-        XCTAssertEqual(TrigonometricCalls.Deg2Rad, [TrigonometricCalls]().deg2rad()[0])
+        XCTAssertEqual(TrigonometricCalls.Deg2Rad, testVector.deg2rad()[0])
     }
     
     func test_calls_rad2deg() {
-        XCTAssertEqual(TrigonometricCalls.Rad2Deg, [TrigonometricCalls]().rad2deg()[0])
+        XCTAssertEqual(TrigonometricCalls.Rad2Deg, testVector.rad2deg()[0])
     }
     
     func test_calls_sincos() {
-        XCTAssertEqual(TrigonometricCalls.SinCos, [TrigonometricCalls]().sincos().1[0])
+        XCTAssertEqual(TrigonometricCalls.SinCos, testVector.sincos().1[0])
     }
 }

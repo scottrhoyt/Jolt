@@ -10,7 +10,7 @@ import Surge
 
 enum OperationsCalls : VectorOperations {
     
-    case Dot, Magnitude, Unit
+    case Dot, Magnitude, Unit, None
     
     static func dot(x: [OperationsCalls], _ y: [OperationsCalls]) -> OperationsCalls {
         return .Dot

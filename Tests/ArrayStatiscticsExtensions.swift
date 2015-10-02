@@ -10,41 +10,43 @@ import XCTest
 import Surge
 
 class ArrayStatiscticsExtensions: XCTestCase {
+    
+    let testVector = [StatisticsCalls]()
 
     func test_calls_sum() {
-        XCTAssertEqual(StatisticsCalls.Sum, [StatisticsCalls]().sum())
+        XCTAssertEqual(StatisticsCalls.Sum, testVector.sum())
     }
     
     func test_calls_mean() {
-        XCTAssertEqual(StatisticsCalls.Mean, [StatisticsCalls]().mean())
+        XCTAssertEqual(StatisticsCalls.Mean, testVector.mean())
     }
     
     func test_calls_min() {
-        XCTAssertEqual(StatisticsCalls.Min, [StatisticsCalls]().min())
+        XCTAssertEqual(StatisticsCalls.Min, testVector.min())
     }
     
     func test_calls_max() {
-        XCTAssertEqual(StatisticsCalls.Max, [StatisticsCalls]().max())
+        XCTAssertEqual(StatisticsCalls.Max, testVector.max())
     }
     
     func test_calls_normalize() {
-        XCTAssertEqual(StatisticsCalls.Normalize, [StatisticsCalls]().normalize()[0])
+        XCTAssertEqual(StatisticsCalls.Normalize, testVector.normalize()[0])
     }
     
     func test_calls_variance() {
-        XCTAssertEqual(StatisticsCalls.Variance, [StatisticsCalls]().variance())
+        XCTAssertEqual(StatisticsCalls.Variance, testVector.variance())
     }
     
     func test_calls_stdev() {
-        XCTAssertEqual(StatisticsCalls.Stdev, [StatisticsCalls]().stdev())
+        XCTAssertEqual(StatisticsCalls.Stdev, testVector.stdev())
     }
     
     func test_calls_covariance() {
-        XCTAssertEqual(StatisticsCalls.Covariance, [StatisticsCalls]().covariance([StatisticsCalls]()))
+        XCTAssertEqual(StatisticsCalls.Covariance, testVector.covariance(testVector))
     }
     
     func test_calls_correlation() {
-        XCTAssertEqual(StatisticsCalls.Correlation, [StatisticsCalls]().correlation([StatisticsCalls]()))
+        XCTAssertEqual(StatisticsCalls.Correlation, testVector.correlation(testVector))
     }
 
 }

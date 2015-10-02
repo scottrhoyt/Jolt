@@ -10,20 +10,22 @@ import XCTest
 import Surge
 
 class ArrayOperationsExtensionsTests: XCTestCase {
+    
+    let testVector = [OperationsCalls]()
 
     func test_calls_dot() {
-        let a = [OperationsCalls]()
-        let b = [OperationsCalls]()
+        let a = testVector
+        let b = testVector
         XCTAssertEqual(OperationsCalls.Dot, a.dot(b))
     }
     
     func test_calls_magnitude() {
-        let a = [OperationsCalls]()
+        let a = testVector
         XCTAssertEqual(OperationsCalls.Magnitude, a.magnitude())
     }
     
     func test_calls_unit() {
-        let a = [OperationsCalls]()
+        let a = testVector
         XCTAssertEqual(OperationsCalls.Unit, a.unit()[0])
     }
 

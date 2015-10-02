@@ -11,7 +11,7 @@ import Surge
 
 enum TrigonometricCalls : VectorTrigonometric {
     
-    case Cos, Sin, Tan, Acos, Asin, Atan, Deg2Rad, Rad2Deg, SinCos
+    case Cos, Sin, Tan, Acos, Asin, Atan, Deg2Rad, Rad2Deg, SinCos, None
     
     static func cos(x: [TrigonometricCalls]) -> [TrigonometricCalls] {
         return [.Cos]

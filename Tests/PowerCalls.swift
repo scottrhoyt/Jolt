@@ -10,7 +10,7 @@ import Surge
 
 enum PowerCalls : VectorPower {
     
-    case Pow, Pow2, Sqrt
+    case Pow, Pow2, Sqrt, None
     
     static func pow(x: [PowerCalls], _ y: [PowerCalls]) -> [PowerCalls] {
         return [.Pow]

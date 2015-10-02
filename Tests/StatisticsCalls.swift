@@ -10,7 +10,7 @@ import Surge
 
 enum StatisticsCalls : VectorStatistics {
     
-    case Sum, Mean, Min, Max, Normalize, Variance, Stdev, Covariance, Correlation
+    case Sum, Mean, Min, Max, Normalize, Variance, Stdev, Covariance, Correlation, None
     
     static func sum(x: [StatisticsCalls]) -> StatisticsCalls {
         return .Sum

@@ -10,9 +10,11 @@ import XCTest
 import Surge
 
 class ArrayFFTExtensionsTests: XCTestCase {
+    
+    let testVector = [FFTCalls]()
 
     func test_calls_fft() {
-        XCTAssertEqual(FFTCalls.FFT, [FFTCalls]().fft()[0])
+        XCTAssertEqual(FFTCalls.FFT, testVector.fft()[0])
     }
 
 }
