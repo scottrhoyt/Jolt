@@ -3,7 +3,7 @@
 //  Surge
 //
 //  Created by Scott Hoyt on 9/10/15.
-//  Copyright © 2015 Mattt Thompson. All rights reserved.
+//  Copyright © 2015 Scott Hoyt. All rights reserved.
 //
 
 

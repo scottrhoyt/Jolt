@@ -3,7 +3,7 @@
 //  SurgeOperators
 //
 //  Created by Scott Hoyt on 9/26/15.
-//  Copyright © 2015 Mattt Thompson. All rights reserved.
+//  Copyright © 2015 Scott Hoyt. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
