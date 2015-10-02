@@ -286,6 +286,14 @@
 			name = ArrayExtensionTests;
 			sourceTree = "<group>";
 		};
+		3B06564C1BBF2C5E00595F71 /* Matrix */ = {
+			isa = PBXGroup;
+			children = (
+				E65C5BE319FF9CF600149FF1 /* Matrix.swift */,
+			);
+			path = Matrix;
+			sourceTree = "<group>";
+		};
 		3B2C8C9D1BB777AB00984C7C /* SurgeOperators */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,7 +327,7 @@
 				3B8D216F1BA235BE00CE9D1A /* VectorHyperbolic.swift */,
 				3B3F1F4E1BB1DCDD00AAE75F /* VectorOther.swift */,
 			);
-			name = VectorProtocols;
+			path = VectorProtocols;
 			sourceTree = "<group>";
 		};
 		3B38701D1BA20E770022CB6E /* FloatingTypeExtensions */ = {
@@ -336,7 +344,7 @@
 				3B8D21711BA236C600CE9D1A /* FloatingTypeHyperbolicExtensions.swift */,
 				3B3F1F501BB1DD7000AAE75F /* FloatingTypeOtherExtensions.swift */,
 			);
-			name = FloatingTypeExtensions;
+			path = FloatingTypeExtensions;
 			sourceTree = "<group>";
 		};
 		3B38701E1BA20E880022CB6E /* ArrayExtensions */ = {
@@ -353,10 +361,10 @@
 				3B8D21731BA2379400CE9D1A /* ArrayHyperbolicExtensions.swift */,
 				3B3F1F521BB1DEC000AAE75F /* ArrayOtherExtensions.swift */,
 			);
-			name = ArrayExtensions;
+			path = ArrayExtensions;
 			sourceTree = "<group>";
 		};
-		3B38701F1BA20EB90022CB6E /* Globals */ = {
+		3B38701F1BA20EB90022CB6E /* GlobalFunctions */ = {
 			isa = PBXGroup;
 			children = (
 				F8A1E1C519917B0A009735E2 /* Auxiliary.swift */,
@@ -368,7 +376,7 @@
 				F8A1E1C419917B0A009735E2 /* Arithmetic.swift */,
 				3BF8A56A1BBE1C9F00F511D2 /* Statistics.swift */,
 			);
-			name = Globals;
+			path = GlobalFunctions;
 			sourceTree = "<group>";
 		};
 		3B3F1F541BB1E05F00AAE75F /* VectorOperationsConvertible */ = {
@@ -376,7 +384,7 @@
 			children = (
 				3B3F1F551BB1E06F00AAE75F /* VectorOperationsConvertible.swift */,
 			);
-			name = VectorOperationsConvertible;
+			path = VectorOperationsConvertible;
 			sourceTree = "<group>";
 		};
 		3BC4646C1BB4DDCF004A2E81 /* TestExtensions */ = {
@@ -506,13 +514,13 @@
 		F8A1E1C319917B0A009735E2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				3B06564C1BBF2C5E00595F71 /* Matrix */,
 				3B3F1F541BB1E05F00AAE75F /* VectorOperationsConvertible */,
-				3B38701F1BA20EB90022CB6E /* Globals */,
+				3B38701F1BA20EB90022CB6E /* GlobalFunctions */,
 				3B38701E1BA20E880022CB6E /* ArrayExtensions */,
 				3B38701D1BA20E770022CB6E /* FloatingTypeExtensions */,
 				3B38701C1BA20E620022CB6E /* VectorProtocols */,
 				F8A1E1C919917B0A009735E2 /* Surge.h */,
-				E65C5BE319FF9CF600149FF1 /* Matrix.swift */,
 			);
 			name = Source;
 			path = Surge/Source;
