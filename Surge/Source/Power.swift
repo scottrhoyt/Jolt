@@ -20,11 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-public func pow<T: VectorPower>(x: [T], y: [T]) -> [T] {
+public func pow<T: VectorPower>(x: [T], _ y: [T]) -> [T] {
     return T.pow(x, y)
 }
 
-public func pow<T: VectorPower>(x: [T], y: T) -> [T] {
+public func pow<T: VectorPower>(x: [T], _ y: T) -> [T] {
     return T.pow(x, y)
 }
 

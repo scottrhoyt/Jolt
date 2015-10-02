@@ -48,10 +48,10 @@ public func atan<T: VectorTrigonometric>(x: [T]) -> [T] {
     return T.atan(x)
 }
 
-func rad2deg<T: VectorTrigonometric>(x: [T]) -> [T] {
+public func rad2deg<T: VectorTrigonometric>(x: [T]) -> [T] {
     return T.rad2deg(x)
 }
 
-func deg2rad<T: VectorTrigonometric>(x: [T]) -> [T] {
+public func deg2rad<T: VectorTrigonometric>(x: [T]) -> [T] {
     return T.deg2rad(x)
 }

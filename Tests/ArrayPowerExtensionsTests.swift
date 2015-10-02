@@ -14,20 +14,15 @@ class ArrayPowerTests: XCTestCase {
     let testVector = [PowerCalls]()
     
     func test_array_calls_pow() {
-        let a = testVector
-        let b = testVector
-        XCTAssertEqual(PowerCalls.Pow, a.pow(b)[0])
+        XCTAssertEqual(PowerCalls.Pow, testVector.pow(testVector)[0])
     }
     
     func test_array_calls_pow2() {
-        let a = testVector
-        let b = PowerCalls.None
-        XCTAssertEqual(PowerCalls.Pow2, a.pow(b)[0])
+        XCTAssertEqual(PowerCalls.Pow2, testVector.pow(PowerCalls.None)[0])
     }
     
     func test_array_calls_sqrt() {
-        let a = testVector
-        XCTAssertEqual(PowerCalls.Sqrt, a.sqrt()[0])
+        XCTAssertEqual(PowerCalls.Sqrt, testVector.sqrt()[0])
     }
 
 }
