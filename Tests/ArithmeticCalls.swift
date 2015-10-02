@@ -10,7 +10,7 @@ import Surge
 
 enum ArithmeticCalls : VectorArithmetic {
     
-    case Add1, Add2, Sub1, Sub2, Sub3, Mul1, Mul2, Div1, Div2, Div3, Mod1, Mod2, Remainder1, Remainder2, Zero, One, NegativeOne
+    case Add1, Add2, Sub1, Sub2, Sub3, Mul1, Mul2, Div1, Div2, Div3, Mod1, Mod2, Mod3, Remainder1, Remainder2, Remainder3, Zero, One, NegativeOne
     
     static func add(x: [ArithmeticCalls], _ y: [ArithmeticCalls]) -> [ArithmeticCalls] {
         return [.Add1]
@@ -64,8 +64,16 @@ enum ArithmeticCalls : VectorArithmetic {
         return [.Mod2]
     }
     
+    static func mod(x: ArithmeticCalls, _ y: [ArithmeticCalls]) -> [ArithmeticCalls] {
+        return [.Mod3]
+    }
+    
     static func remainder(x: [ArithmeticCalls], _ y: ArithmeticCalls) -> [ArithmeticCalls] {
         return [.Remainder2]
+    }
+    
+    static func remainder(x: ArithmeticCalls, _ y: [ArithmeticCalls]) -> [ArithmeticCalls] {
+        return [.Remainder3]
     }
     
 }

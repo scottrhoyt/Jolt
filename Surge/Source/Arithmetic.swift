@@ -24,6 +24,10 @@ public func add<T: VectorArithmetic>(x: [T], _ y: [T]) -> [T] {
     return T.add(x, y)
 }
 
+public func sub<T: VectorArithmetic>(x: [T], _ y: [T]) -> [T] {
+    return T.sub(x, y)
+}
+
 public func mul<T: VectorArithmetic>(x: [T], _ y: [T]) -> [T] {
     return T.mul(x, y)
 }
@@ -44,6 +48,10 @@ public func add<T: VectorArithmetic>(x: [T], _ y: T) -> [T] {
     return T.add(x, y)
 }
 
+public func sub<T: VectorArithmetic>(x: [T], _ y: T) -> [T] {
+    return T.sub(x, y)
+}
+
 public func mul<T: VectorArithmetic>(x: [T], _ y: T) -> [T] {
     return T.mul(x, y)
 }
@@ -62,6 +70,10 @@ public func remainder<T: VectorArithmetic>(x: [T], _ y: T) -> [T] {
 
 public func add<T: VectorArithmetic>(x: T, _ y: [T]) -> [T] {
     return T.add(x, y)
+}
+
+public func sub<T: VectorArithmetic>(x: T, _ y: [T]) -> [T] {
+    return T.sub(x, y)
 }
 
 public func mul<T: VectorArithmetic>(x: T, _ y: [T]) -> [T] {
