@@ -37,6 +37,8 @@ public protocol VectorArithmetic {
     
 }
 
+// MARK: - VectorArithmetic Default Implementations
+
 public extension VectorArithmetic {
     
     static func add(x: Self, _ y: [Self]) -> [Self] {
