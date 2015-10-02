@@ -20,164 +20,42 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import Accelerate
+public func abs<T: VectorAuxiliary>(x: [T]) -> [T] {
+    return T.abs(x)
+}
 
-// MARK: Absolute Value
+public func ceil<T: VectorAuxiliary>(x: [T]) -> [T] {
+    return T.ceil(x)
+}
 
-//public func abs(x: [Double]) -> [Double] {
-//    var results = [Double](count: x.count, repeatedValue: 0.0)
-//    vvfabs(&results, x, [Int32(x.count)])
-//
-//    return results
-//}
+public func clip<T: VectorAuxiliary>(x: [T], _ low: T, _ high: T) -> [T] {
+    return T.clip(x, low, high)
+}
 
-//public func abs(x: [Float]) -> [Float] {
-//    var results = [Float](count: x.count, repeatedValue: 0.0)
-//    vvfabsf(&results, x, [Int32(x.count)])
-//
-//    return results
-//}
+public func copysign<T: VectorAuxiliary>(sign: [T], _ magnitude: [T]) -> [T] {
+    return T.copysign(sign, magnitude)
+}
 
-// MARK: Ceiling
+public func floor<T: VectorAuxiliary>(x: [T]) -> [T] {
+    return T.floor(x)
+}
 
-//public func ceil(x: [Float]) -> [Float] {
-//    var results = [Float](count: x.count, repeatedValue: 0.0)
-//    vvceilf(&results, x, [Int32(x.count)])
-//
-//    return results
-//}
+public func neg<T: VectorAuxiliary>(x: [T]) -> [T] {
+    return T.neg(x)
+}
 
-//public func ceil(x: [Double]) -> [Double] {
-//    var results = [Double](count: x.count, repeatedValue: 0.0)
-//    vvceil(&results, x, [Int32(x.count)])
-//
-//    return results
-//}
+public func rec<T: VectorAuxiliary>(x: [T]) -> [T] {
+    return T.rec(x)
+}
 
-// MARK: Clip
+public func round<T: VectorAuxiliary>(x: [T]) -> [T] {
+    return T.round(x)
+}
 
-//public func clip(x: [Float], _ low: Float, _ high: Float) -> [Float] {
-//    var results = [Float](count: x.count, repeatedValue: 0.0), y = low, z = high
-//    vDSP_vclip(x, 1, &y, &z, &results, 1, vDSP_Length(x.count))
-//
-//    return results
-//}
+public func threshold<T: VectorAuxiliary>(x: [T], _ low: T) -> [T] {
+    return T.threshold(x, low)
+}
 
-//public func clip(x: [Double], _ low: Double, _ high: Double) -> [Double] {
-//    var results = [Double](count: x.count, repeatedValue: 0.0), y = low, z = high
-//    vDSP_vclipD(x, 1, &y, &z, &results, 1, vDSP_Length(x.count))
-//
-//    return results
-//}
-
-// MARK: Copy Sign
-
-//public func copysign(sign: [Float], _ magnitude: [Float]) -> [Float] {
-//    var results = [Float](count: sign.count, repeatedValue: 0.0)
-//    vvcopysignf(&results, magnitude, sign, [Int32(sign.count)])
-//
-//    return results
-//}
-
-//public func copysign(sign: [Double], _ magnitude: [Double]) -> [Double] {
-//    var results = [Double](count: sign.count, repeatedValue: 0.0)
-//    vvcopysign(&results, magnitude, sign, [Int32(sign.count)])
-//
-//    return results
-//}
-
-// MARK: Floor
-
-//public func floor(x: [Float]) -> [Float] {
-//    var results = [Float](count: x.count, repeatedValue: 0.0)
-//    vvfloorf(&results, x, [Int32(x.count)])
-//
-//    return results
-//}
-
-//public func floor(x: [Double]) -> [Double] {
-//    var results = [Double](count: x.count, repeatedValue: 0.0)
-//    vvfloor(&results, x, [Int32(x.count)])
-//
-//    return results
-//}
-
-// MARK: Negate
-
-//public func neg(x: [Float]) -> [Float] {
-//    var results = [Float](count: x.count, repeatedValue: 0.0)
-//    vDSP_vneg(x, 1, &results, 1, vDSP_Length(x.count))
-//
-//    return results
-//}
-
-//public func neg(x: [Double]) -> [Double] {
-//    var results = [Double](count: x.count, repeatedValue: 0.0)
-//    vDSP_vnegD(x, 1, &results, 1, vDSP_Length(x.count))
-//
-//    return results
-//}
-
-// MARK: Reciprocal
-
-//public func rec(x: [Float]) -> [Float] {
-//    var results = [Float](count: x.count, repeatedValue: 0.0)
-//    vvrecf(&results, x, [Int32(x.count)])
-//
-//    return results
-//}
-
-//public func rec(x: [Double]) -> [Double] {
-//    var results = [Double](count: x.count, repeatedValue: 0.0)
-//    vvrec(&results, x, [Int32(x.count)])
-//
-//    return results
-//}
-
-// MARK: Round
-
-//public func round(x: [Float]) -> [Float] {
-//    var results = [Float](count: x.count, repeatedValue: 0.0)
-//    vvnintf(&results, x, [Int32(x.count)])
-//
-//    return results
-//}
-
-//public func round(x: [Double]) -> [Double] {
-//    var results = [Double](count: x.count, repeatedValue: 0.0)
-//    vvnint(&results, x, [Int32(x.count)])
-//
-//    return results
-//}
-
-// MARK: Threshold
-
-//public func threshold(x: [Float], _ low: Float) -> [Float] {
-//    var results = [Float](count: x.count, repeatedValue: 0.0), y = low
-//    vDSP_vthr(x, 1, &y, &results, 1, vDSP_Length(x.count))
-//
-//    return results
-//}
-
-//public func threshold(x: [Double], _ low: Double) -> [Double] {
-//    var results = [Double](count: x.count, repeatedValue: 0.0), y = low
-//    vDSP_vthrD(x, 1, &y, &results, 1, vDSP_Length(x.count))
-//
-//    return results
-//}
-
-// MARK: Truncate
-
-//public func trunc(x: [Float]) -> [Float] {
-//    var results = [Float](count: x.count, repeatedValue: 0.0)
-//    vvintf(&results, x, [Int32(x.count)])
-//
-//    return results
-//}
-
-//public func trunc(x: [Double]) -> [Double] {
-//    var results = [Double](count: x.count, repeatedValue: 0.0)
-//    vvint(&results, x, [Int32(x.count)])
-//
-//    return results
-//}
+public func trunc<T: VectorAuxiliary>(x: [T]) -> [T] {
+    return T.trunc(x)
+}

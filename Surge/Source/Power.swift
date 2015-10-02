@@ -20,20 +20,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import Accelerate
+public func pow<T: VectorPower>(x: [T], y: [T]) -> [T] {
+    return T.pow(x, y)
+}
 
-// MARK: Power
+public func pow<T: VectorPower>(x: [T], y: T) -> [T] {
+    return T.pow(x, y)
+}
 
-//public func pow(x: [Float], y: [Float]) -> [Float] {
-//    var results = [Float](count: x.count, repeatedValue: 0.0)
-//    vvpowf(&results, x, y, [Int32(x.count)])
-//
-//    return results
-//}
-//
-//public func pow(x: [Double], y: [Double]) -> [Double] {
-//    var results = [Double](count: x.count, repeatedValue: 0.0)
-//    vvpow(&results, x, y, [Int32(x.count)])
-//
-//    return results
-//}
+public func sqrt<T: VectorPower>(x: [T]) -> [T] {
+    return T.sqrt(x)
+}
