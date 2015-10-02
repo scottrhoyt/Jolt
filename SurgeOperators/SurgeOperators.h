@@ -6,7 +6,7 @@
 //  Copyright © 2015 Scott Hoyt. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Surge/Surge.h>
 
 //! Project version number for SurgeOperators.
 FOUNDATION_EXPORT double SurgeOperatorsVersionNumber;
