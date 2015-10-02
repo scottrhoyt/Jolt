@@ -10,7 +10,7 @@ import Surge
 
 enum AuxiliaryCalls : VectorAuxiliary {
     
-    case Ceil, Floor, Clip, Threshold, Abs, CopySign, Neg, Rec, Round, Trunc
+    case Ceil, Floor, Clip, Threshold, Abs, CopySign, Neg, Rec, Round, Trunc, None
     
     static func ceil(x: [AuxiliaryCalls]) -> [AuxiliaryCalls] {
         return [.Ceil]
