@@ -5,6 +5,6 @@
       location = "group:Jolt.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Surge.playground">
+      location = "group:Jolt.playground">
    </FileRef>
 </Workspace>
