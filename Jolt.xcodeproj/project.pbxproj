@@ -80,7 +80,7 @@
 		3BE2CA5B1BBF1E11008D6399 /* GlobalOtherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA5A1BBF1E11008D6399 /* GlobalOtherTests.swift */; };
 		3BE2CA5D1BBF1EB6008D6399 /* GlobalPowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA5C1BBF1EB6008D6399 /* GlobalPowerTests.swift */; };
 		3BF89A0A1BBF30A600F9764B /* FloatingTypeTestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF89A081BBF30A600F9764B /* FloatingTypeTestExtensions.swift */; };
-		3BF89A0B1BBF30A600F9764B /* XCTestCase+Surge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF89A091BBF30A600F9764B /* XCTestCase+Surge.swift */; };
+		3BF89A0B1BBF30A600F9764B /* XCTestCase+Jolt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF89A091BBF30A600F9764B /* XCTestCase+Jolt.swift */; };
 		3BF8A56B1BBE1C9F00F511D2 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8A56A1BBE1C9F00F511D2 /* Statistics.swift */; };
 		E65C5BE419FF9CF600149FF1 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65C5BE319FF9CF600149FF1 /* Matrix.swift */; };
 		F8A1E1CB19917B0A009735E2 /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C419917B0A009735E2 /* Arithmetic.swift */; };
@@ -200,7 +200,7 @@
 		3BE2CA5A1BBF1E11008D6399 /* GlobalOtherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalOtherTests.swift; sourceTree = "<group>"; };
 		3BE2CA5C1BBF1EB6008D6399 /* GlobalPowerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalPowerTests.swift; sourceTree = "<group>"; };
 		3BF89A081BBF30A600F9764B /* FloatingTypeTestExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTypeTestExtensions.swift; sourceTree = "<group>"; };
-		3BF89A091BBF30A600F9764B /* XCTestCase+Surge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Surge.swift"; sourceTree = "<group>"; };
+		3BF89A091BBF30A600F9764B /* XCTestCase+Jolt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Jolt.swift"; sourceTree = "<group>"; };
 		3BF8A56A1BBE1C9F00F511D2 /* Statistics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		E65C5BE319FF9CF600149FF1 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		F84A6AAE19A9A72F007B53E1 /* JoltTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JoltTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,7 +217,7 @@
 		F8A1E1D219917C0B009735E2 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		F8A1E1D619917C2B009735E2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F8AE90FD19D1D9120078C7B2 /* FFT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFT.swift; sourceTree = "<group>"; };
-		F8BD5C521A6C1C6400DD357E /* SurgeTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SurgeTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		F8BD5C521A6C1C6400DD357E /* JoltTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JoltTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		F8BD5C531A6C1C6500DD357E /* ArithmeticTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArithmeticTests.swift; sourceTree = "<group>"; };
 		F8BD5C541A6C1C6500DD357E /* AuxiliaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuxiliaryTests.swift; sourceTree = "<group>"; };
 		F8BD5C551A6C1C6500DD357E /* ExponentialTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExponentialTests.swift; sourceTree = "<group>"; };
@@ -315,7 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				3BF89A081BBF30A600F9764B /* FloatingTypeTestExtensions.swift */,
-				3BF89A091BBF30A600F9764B /* XCTestCase+Surge.swift */,
+				3BF89A091BBF30A600F9764B /* XCTestCase+Jolt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -459,7 +459,7 @@
 				3B02BBAA1BBB35CD00C1EFAB /* ArrayExtensionTests */,
 				3B02BBA91BBB35B000C1EFAB /* FloatingTypeVectorConformanceTests */,
 				F84A6AB019A9A72F007B53E1 /* Supporting Files */,
-				F8BD5C521A6C1C6400DD357E /* SurgeTests-Bridging-Header.h */,
+				F8BD5C521A6C1C6400DD357E /* JoltTests-Bridging-Header.h */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -735,7 +735,7 @@
 				3B295A6E1BBB4A49002774E6 /* ArrayOtherExtensionsTests.swift in Sources */,
 				3B02BBAC1BBB360000C1EFAB /* ArrayPowerExtensionsTests.swift in Sources */,
 				F8BD5C591A6C1C6500DD357E /* ArithmeticTests.swift in Sources */,
-				3BF89A0B1BBF30A600F9764B /* XCTestCase+Surge.swift in Sources */,
+				3BF89A0B1BBF30A600F9764B /* XCTestCase+Jolt.swift in Sources */,
 				3BC4647C1BB4E8D5004A2E81 /* StatisticsTests.swift in Sources */,
 				F8BD5C5B1A6C1C6500DD357E /* ExponentialTests.swift in Sources */,
 			);
@@ -863,7 +863,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.scotthoyt.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Tests/SurgeTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/JoltTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -876,7 +876,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.scotthoyt.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Tests/SurgeTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/JoltTests-Bridging-Header.h";
 			};
 			name = Release;
 		};
