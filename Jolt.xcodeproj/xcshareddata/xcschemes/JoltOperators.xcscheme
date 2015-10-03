@@ -17,7 +17,7 @@
                BlueprintIdentifier = "3B2C8C9B1BB777AB00984C7C"
                BuildableName = "JoltOperators.framework"
                BlueprintName = "JoltOperators"
-               ReferencedContainer = "container:Surge.xcodeproj">
+               ReferencedContainer = "container:Jolt.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "3B2C8CA41BB777AB00984C7C"
                BuildableName = "SurgeOperatorsTests.xctest"
                BlueprintName = "SurgeOperatorsTests"
-               ReferencedContainer = "container:Surge.xcodeproj">
+               ReferencedContainer = "container:Jolt.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +45,7 @@
             BlueprintIdentifier = "3B2C8C9B1BB777AB00984C7C"
             BuildableName = "JoltOperators.framework"
             BlueprintName = "JoltOperators"
-            ReferencedContainer = "container:Surge.xcodeproj">
+            ReferencedContainer = "container:Jolt.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -67,7 +67,7 @@
             BlueprintIdentifier = "3B2C8C9B1BB777AB00984C7C"
             BuildableName = "JoltOperators.framework"
             BlueprintName = "JoltOperators"
-            ReferencedContainer = "container:Surge.xcodeproj">
+            ReferencedContainer = "container:Jolt.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -85,7 +85,7 @@
             BlueprintIdentifier = "3B2C8C9B1BB777AB00984C7C"
             BuildableName = "JoltOperators.framework"
             BlueprintName = "JoltOperators"
-            ReferencedContainer = "container:Surge.xcodeproj">
+            ReferencedContainer = "container:Jolt.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

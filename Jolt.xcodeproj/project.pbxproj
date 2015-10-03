@@ -636,7 +636,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F8A1E1A419917A79009735E2 /* Build configuration list for PBXProject "Surge" */;
+			buildConfigurationList = F8A1E1A419917A79009735E2 /* Build configuration list for PBXProject "Jolt" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1031,7 +1031,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8A1E1A419917A79009735E2 /* Build configuration list for PBXProject "Surge" */ = {
+		F8A1E1A419917A79009735E2 /* Build configuration list for PBXProject "Jolt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8A1E1BB19917A79009735E2 /* Debug */,
