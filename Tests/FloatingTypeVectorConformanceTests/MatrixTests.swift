@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import Jolt
+import JoltOperators
 
 protocol MatrixTest : RandomDataTest {
     typealias OperandType : FloatLiteralConvertible, FloatingPointAccuracy
