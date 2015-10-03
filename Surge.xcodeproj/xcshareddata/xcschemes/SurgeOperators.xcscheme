@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3B2C8C9B1BB777AB00984C7C"
-               BuildableName = "SurgeOperators.framework"
-               BlueprintName = "SurgeOperators"
+               BuildableName = "JoltOperators.framework"
+               BlueprintName = "JoltOperators"
                ReferencedContainer = "container:Surge.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3B2C8C9B1BB777AB00984C7C"
-            BuildableName = "SurgeOperators.framework"
-            BlueprintName = "SurgeOperators"
+            BuildableName = "JoltOperators.framework"
+            BlueprintName = "JoltOperators"
             ReferencedContainer = "container:Surge.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,8 +65,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3B2C8C9B1BB777AB00984C7C"
-            BuildableName = "SurgeOperators.framework"
-            BlueprintName = "SurgeOperators"
+            BuildableName = "JoltOperators.framework"
+            BlueprintName = "JoltOperators"
             ReferencedContainer = "container:Surge.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -83,8 +83,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3B2C8C9B1BB777AB00984C7C"
-            BuildableName = "SurgeOperators.framework"
-            BlueprintName = "SurgeOperators"
+            BuildableName = "JoltOperators.framework"
+            BlueprintName = "JoltOperators"
             ReferencedContainer = "container:Surge.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

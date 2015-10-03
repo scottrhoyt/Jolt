@@ -60,28 +60,28 @@
 		3BC464781BB4DF78004A2E81 /* RandomDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC464771BB4DF78004A2E81 /* RandomDataTest.swift */; };
 		3BC4647A1BB4E0B6004A2E81 /* ReductionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC464791BB4E0B6004A2E81 /* ReductionTest.swift */; };
 		3BC4647C1BB4E8D5004A2E81 /* StatisticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4647B1BB4E8D5004A2E81 /* StatisticsTests.swift */; };
-		3BE2CA381BBE6455008D6399 /* PowerCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA361BBE642F008D6399 /* PowerCalls.swift */; settings = {ASSET_TAGS = (); }; };
-		3BE2CA3A1BBE64A4008D6399 /* OperationsCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA391BBE64A4008D6399 /* OperationsCalls.swift */; settings = {ASSET_TAGS = (); }; };
-		3BE2CA3C1BBE64CC008D6399 /* OtherCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA3B1BBE64CC008D6399 /* OtherCalls.swift */; settings = {ASSET_TAGS = (); }; };
-		3BE2CA3E1BBE64EA008D6399 /* HyperbolicCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA3D1BBE64EA008D6399 /* HyperbolicCalls.swift */; settings = {ASSET_TAGS = (); }; };
-		3BE2CA401BBE6506008D6399 /* ExponentialCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA3F1BBE6506008D6399 /* ExponentialCalls.swift */; settings = {ASSET_TAGS = (); }; };
-		3BE2CA421BBE6527008D6399 /* TrigonometricCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA411BBE6527008D6399 /* TrigonometricCalls.swift */; settings = {ASSET_TAGS = (); }; };
-		3BE2CA441BBE6540008D6399 /* FFTCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA431BBE6540008D6399 /* FFTCalls.swift */; settings = {ASSET_TAGS = (); }; };
-		3BE2CA461BBE655F008D6399 /* StatisticsCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA451BBE655F008D6399 /* StatisticsCalls.swift */; settings = {ASSET_TAGS = (); }; };
-		3BE2CA481BBE6581008D6399 /* AuxiliaryCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA471BBE6581008D6399 /* AuxiliaryCalls.swift */; settings = {ASSET_TAGS = (); }; };
-		3BE2CA4A1BBE65A0008D6399 /* ArithmeticCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA491BBE65A0008D6399 /* ArithmeticCalls.swift */; settings = {ASSET_TAGS = (); }; };
-		3BE2CA4D1BBEFAEB008D6399 /* GlobalArithmeticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA4C1BBEFAEB008D6399 /* GlobalArithmeticTests.swift */; settings = {ASSET_TAGS = (); }; };
-		3BE2CA4F1BBF0049008D6399 /* GlobalAuxiliaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA4E1BBF0049008D6399 /* GlobalAuxiliaryTests.swift */; settings = {ASSET_TAGS = (); }; };
-		3BE2CA511BBF1C48008D6399 /* GlobalStatisticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA501BBF1C48008D6399 /* GlobalStatisticsTests.swift */; settings = {ASSET_TAGS = (); }; };
-		3BE2CA531BBF1CE9008D6399 /* GlobalFFTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA521BBF1CE9008D6399 /* GlobalFFTTests.swift */; settings = {ASSET_TAGS = (); }; };
-		3BE2CA551BBF1D1A008D6399 /* GlobalTrigonometricTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA541BBF1D1A008D6399 /* GlobalTrigonometricTests.swift */; settings = {ASSET_TAGS = (); }; };
-		3BE2CA571BBF1D97008D6399 /* GlobalExponentialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA561BBF1D97008D6399 /* GlobalExponentialTests.swift */; settings = {ASSET_TAGS = (); }; };
-		3BE2CA591BBF1DCF008D6399 /* GlobalHyperbolicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA581BBF1DCF008D6399 /* GlobalHyperbolicTests.swift */; settings = {ASSET_TAGS = (); }; };
-		3BE2CA5B1BBF1E11008D6399 /* GlobalOtherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA5A1BBF1E11008D6399 /* GlobalOtherTests.swift */; settings = {ASSET_TAGS = (); }; };
-		3BE2CA5D1BBF1EB6008D6399 /* GlobalPowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA5C1BBF1EB6008D6399 /* GlobalPowerTests.swift */; settings = {ASSET_TAGS = (); }; };
-		3BF89A0A1BBF30A600F9764B /* FloatingTypeTestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF89A081BBF30A600F9764B /* FloatingTypeTestExtensions.swift */; settings = {ASSET_TAGS = (); }; };
-		3BF89A0B1BBF30A600F9764B /* XCTestCase+Surge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF89A091BBF30A600F9764B /* XCTestCase+Surge.swift */; settings = {ASSET_TAGS = (); }; };
-		3BF8A56B1BBE1C9F00F511D2 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8A56A1BBE1C9F00F511D2 /* Statistics.swift */; settings = {ASSET_TAGS = (); }; };
+		3BE2CA381BBE6455008D6399 /* PowerCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA361BBE642F008D6399 /* PowerCalls.swift */; };
+		3BE2CA3A1BBE64A4008D6399 /* OperationsCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA391BBE64A4008D6399 /* OperationsCalls.swift */; };
+		3BE2CA3C1BBE64CC008D6399 /* OtherCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA3B1BBE64CC008D6399 /* OtherCalls.swift */; };
+		3BE2CA3E1BBE64EA008D6399 /* HyperbolicCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA3D1BBE64EA008D6399 /* HyperbolicCalls.swift */; };
+		3BE2CA401BBE6506008D6399 /* ExponentialCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA3F1BBE6506008D6399 /* ExponentialCalls.swift */; };
+		3BE2CA421BBE6527008D6399 /* TrigonometricCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA411BBE6527008D6399 /* TrigonometricCalls.swift */; };
+		3BE2CA441BBE6540008D6399 /* FFTCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA431BBE6540008D6399 /* FFTCalls.swift */; };
+		3BE2CA461BBE655F008D6399 /* StatisticsCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA451BBE655F008D6399 /* StatisticsCalls.swift */; };
+		3BE2CA481BBE6581008D6399 /* AuxiliaryCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA471BBE6581008D6399 /* AuxiliaryCalls.swift */; };
+		3BE2CA4A1BBE65A0008D6399 /* ArithmeticCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA491BBE65A0008D6399 /* ArithmeticCalls.swift */; };
+		3BE2CA4D1BBEFAEB008D6399 /* GlobalArithmeticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA4C1BBEFAEB008D6399 /* GlobalArithmeticTests.swift */; };
+		3BE2CA4F1BBF0049008D6399 /* GlobalAuxiliaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA4E1BBF0049008D6399 /* GlobalAuxiliaryTests.swift */; };
+		3BE2CA511BBF1C48008D6399 /* GlobalStatisticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA501BBF1C48008D6399 /* GlobalStatisticsTests.swift */; };
+		3BE2CA531BBF1CE9008D6399 /* GlobalFFTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA521BBF1CE9008D6399 /* GlobalFFTTests.swift */; };
+		3BE2CA551BBF1D1A008D6399 /* GlobalTrigonometricTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA541BBF1D1A008D6399 /* GlobalTrigonometricTests.swift */; };
+		3BE2CA571BBF1D97008D6399 /* GlobalExponentialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA561BBF1D97008D6399 /* GlobalExponentialTests.swift */; };
+		3BE2CA591BBF1DCF008D6399 /* GlobalHyperbolicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA581BBF1DCF008D6399 /* GlobalHyperbolicTests.swift */; };
+		3BE2CA5B1BBF1E11008D6399 /* GlobalOtherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA5A1BBF1E11008D6399 /* GlobalOtherTests.swift */; };
+		3BE2CA5D1BBF1EB6008D6399 /* GlobalPowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2CA5C1BBF1EB6008D6399 /* GlobalPowerTests.swift */; };
+		3BF89A0A1BBF30A600F9764B /* FloatingTypeTestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF89A081BBF30A600F9764B /* FloatingTypeTestExtensions.swift */; };
+		3BF89A0B1BBF30A600F9764B /* XCTestCase+Surge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF89A091BBF30A600F9764B /* XCTestCase+Surge.swift */; };
+		3BF8A56B1BBE1C9F00F511D2 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8A56A1BBE1C9F00F511D2 /* Statistics.swift */; };
 		E65C5BE419FF9CF600149FF1 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65C5BE319FF9CF600149FF1 /* Matrix.swift */; };
 		F8A1E1CB19917B0A009735E2 /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C419917B0A009735E2 /* Arithmetic.swift */; };
 		F8A1E1CC19917B0A009735E2 /* Auxiliary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C519917B0A009735E2 /* Auxiliary.swift */; };
@@ -137,7 +137,7 @@
 		3B295A771BBB524E002774E6 /* ArrayStatiscticsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayStatiscticsExtensions.swift; sourceTree = "<group>"; };
 		3B295A791BBB5418002774E6 /* ArrayAuxiliaryExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayAuxiliaryExtensionsTests.swift; sourceTree = "<group>"; };
 		3B295A7B1BBB55F2002774E6 /* ArrayArithmeticExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayArithmeticExtensionsTests.swift; sourceTree = "<group>"; };
-		3B2C8C9C1BB777AB00984C7C /* SurgeOperators.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SurgeOperators.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B2C8C9C1BB777AB00984C7C /* JoltOperators.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JoltOperators.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B2C8C9E1BB777AB00984C7C /* SurgeOperators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SurgeOperators.h; sourceTree = "<group>"; };
 		3B2C8CA01BB777AB00984C7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B2C8CB41BB777DF00984C7C /* VectorOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorOperators.swift; sourceTree = "<group>"; };
@@ -203,9 +203,9 @@
 		3BF89A091BBF30A600F9764B /* XCTestCase+Surge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Surge.swift"; sourceTree = "<group>"; };
 		3BF8A56A1BBE1C9F00F511D2 /* Statistics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		E65C5BE319FF9CF600149FF1 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
-		F84A6AAE19A9A72F007B53E1 /* SurgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F84A6AAE19A9A72F007B53E1 /* JoltTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JoltTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F84A6AB119A9A72F007B53E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8A1E1AA19917A79009735E2 /* Surge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Surge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8A1E1AA19917A79009735E2 /* Jolt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Jolt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A1E1AE19917A79009735E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8A1E1C419917B0A009735E2 /* Arithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Arithmetic.swift; sourceTree = "<group>"; };
 		F8A1E1C519917B0A009735E2 /* Auxiliary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auxiliary.swift; sourceTree = "<group>"; };
@@ -486,9 +486,9 @@
 		F8A1E1AB19917A79009735E2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F8A1E1AA19917A79009735E2 /* Surge.framework */,
-				F84A6AAE19A9A72F007B53E1 /* SurgeTests.xctest */,
-				3B2C8C9C1BB777AB00984C7C /* SurgeOperators.framework */,
+				F8A1E1AA19917A79009735E2 /* Jolt.framework */,
+				F84A6AAE19A9A72F007B53E1 /* JoltTests.xctest */,
+				3B2C8C9C1BB777AB00984C7C /* JoltOperators.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -558,9 +558,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3B2C8C9B1BB777AB00984C7C /* SurgeOperators */ = {
+		3B2C8C9B1BB777AB00984C7C /* JoltOperators */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B2C8CB11BB777AB00984C7C /* Build configuration list for PBXNativeTarget "SurgeOperators" */;
+			buildConfigurationList = 3B2C8CB11BB777AB00984C7C /* Build configuration list for PBXNativeTarget "JoltOperators" */;
 			buildPhases = (
 				3B2C8C971BB777AB00984C7C /* Sources */,
 				3B2C8C981BB777AB00984C7C /* Frameworks */,
@@ -572,14 +572,14 @@
 			dependencies = (
 				3B02BBA81BBA719600C1EFAB /* PBXTargetDependency */,
 			);
-			name = SurgeOperators;
+			name = JoltOperators;
 			productName = SurgeOperators;
-			productReference = 3B2C8C9C1BB777AB00984C7C /* SurgeOperators.framework */;
+			productReference = 3B2C8C9C1BB777AB00984C7C /* JoltOperators.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F84A6AAD19A9A72F007B53E1 /* SurgeTests */ = {
+		F84A6AAD19A9A72F007B53E1 /* JoltTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F84A6AB419A9A72F007B53E1 /* Build configuration list for PBXNativeTarget "SurgeTests" */;
+			buildConfigurationList = F84A6AB419A9A72F007B53E1 /* Build configuration list for PBXNativeTarget "JoltTests" */;
 			buildPhases = (
 				F84A6AAA19A9A72F007B53E1 /* Sources */,
 				F84A6AAB19A9A72F007B53E1 /* Frameworks */,
@@ -591,14 +591,14 @@
 				3B2C8CB71BB77B6800984C7C /* PBXTargetDependency */,
 				F84A6AB819A9A771007B53E1 /* PBXTargetDependency */,
 			);
-			name = SurgeTests;
+			name = JoltTests;
 			productName = SurgeTests;
-			productReference = F84A6AAE19A9A72F007B53E1 /* SurgeTests.xctest */;
+			productReference = F84A6AAE19A9A72F007B53E1 /* JoltTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F8A1E1A919917A79009735E2 /* Surge */ = {
+		F8A1E1A919917A79009735E2 /* Jolt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8A1E1BD19917A79009735E2 /* Build configuration list for PBXNativeTarget "Surge" */;
+			buildConfigurationList = F8A1E1BD19917A79009735E2 /* Build configuration list for PBXNativeTarget "Jolt" */;
 			buildPhases = (
 				F8A1E1A519917A79009735E2 /* Sources */,
 				F8A1E1A619917A79009735E2 /* Frameworks */,
@@ -609,9 +609,9 @@
 			);
 			dependencies = (
 			);
-			name = Surge;
+			name = Jolt;
 			productName = Surge;
-			productReference = F8A1E1AA19917A79009735E2 /* Surge.framework */;
+			productReference = F8A1E1AA19917A79009735E2 /* Jolt.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -648,9 +648,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F8A1E1A919917A79009735E2 /* Surge */,
-				F84A6AAD19A9A72F007B53E1 /* SurgeTests */,
-				3B2C8C9B1BB777AB00984C7C /* SurgeOperators */,
+				F8A1E1A919917A79009735E2 /* Jolt */,
+				F84A6AAD19A9A72F007B53E1 /* JoltTests */,
+				3B2C8C9B1BB777AB00984C7C /* JoltOperators */,
 			);
 		};
 /* End PBXProject section */
@@ -793,17 +793,17 @@
 /* Begin PBXTargetDependency section */
 		3B02BBA81BBA719600C1EFAB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F8A1E1A919917A79009735E2 /* Surge */;
+			target = F8A1E1A919917A79009735E2 /* Jolt */;
 			targetProxy = 3B02BBA71BBA719600C1EFAB /* PBXContainerItemProxy */;
 		};
 		3B2C8CB71BB77B6800984C7C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3B2C8C9B1BB777AB00984C7C /* SurgeOperators */;
+			target = 3B2C8C9B1BB777AB00984C7C /* JoltOperators */;
 			targetProxy = 3B2C8CB61BB77B6800984C7C /* PBXContainerItemProxy */;
 		};
 		F84A6AB819A9A771007B53E1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F8A1E1A919917A79009735E2 /* Surge */;
+			target = F8A1E1A919917A79009735E2 /* Jolt */;
 			targetProxy = F84A6AB719A9A771007B53E1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1013,7 +1013,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3B2C8CB11BB777AB00984C7C /* Build configuration list for PBXNativeTarget "SurgeOperators" */ = {
+		3B2C8CB11BB777AB00984C7C /* Build configuration list for PBXNativeTarget "JoltOperators" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3B2C8CAD1BB777AB00984C7C /* Debug */,
@@ -1022,7 +1022,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F84A6AB419A9A72F007B53E1 /* Build configuration list for PBXNativeTarget "SurgeTests" */ = {
+		F84A6AB419A9A72F007B53E1 /* Build configuration list for PBXNativeTarget "JoltTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F84A6AB519A9A72F007B53E1 /* Debug */,
@@ -1040,7 +1040,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8A1E1BD19917A79009735E2 /* Build configuration list for PBXNativeTarget "Surge" */ = {
+		F8A1E1BD19917A79009735E2 /* Build configuration list for PBXNativeTarget "Jolt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8A1E1BE19917A79009735E2 /* Debug */,

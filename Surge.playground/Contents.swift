@@ -1,7 +1,7 @@
 
-import Surge
+import Jolt
 import XCPlayground
-import SurgeOperators
+import JoltOperators
 
 //// MARK: - Arithmetic
 //
