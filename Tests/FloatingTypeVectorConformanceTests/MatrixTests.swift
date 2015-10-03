@@ -1,13 +1,13 @@
 //
 //  MatrixTests.swift
-//  Surge
+//  Jolt
 //
 //  Created by Scott Hoyt on 9/25/15.
 //  Copyright © 2015 Scott Hoyt. All rights reserved.
 //
 
 import XCTest
-@testable import Surge
+@testable import Jolt
 
 protocol MatrixTest : RandomDataTest {
     typealias OperandType : FloatLiteralConvertible, FloatingPointAccuracy

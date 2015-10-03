@@ -6,11 +6,11 @@ import JoltOperators
 //// MARK: - Arithmetic
 //
 //let n = [-1.0, 2.0, 3.0, 4.0, 5.0]
-//let sum = Surge.sum(n)
+//let sum = Jolt.sum(n)
 //
 //let a = [1.0, 3.0, 5.0, 7.0]
 //let b = [2.0, 4.0, 6.0, 8.0]
-//let product = Surge.mul(a, b)
+//let product = Jolt.mul(a, b)
 //
 //// MARK: - Matrix
 //

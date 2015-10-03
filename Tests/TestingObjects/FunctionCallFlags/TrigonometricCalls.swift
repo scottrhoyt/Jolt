@@ -1,13 +1,13 @@
 //
 //  TrigonometricCalls.swift
-//  Surge
+//  Jolt
 //
 //  Created by Scott Hoyt on 10/2/15.
 //  Copyright © 2015 Scott Hoyt. All rights reserved.
 //
 
 import Foundation
-import Surge
+import Jolt
 
 enum TrigonometricCalls : VectorTrigonometric {
     

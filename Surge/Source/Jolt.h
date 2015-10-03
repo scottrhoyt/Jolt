@@ -1,4 +1,4 @@
-// Surge.h
+// Jolt.h
 //
 // Copyright (c) 2014–2015 Mattt Thompson (http://mattt.me)
 //
@@ -23,9 +23,9 @@
 #import <Foundation/Foundation.h>
 #import <Accelerate/Accelerate.h>
 
-//! Project version number for Surge.
-FOUNDATION_EXPORT double SurgeVersionNumber;
+//! Project version number for Jolt.
+FOUNDATION_EXPORT double JoltVersionNumber;
 
-//! Project version string for Surge.
-FOUNDATION_EXPORT const unsigned char SurgeVersionString[];
+//! Project version string for Jolt.
+FOUNDATION_EXPORT const unsigned char JoltVersionString[];
 

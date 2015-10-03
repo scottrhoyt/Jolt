@@ -1,4 +1,4 @@
-// XCTestCase+Surge.swift
+// XCTestCase+Jolt.swift
 //
 // Copyright (c) 2014–2015 Mattt Thompson (http://mattt.me)
 //
@@ -23,10 +23,10 @@
 
 import XCTest
 
-let SurgeTestCountLow = 10
-let SurgeTestCountMedium = 1000
-let SurgeTestCountHigh = 100000
-let SurgeTestDoubleAccuracy = 0.000001
+let JoltTestCountLow = 10
+let JoltTestCountMedium = 1000
+let JoltTestCountHigh = 100000
+let JoltTestDoubleAccuracy = 0.000001
 
 extension XCTestCase {
     

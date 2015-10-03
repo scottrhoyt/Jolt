@@ -21,9 +21,9 @@
 // THE SOFTWARE.
 
 
-import Surge
+import Jolt
 import XCTest
-import SurgeOperators
+import JoltOperators
 
 class DoubleArithmeticTests: XCTestCase, DoubleOperandTest {
     

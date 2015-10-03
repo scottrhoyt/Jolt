@@ -21,7 +21,7 @@
 // THE SOFTWARE.
 
 
-import Surge
+import Jolt
 import XCTest
 
 class DoubleAuxiliaryTests: XCTestCase , SingleOperandTest {
@@ -32,10 +32,10 @@ class DoubleAuxiliaryTests: XCTestCase , SingleOperandTest {
     let upperBound: OperandType = 1e6
     
     func test_copysign() {
-        let signs = [OperandType]((0..<SurgeTestCountMedium).map {$0 % 2 == 0 ? 1.0 : -1.0})
+        let signs = [OperandType]((0..<JoltTestCountMedium).map {$0 % 2 == 0 ? 1.0 : -1.0})
 
         var magnitudes = [OperandType]()
-        for _ in (0..<SurgeTestCountMedium).enumerate() {
+        for _ in (0..<JoltTestCountMedium).enumerate() {
             magnitudes.append(OperandType(arc4random_uniform(10)))
         }
 
@@ -101,10 +101,10 @@ class FloatAuxiliaryTests: XCTestCase , SingleOperandTest {
     let upperBound: OperandType = 1e3
     
     func test_copysign() {
-        let signs = [OperandType]((0..<SurgeTestCountMedium).map {$0 % 2 == 0 ? 1.0 : -1.0})
+        let signs = [OperandType]((0..<JoltTestCountMedium).map {$0 % 2 == 0 ? 1.0 : -1.0})
         
         var magnitudes = [OperandType]()
-        for _ in (0..<SurgeTestCountMedium).enumerate() {
+        for _ in (0..<JoltTestCountMedium).enumerate() {
             magnitudes.append(OperandType(arc4random_uniform(10)))
         }
         

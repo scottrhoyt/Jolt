@@ -1,6 +1,6 @@
 //
 //  VectorArithmetic.swift
-//  Surge
+//  Jolt
 //
 //  Created by Scott Hoyt on 9/6/15.
 //  Copyright © 2015 Scott Hoyt. All rights reserved.

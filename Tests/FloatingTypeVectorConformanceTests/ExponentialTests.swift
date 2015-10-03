@@ -21,7 +21,7 @@
 // THE SOFTWARE.
 
 
-import Surge
+import Jolt
 import XCTest
 
 class DoubleExponentialTests: XCTestCase, SingleOperandTest {

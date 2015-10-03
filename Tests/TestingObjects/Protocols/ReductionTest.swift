@@ -1,6 +1,6 @@
 //
 //  ReductionTest.swift
-//  Surge
+//  Jolt
 //
 //  Created by Scott Hoyt on 9/24/15.
 //  Copyright © 2015 Scott Hoyt. All rights reserved.
@@ -21,7 +21,7 @@ extension ReductionTest where Self : XCTestCase {
     
     func measureAndValidateMappedFunctionWithAccuracy(reduction: ([OperandType]) -> (OperandType), mapped: (([OperandType]) -> (OperandType)), lowerBound: OperandType? = nil, upperBound: OperandType? = nil, accuracy: OperandType = OperandType.accuracy)
     {
-        let values = rands(SurgeTestCountMedium, lowerBound: lowerBound, upperBound: upperBound)
+        let values = rands(JoltTestCountMedium, lowerBound: lowerBound, upperBound: upperBound)
         measureAndValidateMappedFunctionWithAccuracy(values, reduction: reduction, mapped: mapped, accuracy: accuracy)
 
     }

@@ -21,7 +21,7 @@
 // THE SOFTWARE.
 
 import Darwin
-import Surge
+import Jolt
 import XCTest
 
 class DoubleHyperbolicTests: XCTestCase, SingleOperandTest {

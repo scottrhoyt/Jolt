@@ -1,6 +1,6 @@
 //
 //  FloatingTypeAuxiliaryExtensions.swift
-//  Surge
+//  Jolt
 //
 //  Created by Scott Hoyt on 9/8/15.
 //  Copyright © 2015 Scott Hoyt. All rights reserved.

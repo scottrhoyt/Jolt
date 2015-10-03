@@ -1,13 +1,13 @@
 //
 //  ArrayOtherExtensionsTests.swift
-//  Surge
+//  Jolt
 //
 //  Created by Scott Hoyt on 9/29/15.
 //  Copyright © 2015 Scott Hoyt. All rights reserved.
 //
 
 import XCTest
-import Surge
+import Jolt
 
 class ArrayOtherExtensionsTests: XCTestCase {
     

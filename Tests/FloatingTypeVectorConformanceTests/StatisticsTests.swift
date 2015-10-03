@@ -1,13 +1,13 @@
 //
 //  StatisticsTests.swift
-//  Surge
+//  Jolt
 //
 //  Created by Scott Hoyt on 9/24/15.
 //  Copyright © 2015 Scott Hoyt. All rights reserved.
 //
 
 import XCTest
-import SurgeOperators
+import JoltOperators
 
 class DoubleStatisticsTests: XCTestCase, ReductionTest {
 
@@ -44,7 +44,7 @@ class DoubleStatisticsTests: XCTestCase, ReductionTest {
     }
     
     func test_normalize() {
-        let data = OperandType.normalize(rands(SurgeTestCountMedium))
+        let data = OperandType.normalize(rands(JoltTestCountMedium))
         let mean = OperandType.mean(data)
         let stdev = OperandType.stdev(data)
         XCTAssertEqualWithAccuracy(mean, 0, accuracy: OperandType.accuracy)
@@ -53,13 +53,13 @@ class DoubleStatisticsTests: XCTestCase, ReductionTest {
     
     func test_variance() {
         let scaleFactor: OperandType = 2
-        let data = OperandType.normalize(rands(SurgeTestCountMedium)) * scaleFactor
+        let data = OperandType.normalize(rands(JoltTestCountMedium)) * scaleFactor
         let variance = OperandType.variance(data)
         XCTAssertEqualWithAccuracy(variance, pow(scaleFactor, 2), accuracy: OperandType.accuracy)
     }
     
     func test_correlation() {
-        let data = rands(SurgeTestCountMedium, lowerBound: -1, upperBound: 1)
+        let data = rands(JoltTestCountMedium, lowerBound: -1, upperBound: 1)
         XCTAssertEqualWithAccuracy(1, OperandType.correlation(data, data), accuracy: OperandType.accuracy)
         XCTAssertEqualWithAccuracy(-1, OperandType.correlation(-1 * data, data), accuracy: OperandType.accuracy)
     }
@@ -101,7 +101,7 @@ class FloatStatisticsTests: XCTestCase, ReductionTest {
     }
     
     func test_normalize() {
-        let data = OperandType.normalize(rands(SurgeTestCountMedium))
+        let data = OperandType.normalize(rands(JoltTestCountMedium))
         let mean = OperandType.mean(data)
         let stdev = OperandType.stdev(data)
         XCTAssertEqualWithAccuracy(mean, 0, accuracy: OperandType.accuracy)
@@ -110,13 +110,13 @@ class FloatStatisticsTests: XCTestCase, ReductionTest {
     
     func test_variance() {
         let scaleFactor: OperandType = 2
-        let data = OperandType.normalize(rands(SurgeTestCountMedium)) * scaleFactor
+        let data = OperandType.normalize(rands(JoltTestCountMedium)) * scaleFactor
         let variance = OperandType.variance(data)
         XCTAssertEqualWithAccuracy(variance, pow(scaleFactor, 2), accuracy: OperandType.accuracy)
     }
     
     func test_correlation() {
-        let data = rands(SurgeTestCountMedium, lowerBound: -1, upperBound: 1)
+        let data = rands(JoltTestCountMedium, lowerBound: -1, upperBound: 1)
         XCTAssertEqualWithAccuracy(1, OperandType.correlation(data, data), accuracy: OperandType.accuracy)
         XCTAssertEqualWithAccuracy(-1, OperandType.correlation(-1 * data, data), accuracy: OperandType.accuracy)
     }

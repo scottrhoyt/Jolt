@@ -1,6 +1,6 @@
 //
 //  Statistics.swift
-//  Surge
+//  Jolt
 //
 //  Created by Scott Hoyt on 10/1/15.
 //  Copyright © 2015 Scott Hoyt. All rights reserved.

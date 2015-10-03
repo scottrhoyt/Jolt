@@ -21,7 +21,7 @@
 // THE SOFTWARE.
 
 import Darwin
-import Surge
+import Jolt
 import XCTest
 
 class DoubleTrigonometricTests: XCTestCase, SingleOperandTest {
@@ -61,7 +61,7 @@ class DoubleTrigonometricTests: XCTestCase, SingleOperandTest {
     }
     
     func test_sincos() {
-        let data = rands(SurgeTestCountMedium)
+        let data = rands(JoltTestCountMedium)
         let results = OperandType.sincos(data)
         let sins = OperandType.sin(data)
         let coss = OperandType.cos(data)
@@ -108,7 +108,7 @@ class FloatTrigonometricTests: XCTestCase, SingleOperandTest {
     }
     
     func test_sincos() {
-        let data = rands(SurgeTestCountMedium)
+        let data = rands(JoltTestCountMedium)
         let results = OperandType.sincos(data)
         let sins = OperandType.sin(data)
         let coss = OperandType.cos(data)
