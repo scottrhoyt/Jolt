@@ -320,14 +320,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		3B2C8C9D1BB777AB00984C7C /* SurgeOperators */ = {
+		3B2C8C9D1BB777AB00984C7C /* JoltOperators */ = {
 			isa = PBXGroup;
 			children = (
+				3BC119E71BBF6EA8005AB465 /* Supporting Files */,
 				3B2C8CB31BB777BE00984C7C /* Operators */,
 				3B2C8C9E1BB777AB00984C7C /* JoltOperators.h */,
-				3B2C8CA01BB777AB00984C7C /* Info.plist */,
 			);
-			path = SurgeOperators;
+			path = JoltOperators;
 			sourceTree = "<group>";
 		};
 		3B2C8CB31BB777BE00984C7C /* Operators */ = {
@@ -413,6 +413,14 @@
 			path = VectorOperationsConvertible;
 			sourceTree = "<group>";
 		};
+		3BC119E71BBF6EA8005AB465 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B2C8CA01BB777AB00984C7C /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		3BC464711BB4DE5A004A2E81 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,8 +483,8 @@
 		F8A1E1A019917A79009735E2 = {
 			isa = PBXGroup;
 			children = (
-				F8A1E1AC19917A79009735E2 /* Source */,
-				3B2C8C9D1BB777AB00984C7C /* SurgeOperators */,
+				F8A1E1AC19917A79009735E2 /* Jolt */,
+				3B2C8C9D1BB777AB00984C7C /* JoltOperators */,
 				F84A6AAF19A9A72F007B53E1 /* Tests */,
 				F8A1E1D419917C17009735E2 /* Frameworks */,
 				F8A1E1AB19917A79009735E2 /* Products */,
@@ -493,14 +501,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F8A1E1AC19917A79009735E2 /* Source */ = {
+		F8A1E1AC19917A79009735E2 /* Jolt */ = {
 			isa = PBXGroup;
 			children = (
 				F8A1E1C319917B0A009735E2 /* Source */,
 				F8A1E1AD19917A79009735E2 /* Supporting Files */,
 			);
-			name = Source;
-			path = Surge;
+			path = Jolt;
 			sourceTree = "<group>";
 		};
 		F8A1E1AD19917A79009735E2 /* Supporting Files */ = {
@@ -523,7 +530,7 @@
 				F8A1E1C919917B0A009735E2 /* Jolt.h */,
 			);
 			name = Source;
-			path = Surge/Source;
+			path = Jolt/Source;
 			sourceTree = SOURCE_ROOT;
 		};
 		F8A1E1D419917C17009735E2 /* Frameworks */ = {
@@ -819,7 +826,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = SurgeOperators/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/JoltOperators/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -841,7 +848,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = SurgeOperators/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/JoltOperators/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -985,7 +992,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Jolt/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.scotthoyt.$(PRODUCT_NAME:rfc1034identifier)";
@@ -1001,7 +1008,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Jolt/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.scotthoyt.$(PRODUCT_NAME:rfc1034identifier)";
