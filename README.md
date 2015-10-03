@@ -11,7 +11,7 @@ Though, keep in mind: _Accelerate is not a silver bullet_. Under certain conditi
 
 ## Acknowledgements
 
-This project got it's inspiration and was originally forked from Mattt Thompson's ([@mattt](https://twitter.com/mattt)) original [Surge](https://github.com/mattt/Jolt) project.
+This project got it's inspiration and was originally forked from Mattt Thompson's ([@mattt](https://twitter.com/mattt)) [Surge](https://github.com/mattt/Jolt) project.
 
 ## Requirements
 
