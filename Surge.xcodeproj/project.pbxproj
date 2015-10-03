@@ -19,7 +19,7 @@
 		3B295A781BBB524E002774E6 /* ArrayStatiscticsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B295A771BBB524E002774E6 /* ArrayStatiscticsExtensions.swift */; };
 		3B295A7A1BBB5418002774E6 /* ArrayAuxiliaryExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B295A791BBB5418002774E6 /* ArrayAuxiliaryExtensionsTests.swift */; };
 		3B295A7C1BBB55F2002774E6 /* ArrayArithmeticExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B295A7B1BBB55F2002774E6 /* ArrayArithmeticExtensionsTests.swift */; };
-		3B2C8C9F1BB777AB00984C7C /* SurgeOperators.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2C8C9E1BB777AB00984C7C /* SurgeOperators.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B2C8C9F1BB777AB00984C7C /* JoltOperators.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2C8C9E1BB777AB00984C7C /* JoltOperators.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B2C8CB51BB777DF00984C7C /* VectorOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C8CB41BB777DF00984C7C /* VectorOperators.swift */; };
 		3B3870211BA20EFD0022CB6E /* VectorTrigonometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3870201BA20EFD0022CB6E /* VectorTrigonometric.swift */; };
 		3B3870231BA2108C0022CB6E /* FloatingTypeTrigonometricExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3870221BA2108C0022CB6E /* FloatingTypeTrigonometricExtensions.swift */; };
@@ -88,7 +88,7 @@
 		F8A1E1CD19917B0A009735E2 /* Exponential.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C619917B0A009735E2 /* Exponential.swift */; };
 		F8A1E1CE19917B0A009735E2 /* Hyperbolic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C719917B0A009735E2 /* Hyperbolic.swift */; };
 		F8A1E1CF19917B0A009735E2 /* Power.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C819917B0A009735E2 /* Power.swift */; };
-		F8A1E1D019917B0A009735E2 /* Surge.h in Headers */ = {isa = PBXBuildFile; fileRef = F8A1E1C919917B0A009735E2 /* Surge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8A1E1D019917B0A009735E2 /* Jolt.h in Headers */ = {isa = PBXBuildFile; fileRef = F8A1E1C919917B0A009735E2 /* Jolt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8A1E1D119917B0A009735E2 /* Trigonometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1CA19917B0A009735E2 /* Trigonometric.swift */; };
 		F8A1E1D519917C25009735E2 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A1E1D219917C0B009735E2 /* Accelerate.framework */; };
 		F8A1E1D719917C2B009735E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A1E1D619917C2B009735E2 /* Foundation.framework */; };
@@ -138,7 +138,7 @@
 		3B295A791BBB5418002774E6 /* ArrayAuxiliaryExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayAuxiliaryExtensionsTests.swift; sourceTree = "<group>"; };
 		3B295A7B1BBB55F2002774E6 /* ArrayArithmeticExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayArithmeticExtensionsTests.swift; sourceTree = "<group>"; };
 		3B2C8C9C1BB777AB00984C7C /* JoltOperators.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JoltOperators.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B2C8C9E1BB777AB00984C7C /* SurgeOperators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SurgeOperators.h; sourceTree = "<group>"; };
+		3B2C8C9E1BB777AB00984C7C /* JoltOperators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JoltOperators.h; sourceTree = "<group>"; };
 		3B2C8CA01BB777AB00984C7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B2C8CB41BB777DF00984C7C /* VectorOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorOperators.swift; sourceTree = "<group>"; };
 		3B3870201BA20EFD0022CB6E /* VectorTrigonometric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorTrigonometric.swift; sourceTree = "<group>"; };
@@ -212,7 +212,7 @@
 		F8A1E1C619917B0A009735E2 /* Exponential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exponential.swift; sourceTree = "<group>"; };
 		F8A1E1C719917B0A009735E2 /* Hyperbolic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hyperbolic.swift; sourceTree = "<group>"; };
 		F8A1E1C819917B0A009735E2 /* Power.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Power.swift; sourceTree = "<group>"; };
-		F8A1E1C919917B0A009735E2 /* Surge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surge.h; sourceTree = "<group>"; };
+		F8A1E1C919917B0A009735E2 /* Jolt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jolt.h; sourceTree = "<group>"; };
 		F8A1E1CA19917B0A009735E2 /* Trigonometric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigonometric.swift; sourceTree = "<group>"; };
 		F8A1E1D219917C0B009735E2 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		F8A1E1D619917C2B009735E2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -324,7 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				3B2C8CB31BB777BE00984C7C /* Operators */,
-				3B2C8C9E1BB777AB00984C7C /* SurgeOperators.h */,
+				3B2C8C9E1BB777AB00984C7C /* JoltOperators.h */,
 				3B2C8CA01BB777AB00984C7C /* Info.plist */,
 			);
 			path = SurgeOperators;
@@ -520,7 +520,7 @@
 				3B38701E1BA20E880022CB6E /* ArrayExtensions */,
 				3B38701D1BA20E770022CB6E /* FloatingTypeExtensions */,
 				3B38701C1BA20E620022CB6E /* VectorProtocols */,
-				F8A1E1C919917B0A009735E2 /* Surge.h */,
+				F8A1E1C919917B0A009735E2 /* Jolt.h */,
 			);
 			name = Source;
 			path = Surge/Source;
@@ -543,7 +543,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B2C8C9F1BB777AB00984C7C /* SurgeOperators.h in Headers */,
+				3B2C8C9F1BB777AB00984C7C /* JoltOperators.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,7 +551,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8A1E1D019917B0A009735E2 /* Surge.h in Headers */,
+				F8A1E1D019917B0A009735E2 /* Jolt.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
