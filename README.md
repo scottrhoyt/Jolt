@@ -11,7 +11,7 @@ Though, keep in mind: _Accelerate is not a silver bullet_. Under certain conditi
 
 ## Acknowledgements
 
-This project got it's inspiration and was originally forked from Mattt Thompson's ([@mattt](https://twitter.com/mattt)) original [Surge](https://github.com/mattt/Jolt) project.
+This project got it's inspiration and was originally forked from Mattt Thompson's ([@mattt](https://twitter.com/mattt)) [Surge](https://github.com/mattt/Jolt) project.
 
 ## Requirements
 
@@ -52,14 +52,14 @@ _The infrastructure and best practices for distributing Swift libraries are curr
 
 ## Inventory
 
-> Jolt functions are named according to their corresponding "Math.h" functions, where applicable (omitting `f` and `d` affixes, since type information is communicated and enforced by the language's type system).
+> Jolt functions are named according to their corresponding "Math.h" functions, where applicable (omitting `f` and `d` affixes, since type information is communicated and enforced by the language's type system). Mapped operators that are exposed via `import JoltOperators` are shown where available.
 
 ### Arithmetic
 
-- `add`
-- `mul`
-- `div`
-- `mod`
+- `add` => `+`
+- `mul` => `*`
+- `div` => `/`
+- `mod` => `%`
 - `remainder`
 
 ### Auxilliary
@@ -96,10 +96,10 @@ _The infrastructure and best practices for distributing Swift libraries are curr
 
 ### Matrix
 
-- `add`
-- `mul`
+- `add` => `+`
+- `mul` => `*`
 - `inv`
-- `transpose`
+- `transpose` => `′`
 
 ### Other
 
@@ -137,7 +137,7 @@ _The infrastructure and best practices for distributing Swift libraries are curr
 
 ### Vector Operations
 
-- `dot`
+- `dot` => `•`
 - `magnitude`
 - `unit`
 - `normalize`
