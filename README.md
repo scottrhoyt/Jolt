@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/scottrhoyt/Jolt.svg?branch=master)](https://travis-ci.org/scottrhoyt/Jolt)
 # Jolt
 *Swift + Accelerate for Vector Math*
 
