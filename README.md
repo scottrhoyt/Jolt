@@ -1,4 +1,7 @@
 [![Build Status](https://travis-ci.org/scottrhoyt/Jolt.svg?branch=master)](https://travis-ci.org/scottrhoyt/Jolt)
+
+[![codecov.io](http://codecov.io/github/scottrhoyt/Jolt/coverage.svg?branch=master)](http://codecov.io/github/scottrhoyt/Jolt?branch=master)
+
 # Jolt
 *Swift + Accelerate for Vector Math*
 
