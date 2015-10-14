@@ -8,3 +8,8 @@ xcode_workspace: Jolt.xcworkspace
 xcode_scheme: Jolt
 osx_image: xcode7
 xcode_sdk: iphonesimulator9.0
+
+before_install:
+  - pip install codecov
+after_success:
+  - codecov
